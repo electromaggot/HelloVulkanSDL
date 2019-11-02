@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="HelloTriangle">
+      <UniqueIdentifier>{d5b95019-0672-4696-94d0-80392b8443cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{6e333747-2dd3-4eb7-ab08-325f569f37ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vulkan">
+      <UniqueIdentifier>{da7b9dab-a77d-46cb-9ded-de004318279e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HelloTriangle\Shaders">
+      <UniqueIdentifier>{6d654bb5-2348-4fda-bdd6-56961512a660}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\ImageHandling">
+      <UniqueIdentifier>{9f3699e7-2942-4cd5-b2ee-eac1afdd4fa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vulkan\Objects">
+      <UniqueIdentifier>{1177c7b6-81b4-4f64-a29e-df2cd817ab78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vulkan\AddOns">
+      <UniqueIdentifier>{25bc9c39-49ba-40b0-bb73-8497fc07a505}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vulkan\Setup">
+      <UniqueIdentifier>{28edba8d-58d9-43b2-b88a-cf7548c65361}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vulkan\Assist">
+      <UniqueIdentifier>{35355780-e1a8-429c-8f98-4358fb26e57a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OSAbstraction">
+      <UniqueIdentifier>{7d282b1d-98f3-4da3-8399-9d69bd681c2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Microsoft">
+      <UniqueIdentifier>{d0a004e3-603b-4867-ab2f-46720e0cc9b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vulkan\AddOns\3DObjects">
+      <UniqueIdentifier>{ced8594a-153d-4e10-ab4b-d94db1c0a5a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vulkan\AddOns\VertexTypes">
+      <UniqueIdentifier>{01cb5cf0-9da6-4744-ad29-0be1430bd9c9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\AppConstants.h">
+      <Filter>HelloTriangle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HelloTriangle.h">
+      <Filter>HelloTriangle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Platform\OSAbstraction\iPlatform.h">
+      <Filter>Platform\OSAbstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Platform\OSAbstraction\PlatformGLFW.h">
+      <Filter>Platform\OSAbstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Platform\OSAbstraction\PlatformSDL.h">
+      <Filter>Platform\OSAbstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Platform\ImageHandling\iImageSource.h">
+      <Filter>Platform\ImageHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Platform\ImageHandling\ImageSDL.h">
+      <Filter>Platform\ImageHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Platform\ImageHandling\ImageSTB.h">
+      <Filter>Platform\ImageHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Platform\FileSystem.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Platform\PlatformExtension.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\3DObjects\VertexBasedObject.h">
+      <Filter>Vulkan\AddOns\3DObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\Vertex2D.h">
+      <Filter>Vulkan\AddOns\VertexTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\Vertex2DColored.h">
+      <Filter>Vulkan\AddOns\VertexTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\Vertex2DTextured.h">
+      <Filter>Vulkan\AddOns\VertexTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\Vertex2DTextureTinted.h">
+      <Filter>Vulkan\AddOns\VertexTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\VertexNull.h">
+      <Filter>Vulkan\AddOns\VertexTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\VertexType.h">
+      <Filter>Vulkan\AddOns\VertexTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\BufferBase.h">
+      <Filter>Vulkan\AddOns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\CommandBufferBase.h">
+      <Filter>Vulkan\AddOns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\Descriptors.h">
+      <Filter>Vulkan\AddOns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\PrimitiveBuffer.h">
+      <Filter>Vulkan\AddOns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\TextureImage.h">
+      <Filter>Vulkan\AddOns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\UniformBuffer.h">
+      <Filter>Vulkan\AddOns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\UniformBufferObjects.h">
+      <Filter>Vulkan\AddOns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Assist\DebugReport.h">
+      <Filter>Vulkan\Assist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Assist\DeviceAssessment.h">
+      <Filter>Vulkan\Assist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Assist\DeviceProfile.h">
+      <Filter>Vulkan\Assist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Assist\DeviceRanking.h">
+      <Filter>Vulkan\Assist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Assist\Helpers.h">
+      <Filter>Vulkan\Assist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Assist\Utility.h">
+      <Filter>Vulkan\Assist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Assist\ValidationLayers.h">
+      <Filter>Vulkan\Assist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Assist\VulkanPlatform.h">
+      <Filter>Vulkan\Assist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Setup\RenderSettings.h">
+      <Filter>Vulkan\Setup</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Setup\Shader.h">
+      <Filter>Vulkan\Setup</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Setup\VulkanConfigure.h">
+      <Filter>Vulkan\Setup</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Setup\VulkanSetup.h">
+      <Filter>Vulkan\Setup</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Setup\VulkanSingleton.h">
+      <Filter>Vulkan\Setup</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Objects\CommandObjects.h">
+      <Filter>Vulkan\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Objects\DeviceQueues.h">
+      <Filter>Vulkan\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Objects\Framebuffers.h">
+      <Filter>Vulkan\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Objects\GraphicsDevice.h">
+      <Filter>Vulkan\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Objects\GraphicsPipeline.h">
+      <Filter>Vulkan\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Objects\RenderPass.h">
+      <Filter>Vulkan\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Objects\ShaderModules.h">
+      <Filter>Vulkan\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Objects\Swapchain.h">
+      <Filter>Vulkan\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Objects\SyncObjects.h">
+      <Filter>Vulkan\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Objects\VulkanInstance.h">
+      <Filter>Vulkan\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\Objects\WindowSurface.h">
+      <Filter>Vulkan\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\optional.h">
+      <Filter>Platform\Microsoft</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlatformSpecifics.h">
+      <Filter>Platform\Microsoft</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlatformConstants.h">
+      <Filter>Platform\Microsoft</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Vulkan\AddOns\Mipmaps.h">
+      <Filter>Vulkan\AddOns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Platform\ImageHandling\sdlEquivalents.h">
+      <Filter>Platform\ImageHandling</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\HelloTriangle.cpp">
+      <Filter>HelloTriangle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>HelloTriangle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Platform\OSAbstraction\PlatformSDL.cpp">
+      <Filter>Platform\OSAbstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Platform\FileSystem.cpp">
+      <Filter>Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Platform\PlatformCommon.cpp">
+      <Filter>Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Quad2D.cpp">
+      <Filter>Vulkan\AddOns\3DObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Quad2DColored.cpp">
+      <Filter>Vulkan\AddOns\3DObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Quad2DTextured.cpp">
+      <Filter>Vulkan\AddOns\3DObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Quad2DTextureTinted.cpp">
+      <Filter>Vulkan\AddOns\3DObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Triangle2DColored.cpp">
+      <Filter>Vulkan\AddOns\3DObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\AddOns\VertexTypes\VertexTypes.cpp">
+      <Filter>Vulkan\AddOns\VertexTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\AddOns\Descriptors.cpp">
+      <Filter>Vulkan\AddOns</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\AddOns\PrimitiveBuffer.cpp">
+      <Filter>Vulkan\AddOns</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\AddOns\TextureImage.cpp">
+      <Filter>Vulkan\AddOns</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\AddOns\UniformBuffer.cpp">
+      <Filter>Vulkan\AddOns</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Assist\DebugReport.cpp">
+      <Filter>Vulkan\Assist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Assist\DeviceAssessment.cpp">
+      <Filter>Vulkan\Assist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Assist\DeviceRanking.cpp">
+      <Filter>Vulkan\Assist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Assist\Utility.cpp">
+      <Filter>Vulkan\Assist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Assist\ValidationLayers.cpp">
+      <Filter>Vulkan\Assist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Assist\vkEnumStrings.cpp">
+      <Filter>Vulkan\Assist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Setup\VulkanSetup.cpp">
+      <Filter>Vulkan\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Objects\CommandObjects.cpp">
+      <Filter>Vulkan\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Objects\DeviceQueues.cpp">
+      <Filter>Vulkan\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Objects\Framebuffers.cpp">
+      <Filter>Vulkan\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Objects\GraphicsDevice.cpp">
+      <Filter>Vulkan\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Objects\GraphicsPipeline.cpp">
+      <Filter>Vulkan\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Objects\RenderPass.cpp">
+      <Filter>Vulkan\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Objects\ShaderModules.cpp">
+      <Filter>Vulkan\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Objects\Swapchain.cpp">
+      <Filter>Vulkan\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Objects\SyncObjects.cpp">
+      <Filter>Vulkan\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Objects\VulkanInstance.cpp">
+      <Filter>Vulkan\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Vulkan\Objects\WindowSurface.cpp">
+      <Filter>Vulkan\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Platform\OSAbstraction\PlatformGLFW.cpp">
+      <Filter>Platform\OSAbstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LocalFileSystem.cpp">
+      <Filter>Platform\Microsoft</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\shaders\09_shader_base.frag">
+      <Filter>HelloTriangle\Shaders</Filter>
+    </None>
+    <None Include="..\src\shaders\09_shader_base.vert">
+      <Filter>HelloTriangle\Shaders</Filter>
+    </None>
+    <None Include="..\src\shaders\17_shader_vertexbuffer.frag">
+      <Filter>HelloTriangle\Shaders</Filter>
+    </None>
+    <None Include="..\src\shaders\17_shader_vertexbuffer.vert">
+      <Filter>HelloTriangle\Shaders</Filter>
+    </None>
+    <None Include="..\src\shaders\21_shader_ubo.frag">
+      <Filter>HelloTriangle\Shaders</Filter>
+    </None>
+    <None Include="..\src\shaders\21_shader_ubo.vert">
+      <Filter>HelloTriangle\Shaders</Filter>
+    </None>
+    <None Include="..\src\shaders\25_shader_textures.frag">
+      <Filter>HelloTriangle\Shaders</Filter>
+    </None>
+    <None Include="..\src\shaders\25_shader_textures.vert">
+      <Filter>HelloTriangle\Shaders</Filter>
+    </None>
+    <None Include="..\src\shaders\basicPlaid.frag">
+      <Filter>HelloTriangle\Shaders</Filter>
+    </None>
+    <None Include="..\src\shaders\compile.bat">
+      <Filter>HelloTriangle\Shaders</Filter>
+    </None>
+    <None Include="..\src\shaders\FullScreenTriangle.vert">
+      <Filter>HelloTriangle\Shaders</Filter>
+    </None>
+    <None Include="..\src\shaders\TexturedQuad.frag">
+      <Filter>HelloTriangle\Shaders</Filter>
+    </None>
+    <None Include="..\src\shaders\TexturedQuad.vert">
+      <Filter>HelloTriangle\Shaders</Filter>
+    </None>
+    <None Include="..\src\shaders\tjVolcanic.frag">
+      <Filter>HelloTriangle\Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

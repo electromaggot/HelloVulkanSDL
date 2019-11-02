@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\AppConstants.h" />
+    <ClInclude Include="..\src\HelloTriangle.h" />
+    <ClInclude Include="..\src\Platform\FileSystem.h" />
+    <ClInclude Include="..\src\Platform\ImageHandling\iImageSource.h" />
+    <ClInclude Include="..\src\Platform\ImageHandling\ImageSDL.h" />
+    <ClInclude Include="..\src\Platform\ImageHandling\ImageSTB.h" />
+    <ClInclude Include="..\src\Platform\ImageHandling\sdlEquivalents.h" />
+    <ClInclude Include="..\src\Platform\OSAbstraction\iPlatform.h" />
+    <ClInclude Include="..\src\Platform\OSAbstraction\PlatformGLFW.h" />
+    <ClInclude Include="..\src\Platform\OSAbstraction\PlatformSDL.h" />
+    <ClInclude Include="..\src\Platform\PlatformExtension.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\3DObjects\VertexBasedObject.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\BufferBase.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\CommandBufferBase.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\Descriptors.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\Mipmaps.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\PrimitiveBuffer.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\TextureImage.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\UniformBuffer.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\UniformBufferObjects.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\Vertex2D.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\Vertex2DColored.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\Vertex2DTextured.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\Vertex2DTextureTinted.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\VertexNull.h" />
+    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\VertexType.h" />
+    <ClInclude Include="..\src\Vulkan\Assist\DebugReport.h" />
+    <ClInclude Include="..\src\Vulkan\Assist\DeviceAssessment.h" />
+    <ClInclude Include="..\src\Vulkan\Assist\DeviceProfile.h" />
+    <ClInclude Include="..\src\Vulkan\Assist\DeviceRanking.h" />
+    <ClInclude Include="..\src\Vulkan\Assist\Helpers.h" />
+    <ClInclude Include="..\src\Vulkan\Assist\Utility.h" />
+    <ClInclude Include="..\src\Vulkan\Assist\ValidationLayers.h" />
+    <ClInclude Include="..\src\Vulkan\Assist\VulkanPlatform.h" />
+    <ClInclude Include="..\src\Vulkan\Objects\CommandObjects.h" />
+    <ClInclude Include="..\src\Vulkan\Objects\DeviceQueues.h" />
+    <ClInclude Include="..\src\Vulkan\Objects\Framebuffers.h" />
+    <ClInclude Include="..\src\Vulkan\Objects\GraphicsDevice.h" />
+    <ClInclude Include="..\src\Vulkan\Objects\GraphicsPipeline.h" />
+    <ClInclude Include="..\src\Vulkan\Objects\RenderPass.h" />
+    <ClInclude Include="..\src\Vulkan\Objects\ShaderModules.h" />
+    <ClInclude Include="..\src\Vulkan\Objects\Swapchain.h" />
+    <ClInclude Include="..\src\Vulkan\Objects\SyncObjects.h" />
+    <ClInclude Include="..\src\Vulkan\Objects\VulkanInstance.h" />
+    <ClInclude Include="..\src\Vulkan\Objects\WindowSurface.h" />
+    <ClInclude Include="..\src\Vulkan\Setup\RenderSettings.h" />
+    <ClInclude Include="..\src\Vulkan\Setup\Shader.h" />
+    <ClInclude Include="..\src\Vulkan\Setup\VulkanConfigure.h" />
+    <ClInclude Include="..\src\Vulkan\Setup\VulkanSetup.h" />
+    <ClInclude Include="..\src\Vulkan\Setup\VulkanSingleton.h" />
+    <ClInclude Include="src\optional.h" />
+    <ClInclude Include="src\PlatformConstants.h" />
+    <ClInclude Include="src\PlatformSpecifics.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\HelloTriangle.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\Platform\FileSystem.cpp" />
+    <ClCompile Include="..\src\Platform\OSAbstraction\PlatformGLFW.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\Platform\OSAbstraction\PlatformSDL.cpp" />
+    <ClCompile Include="..\src\Platform\PlatformCommon.cpp" />
+    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Quad2D.cpp" />
+    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Quad2DColored.cpp" />
+    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Quad2DTextured.cpp" />
+    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Quad2DTextureTinted.cpp" />
+    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Triangle2DColored.cpp" />
+    <ClCompile Include="..\src\Vulkan\AddOns\Descriptors.cpp" />
+    <ClCompile Include="..\src\Vulkan\AddOns\PrimitiveBuffer.cpp" />
+    <ClCompile Include="..\src\Vulkan\AddOns\TextureImage.cpp" />
+    <ClCompile Include="..\src\Vulkan\AddOns\UniformBuffer.cpp" />
+    <ClCompile Include="..\src\Vulkan\AddOns\VertexTypes\VertexTypes.cpp" />
+    <ClCompile Include="..\src\Vulkan\Assist\DebugReport.cpp" />
+    <ClCompile Include="..\src\Vulkan\Assist\DeviceAssessment.cpp" />
+    <ClCompile Include="..\src\Vulkan\Assist\DeviceRanking.cpp" />
+    <ClCompile Include="..\src\Vulkan\Assist\Utility.cpp" />
+    <ClCompile Include="..\src\Vulkan\Assist\ValidationLayers.cpp" />
+    <ClCompile Include="..\src\Vulkan\Assist\vkEnumStrings.cpp" />
+    <ClCompile Include="..\src\Vulkan\Objects\CommandObjects.cpp" />
+    <ClCompile Include="..\src\Vulkan\Objects\DeviceQueues.cpp" />
+    <ClCompile Include="..\src\Vulkan\Objects\Framebuffers.cpp" />
+    <ClCompile Include="..\src\Vulkan\Objects\GraphicsDevice.cpp" />
+    <ClCompile Include="..\src\Vulkan\Objects\GraphicsPipeline.cpp" />
+    <ClCompile Include="..\src\Vulkan\Objects\RenderPass.cpp" />
+    <ClCompile Include="..\src\Vulkan\Objects\ShaderModules.cpp" />
+    <ClCompile Include="..\src\Vulkan\Objects\Swapchain.cpp" />
+    <ClCompile Include="..\src\Vulkan\Objects\SyncObjects.cpp" />
+    <ClCompile Include="..\src\Vulkan\Objects\VulkanInstance.cpp" />
+    <ClCompile Include="..\src\Vulkan\Objects\WindowSurface.cpp" />
+    <ClCompile Include="..\src\Vulkan\Setup\VulkanSetup.cpp" />
+    <ClCompile Include="src\LocalFileSystem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\shaders\09_shader_base.frag" />
+    <None Include="..\src\shaders\09_shader_base.vert" />
+    <None Include="..\src\shaders\17_shader_vertexbuffer.frag" />
+    <None Include="..\src\shaders\17_shader_vertexbuffer.vert" />
+    <None Include="..\src\shaders\21_shader_ubo.frag" />
+    <None Include="..\src\shaders\21_shader_ubo.vert" />
+    <None Include="..\src\shaders\25_shader_textures.frag" />
+    <None Include="..\src\shaders\25_shader_textures.vert" />
+    <None Include="..\src\shaders\basicPlaid.frag" />
+    <None Include="..\src\shaders\compile.bat" />
+    <None Include="..\src\shaders\FullScreenTriangle.vert" />
+    <None Include="..\src\shaders\TexturedQuad.frag" />
+    <None Include="..\src\shaders\TexturedQuad.vert" />
+    <None Include="..\src\shaders\tjVolcanic.frag" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{61821F10-58EE-470C-BCAF-D8C8D3DF1ABF}</ProjectGuid>
+    <RootNamespace>HelloTriangle</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="CPPaccompaniedHfileDirectories.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="CPPaccompaniedHfileDirectories.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="CPPaccompaniedHfileDirectories.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="CPPaccompaniedHfileDirectories.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>build\$(Platform)\objs\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>build\$(Platform)\objs\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\External\VulkanSDK\1.1.121.2\Include;..\External\VulkanSDK\1.1.121.2\Third-Party\Include;..\External\SDL2\include;..\External\SDL2_image\include;$(CPPaccompaniedHfileFolders);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SDL_MAIN_HANDLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\External\VulkanSDK\1.1.121.2\Lib;..\External\VulkanSDK\1.1.121.2\Third-Party\Bin;..\External\SDL2\lib\$(Platform);..\External\SDL2_image\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vulkan-1.lib;SDL2.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <NoEntryPoint />
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "$(ProjectDir)..\External\VulkanSDK\1.1.121.2\Lib\*.dll" "$(TargetDir)"
+xcopy /y /d "$(ProjectDir)..\External\SDL2\lib\$(Platform)\*.dll" "$(TargetDir)"
+xcopy /y /d "$(ProjectDir)..\External\SDL2_image\lib\$(Platform)\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy DLLs to Output Directory</Message>
+    </PostBuildEvent>
+    <CustomBuildStep>
+      <Command>cd ../src/shaders
+compile.bat</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Compile Shaders</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <RootFolder>..\src\shaders</RootFolder>
+      <Outputs>build\compiledShaders</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\External\VulkanSDK\1.1.121.2\Include;..\External\VulkanSDK\1.1.121.2\Third-Party\Include;..\External\SDL2\include;..\External\SDL2_image\include;$(CPPaccompaniedHfileFolders);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SDL_MAIN_HANDLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\External\VulkanSDK\1.1.121.2\Lib;..\External\VulkanSDK\1.1.121.2\Third-Party\Bin;..\External\SDL2\lib\$(Platform);..\External\SDL2_image\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vulkan-1.lib;SDL2.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "$(ProjectDir)..\External\VulkanSDK\1.1.121.2\Lib\*.dll" "$(TargetDir)"
+xcopy /y /d "$(ProjectDir)..\External\SDL2\lib\$(Platform)\*.dll" "$(TargetDir)"
+xcopy /y /d "$(ProjectDir)..\External\SDL2_image\lib\$(Platform)\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy DLLs to Output Directory</Message>
+    </PostBuildEvent>
+    <CustomBuildStep>
+      <Command>cd ../src/shaders
+compile.bat</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Compile Shaders</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <RootFolder>..\src\shaders</RootFolder>
+      <Outputs>build\compiledShaders</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

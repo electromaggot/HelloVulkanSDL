@@ -1,0 +1,11 @@
+NOTES
+1. These files are only intended to be included in Xcode projects.
+2. The function vkEnumerateInstanceVersion(uint32_t* pApiVersion)
+  although prototyped in vulkan_core.h, fails to link when called,
+  because it doesn't seem implemented in the MoltenVK libraries.
+  So an "implementation" is provided here, which links, and tries
+  vkGetInstanceProcAddr() to locate the function, returning error
+  on failure.
+   If vkEnumerateInstanceVersion is also unavailable on other
+  platforms, consider moving this file into the common "src"
+  directory, unless it has been deprecated entirely, delete it.

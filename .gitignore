@@ -1,0 +1,67 @@
+# MICROSOFT
+# Should generally exclude Visual Studio-related build/user stuff:
+*.suo
+*.csproj.user
+bin/
+obj/
+*.vbproj.user
+*.vcxproj.user
+.vs
+# and logs and databases
+*.log
+*.sql
+*.sqlite
+# and another few build folders under SDL, and some SQL-related VS2013 files
+Win32/
+x64/
+*.sdf
+*.opensdf
+*.aps
+# and Vulkan-related, like compiled shaders
+*.spv
+# and general other Windows cruft
+thumbs.db
+desktop.ini
+
+# APPLE
+# Also Xcode-related build/user items:
+.DS_Store
+**/.DS_Store
+build/
+*/build/*
+#iOS/build/
+iOS/*.xcodeproj/xcuserdata/
+xcuserdata/
+iOS/*.xcodeproj/project.xcworkspace/xcuserdata/
+project.xcworkspace/
+# Sometimes we want to check in frameworks, but not this time:
+*.framework
+# VI/VIM artifact
+*.swp
+*~
+
+# GOOGLE
+# Also Android Studio files
+.idea
+.gradle
+local.properties
+*.iml
+# and Build files and directories
+*.o
+*.apk
+
+# IN GENERAL
+# any build directory soundly ignored
+build
+# project-local directory designed to hold links to platform-local 3rd Party libraries
+External
+
+# LOCAL/PERSONAL
+# and these definitely would be specifically Tadd's somethin-r-anothers:
+*.tadd
+bak/
+bak*
+#*.sh
+*.bash
+WIP/
+
