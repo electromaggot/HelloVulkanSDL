@@ -1,4 +1,82 @@
 # HelloVulkanSDL
-Skeleton Vulkan project using SDL -- "Hello Triangle" plus examples of "Vulkan Tutorial"
 
-Build instructions and further project description coming very soon!
+A starting-point for platform-independent graphics projects based on [Vulkan](https://www.khronos.org/vulkan/) and [SDL](https://www.libsdl.org/).
+
+Currently supports:
+- iOS and macOS (Xcode 11)
+- Windows (Visual Studio 2019)
+
+**Windows Requisites and Language Notes:** Visual Studio 2019 is required for this project, which is replete with modern C/C++ syntax, so won't build on older VS versions.
+One example is the use of "designated initializers," aligning with a main design goal here: "The less code, the better."
+That even means the most minimal code appearing on the visible page (although without crowding).
+Vulkan setup requires ubiquitous pre-initialized data structures, so streamlining their definition is important (designated initializers have existed for years in Clang/GCC for C++ and since C99).
+Clang/LLVM is the targetted compiler, C++14/libc++ the intended language variant.
+
+## Build Instructions
+
+You'll need to download the following:
+ 1. Vulkan SDK
+ 2. Simple DirectMedia Layer (SDL)
+Instructions/links to follow.
+
+Whatever location you install these to, the Project will have to know where to find them, so it can include their header files and link with their library binaries.
+In the root directory of the Project, there will be a subdirectory called "External" - where the Project's build process will look to find these dependencies.  So while you can modify the build settings, it's easiest to do one of these two options:
+  A. Either install the packages to this "External" directory.
+  B. Or set up *symbolic links* from within this directory to the locations where you actually have them installed.
+     To assist you, each platform-specific directory contains a script you can run to set up the links.  However, it requires a minor edit first.
+
+**SPECIFIC INSTRUCTIONS**
+
+1. Download Vulkan SDK:  https://vulkan.lunarg.com/sdk/home#windows
+
+	a. Run the .exe and when possible, change the Install directory to:  External\VulkanSDK
+
+	b. -OR- Install the SDK to wherever you want, then:
+		> cd External
+	    ON WINDOWS, for example:
+		> mklink /J VulkanSDK <path/to/where/you/installed/sdk>
+	    ON MAC:
+		> ln -s <path/to/where/you/installed/sdk> VulkanSDK
+
+	    Example from my machine:  mklink /J VulkanSDK ..\..\Modules\3rdParty\VulkanSDK
+
+2. Download the DEVELOPMENT LIBRARIES for both:
+
+	a. **SDL:**  https://www.libsdl.org/download-2.0.php
+
+	   You're probably running 64-bit Windows, so download:  SDL2-devel-2.0.<xx>-VC.zip
+		(where "<xx>" is the latest version number)
+		(DON'T bother with the "Runtime Binaries" -- they're just DLLs, lacking the .H files we need)
+
+	   Unzip the  SDL2-2.0.xx  directory, either into External or your own location and link it like 1b. above:
+
+		> mklink /J SDL2-2.0.<xx> <path/to/where/you/installed/sdl2>
+
+	   Example from my machine:  mklink /J SDL2-2.0.10 ..\..\Modules\3rdParty\SDL2-2.0.10
+
+	b. **SDL_image:**  https://www.libsdl.org/projects/SDL_image/
+
+	   Similar to above, you'll probably want to download:  SDL2_image-devel-2.0.<x>-VC.zip
+		("<x>" is latest)
+	   and unzip/link it the same way.  Example:  mklink /J SDL2_image-2.0.5 ..\..\Modules\3rdParty\SDL2_image-2.0.5
+
+3. Edit and run the "setup1st" script for your specific platform:
+
+    MAC:
+
+    1. Open Terminal (click Magnifying Glass in upper right, enter "terminal").
+	2. "cd" to where you downloaded/cloned and the "Xcode" directory.
+	3. To make sure you have the relative path correct: ls ../../<to directory where you downloaded #1 & #2 above> 
+    4. Edit "setup1st.sh" and replace the EXTERNAL_LIBRARY_PATH with the one you just saw.
+    5. Run the script:  ./setup1st.sh
+	6. Verify "External" directory created in project root and that its symbollic links list actual files/dirs.
+ 
+    WINDOWS:
+
+    1. Open a Command Prompt.
+	2. "cd" to where you downloaded/cloned and the "VisualStudio" directory.
+	3. To make sure you have the relative path correct: dir ..\..\<to directory where you downloaded #1 & #2 above> 
+    4. Edit "setup1st.bat" and replace the EXTERNAL_LIBRARY_PATH with the one you just saw.
+    5. Run the batch file:  ./setup1st.bat
+	6. Verify "External" directory created in project root and that its junction links list actual files/dirs.
+
