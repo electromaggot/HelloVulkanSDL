@@ -19,20 +19,18 @@ Clang/LLVM is the targetted compiler, C++14/libc++ the intended language variant
 You'll need to download the following:
  1. Vulkan SDK
  2. Simple DirectMedia Layer (SDL)
-Instructions/links to follow.
+
+More-specific instructions/links are in the next section.
 
 Whatever location you install these to, the Project will have to know where to find them, so it can include their header files and link with their library binaries.\
-In the root directory of the Project, there will be a subdirectory called `External` - where the Project's build process will look to find these dependencies.  So while you can modify the build settings, it's easiest to do one of these two options:\
-<ol type="A">
-  <li>Either install the packages to this `External` directory.</li>
-  <li>Or set up *symbolic links* from within this directory to the locations where you actually have them installed.<br/>
-      To assist you, each platform-specific directory contains a script you can run to set up the links.  However, it
-      requires a minor edit first.</li>
-</ol>
+In the root directory of the Project, there will be a subdirectory called `External` where the Project's build process will look to find these dependencies.  So while you can modify the build settings, it's easiest to do one of these two options:\
+&nbsp;&nbsp;&nbsp;&nbsp;A. Either install the packages to this `External` directory.\
+&nbsp;&nbsp;&nbsp;&nbsp;B. Or set up *symbolic links* from within this directory to the locations where you actually have them installed. To assist you,\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;each platform-specific directory contains a script you can run to set up the links.  However, it requires a minor edit first.
 
-**SPECIFIC INSTRUCTIONS**
+**STEP-BY-STEP INSTRUCTIONS**
 
-1. Download Vulkan SDK:  https://vulkan.lunarg.com/sdk/home#windows \
+1. Download **Vulkan SDK**:  https://vulkan.lunarg.com/sdk/home#windows \
   a. Run the `.exe` and when requested, change the Install directory to:  `External\VulkanSDK`\
   b. -OR- Install the SDK to wherever you want, then:\
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`> cd External`<br/>
