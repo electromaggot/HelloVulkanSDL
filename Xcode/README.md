@@ -39,7 +39,7 @@
    HelloVulkanSDL repo includes additional Xcode projects to build the iOS frameworks for SDL:
 	1. `> cd ./Xcode/iOSFrameworks`
 	2. `> open SDL-iOS.xcodeproj`
-	3. Build from Xcode. &rarr; A `build` directory will be created, containing `SDL_iOS.framework` files.\
+	3. Build the **BuildFatFramework** target &rarr; creates a `build` directory containing `SDL_iOS.framework` files.\
 	   Later, the HelloVulkanSDL project will know to find the iOS frameworks there.  As for the macOS ones, #3 above
 	   already created links in the `./External` directory (or you dragged/copied the macOS frameworks yourself).
 	4. `> open SDL_image-iOS.xcodeproj` and do the same.
