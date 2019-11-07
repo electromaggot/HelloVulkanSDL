@@ -30,20 +30,27 @@ In the root directory of the Project, there will be a subdirectory called `Exter
 
 **STEP-BY-STEP INSTRUCTIONS**
 
-0. After cloning this project (or downloading/unzipping it, then opening a Terminal (Mac) or Command Prompt (Windows)),
+0. After cloning this project (or downloading/unzipping it, then opening a Terminal (Mac) or Command Prompt (Windows)),\
    `cd` to the project's directory and assume that is `./` as referred to below (of course reversing the slash for Windows).
 
-1. Download **Vulkan SDK**: &nbsp; https://vulkan.lunarg.com/sdk/home#windows \
-   Run the `.exe` and when requested, either:\
-  a) Change the Install directory to: &nbsp; `./External/VulkanSDK`\
-  b) -OR- Install the SDK to wherever you want, requiring you to run the script in #3.\
+1. Download the latest **Vulkan SDK**: \
+   **Windows**: &nbsp; https://vulkan.lunarg.com/sdk/home#windows \
+   &nbsp;&nbsp;&nbsp;&nbsp;Run the `.exe` and when requested, either:\
+   &nbsp;&nbsp;&nbsp;&nbsp;a) Change the Install directory to: &nbsp; `./External/VulkanSDK`\
+   &nbsp;&nbsp;&nbsp;&nbsp;b) -OR- Install the SDK to wherever you want, requiring you to run the script in #3 below.
+
+   **Mac**: &nbsp; https://vulkan.lunarg.com/sdk/home#mac \
+   &nbsp;&nbsp;&nbsp;&nbsp;Double-click the `.tar.gz` and drag/`mv` the extracted directory to either:\
+   &nbsp;&nbsp;&nbsp;&nbsp;a) `./External/VulkanSDK` (renaming it)\
+   &nbsp;&nbsp;&nbsp;&nbsp;b) -OR- wherever you want, while still renaming it as just `VulkanSDK` and running the script in #3.
 2. Download the DEVELOPMENT LIBRARIES for both of these:\
   a) **SDL:** &nbsp; https://www.libsdl.org/download-2.0.php \
-	 &nbsp;&nbsp;&nbsp;&nbsp;Windows: you're probably running 64-bit, so download: &nbsp; `SDL2-devel-2.0.<xx>-VC.zip`\
+	 &nbsp;&nbsp;&nbsp;&nbsp;**Windows**: you're probably running 64-bit, so download: &nbsp; `SDL2-devel-2.0.<xx>-VC.zip`\
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(where "\<xx>" is the latest version number)\
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(DON'T bother with the "Runtime Binaries" -- they're just DLLs, lacking the .H files we need)\
-	 &nbsp;&nbsp;&nbsp;&nbsp;Mac: download: &nbsp; `SDL2-2.0.<xx>.dmg`\
-	 &nbsp;&nbsp;&nbsp;&nbsp;Unzip (or double-click) the `SDL2-2.0.xx` directory, either into `./External` or by dragging it, or into your own location like 1b) above.\
+	 &nbsp;&nbsp;&nbsp;&nbsp;**Mac**: download: &nbsp; `SDL2-2.0.<xx>.dmg`\
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Double-click and drag `SDL2.framework` into either `./External` or\
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;into your own location like 1b) above.\
   b) **SDL_image:** &nbsp; https://www.libsdl.org/projects/SDL_image/ \
 	 &nbsp;&nbsp;&nbsp;&nbsp;Similar to above, you'll probably want to download: &nbsp; `SDL2_image-devel-2.0.<x>-VC.zip`\
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;("\<x>" is latest)\
@@ -52,34 +59,34 @@ In the root directory of the Project, there will be a subdirectory called `Exter
 3. To set up symbolic links (skip this if you installed everything to the `./External` directory).
    edit and run the "setup1st" script for your specific platform as follows:<br/>\
     MAC - from Terminal:
-    2. `cd` to where you downloaded/cloned and then into the `Xcode` directory.
-    3. To make sure you have the relative path correct: `ls ../../<to directory where you downloaded #1 & #2 above>`
-    4. Edit `setup1st.sh` and replace the `EXTERNAL_LIBRARY_PATH` with the one you just saw.
-    5. Run the script:  `./setup1st.sh`
-    6. Verify `External` directory created in project root and that its symbollic links list actual files/dirs.\
+    1. `cd` to where you downloaded/cloned and then into the `Xcode` directory.
+    2. To make sure you have the relative path correct: `ls ../../<to directory where you downloaded #1 & #2 above>`
+    3. Edit `setup1st.sh` and replace the `EXTERNAL_LIBRARY_PATH` with the one you just saw.
+    4. Run the script:  `./setup1st.sh`
+    5. Verify `External` directory created in project root and that its symbollic links list actual files/dirs.\
 
     WINDOWS - from Command Prompt:
-    2. `cd` to where you downloaded/cloned and then into the `VisualStudio` directory.
-    3. To make sure you have the relative path correct: `dir ..\..\<to directory where you downloaded #1 & #2 above>` 
-    4. Edit `setup1st.bat` and replace the `EXTERNAL_LIBRARY_PATH` with the one you just saw.
-    5. Run the batch file:  `./setup1st.bat`
-    6. Verify `External` directory created in project root and that its junction links list actual files/dirs.
+    1. `cd` to where you downloaded/cloned and then into the `VisualStudio` directory.
+    2. To make sure you have the relative path correct: `dir ..\..\<to directory where you downloaded #1 & #2 above>` 
+    3. Edit `setup1st.bat` and replace the `EXTERNAL_LIBRARY_PATH` with the one you just saw.
+    4. Run the batch file:  `./setup1st.bat`
+    5. Verify `External` directory created in project root and that its junction links list actual files/dirs.
 
 
 If the scripts don't work, here's how to manually replicate what they do.
 FOR BUILD PROCESS TO FIND:
-1. VulkanSDK:
+1. VulkanSDK:\
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`> cd ./External`<br/>
 	 &nbsp;&nbsp;&nbsp;&nbsp;ON WINDOWS, for example:<br/>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`> mklink /J VulkanSDK <path/to/where/you/installed/sdk>`<br/>
 	 &nbsp;&nbsp;&nbsp;&nbsp;ON MAC:<br/>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`> ln -s <path/to/where/you/installed/sdk> VulkanSDK`<br/>
 	 &nbsp;&nbsp;&nbsp;&nbsp;Example from my machine:  `mklink /J VulkanSDK ..\..\Modules\3rdParty\VulkanSDK`
-2. SDL:
+2. SDL:\
 	 &nbsp;&nbsp;&nbsp;&nbsp;Link this unzipped library like #1 above:\
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`> mklink /J SDL2-2.0.<xx> <path/to/where/you/installed/sdl2>`\
 	 &nbsp;&nbsp;&nbsp;&nbsp;Example from my machine:  `mklink /J SDL2-2.0.10 ..\..\Modules\3rdParty\SDL2-2.0.10`\
-3. SDL_image:
+3. SDL_image:\
 	 &nbsp;&nbsp;&nbsp;&nbsp;Link this the same way as #2 above.\
 	 &nbsp;&nbsp;&nbsp;&nbsp;Example:  `mklink /J SDL2_image-2.0.5 \..\..\Modules\3rdParty\SDL2_image-2.0.5`
 
