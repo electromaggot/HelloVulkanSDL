@@ -26,7 +26,7 @@ fi
 
 cd ../External
 
-ln -sfv "$EXTERNAL_LIBRARY_PATH/vulkansdk-macos-1.1.121.0" VulkanSDK
+ln -sfv "$EXTERNAL_LIBRARY_PATH/vulkansdk-macos-1.1.126.0" VulkanSDK
 
 ln -sfv "$EXTERNAL_LIBRARY_PATH/SDL2-2.0.10" SDL
 
