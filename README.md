@@ -5,7 +5,7 @@ Starting-point for platform-independent graphics projects based on [Vulkan](http
 A "Hello Triangle"-style (3D "Hello World") program, hides away much of Vulkan's extensive setup in an **object-oriented** manner.  Includes unified, reworked examples from [Vulkan Tutorial](https://vulkan-tutorial.com/) plus a bonus shader-based ray-marching example (thanks [ShaderToy](https://www.shadertoy.com/))!
 
 Currently supports:
-- iOS and macOS (Xcode 11)
+- iOS and macOS (Xcode 11) &nbsp; &rarr; &nbsp; [Mac Build Instructions](https://github.com/electromaggot/HelloVulkanSDL/tree/master/Xcode)
 - Windows (Visual Studio 2019)
 
 **Windows Requisites** and **Language Notes:** Visual Studio 2019 is required for this project, which is replete with modern C/C++ syntax, so won't build on older VS versions.\
