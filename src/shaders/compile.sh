@@ -1,6 +1,6 @@
 #!/bin/sh
 
-COMPILER=../../../../../Modules/3rdParty/Vulkan/VulkanSDK/macOS/bin/glslangValidator
+COMPILER=../../External/VulkanSDK/macOS/bin/glslangValidator
 
 DSTDIR=../../Xcode/Resources/compiledShaders
 
