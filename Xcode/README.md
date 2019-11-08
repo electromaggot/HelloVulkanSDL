@@ -24,8 +24,8 @@
 	 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (`<x>` being latest)\
 	 &nbsp; &nbsp; and unzip/double-click and relocate the contents the same way.
 3. Lastly, grab **glm**: &nbsp; https://glm.g-truc.net \
-	 &nbsp; &nbsp; Download using the upper-left link, e.g.: &nbsp; `glm-0.9.9.<x>.zip`\
-	 &nbsp; &nbsp; unzip/double-click and move the directory as you did previously.
+	 Download using the upper-left link, e.g.: &nbsp; `glm-0.9.9.<x>.zip`\
+	 unzip/double-click and move the directory as you did previously.
 
 4. To set up symbolic links (skip this if you installed everything to the `./External` directory),\
    modify and run the `setup1st.sh` script* as follows. &nbsp; From **Terminal**:
