@@ -8,7 +8,7 @@ REM  Assumes all source files are in this script's same directory, while the des
 REM	is different (included with the "build" products) as specified below.
 REM
 
-set COMPILER=..\..\External\VulkanSDK\1.1.121.2\Bin\glslangValidator.exe
+set COMPILER=..\..\External\VulkanSDK\1.1.126.0\Bin\glslangValidator.exe
 
 set DSTDIR=..\..\VisualStudio\build\compiledShaders
 
@@ -67,6 +67,6 @@ exit /B
 
 
 REM e.g.
-REM ..\..\External\VulkanSDK\1.1.121.2\Bin\glslangValidator.exe -V FullScreenTriangle.vert -o ..\..\VisualStudio\x64\Debug\compiledShaders\FullScreenTriangle-vert.spv
-REM ..\..\External\VulkanSDK\1.1.121.2\Bin\glslangValidator.exe -V tjVolcanic.frag -o ..\..\VisualStudio\x64\Debug\compiledShaders\tjVolcanic-frag.spv
+REM ..\..\External\VulkanSDK\1.1.126.0\Bin\glslangValidator.exe -V FullScreenTriangle.vert -o ..\..\VisualStudio\x64\Debug\compiledShaders\FullScreenTriangle-vert.spv
+REM ..\..\External\VulkanSDK\1.1.126.0\Bin\glslangValidator.exe -V tjVolcanic.frag -o ..\..\VisualStudio\x64\Debug\compiledShaders\tjVolcanic-frag.spv
 
