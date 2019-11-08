@@ -48,6 +48,9 @@
 	   already created links in the `./External` directory (or you dragged/copied the macOS frameworks yourself).
 	4. `> open SDL_image-iOS.xcodeproj` and do the same.
 
+6. Open `Xcode/HelloVulkanSDL.xcodeproj`, select a target, build, and run.\
+	To try different demos, change the `HelloTriangle.cpp` file's `iMode` variable atop the `HelloApplication::Init()` method.
+
 <br/>
 
 \* - If, for whatever reason, the setup script fails to work, here's how to manually replicate what it does.\
