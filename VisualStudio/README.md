@@ -29,7 +29,7 @@
     4. Run the batch file:  `.\setup1st.bat`
     5. Verify `External` directory created in project root and that its junction links list actual files/dirs.
 
-5. Open `VisualStudio\HelloVulkanSDL`, build, and run.\
+5. Open `VisualStudio\HelloVulkanSDL.sln`, build, and run.\
 	To try different demos, change the `iMode` variable atop the `HelloApplication::Init()` method in the `HelloTriangle.cpp` file.
 
 <br/>
