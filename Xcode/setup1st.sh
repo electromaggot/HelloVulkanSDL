@@ -32,5 +32,7 @@ ln -sfv "$EXTERNAL_LIBRARY_PATH/SDL2-2.0.10" SDL
 
 ln -sfv "$EXTERNAL_LIBRARY_PATH/SDL2_image-2.0.5" SDL_image
 
+ln -sfv "$EXTERNAL_LIBRARY_PATH/glm" glm
+
 echo "Done."
 

@@ -23,8 +23,11 @@
 	 &nbsp; &nbsp; &nbsp; &nbsp; or alternately: &nbsp; `SDL2_image-2.0.<x>.dmg`\
 	 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (`<x>` being latest)\
 	 &nbsp; &nbsp; and unzip/double-click and relocate the contents the same way.
+3. Lastly, grab **glm**: &nbsp; https://glm.g-truc.net \
+	 &nbsp; &nbsp; Download using the upper-left link, e.g.: &nbsp; `glm-0.9.9.<x>.zip`\
+	 &nbsp; &nbsp; unzip/double-click and move the directory as you did previously.
 
-3. To set up symbolic links (skip this if you installed everything to the `./External` directory),\
+4. To set up symbolic links (skip this if you installed everything to the `./External` directory),\
    modify and run the `setup1st.sh` script* as follows. &nbsp; From **Terminal**:
 	1. `cd` to where you downloaded/cloned, then into the **`Xcode`** directory.
 	2. Make sure you have the relative path correct: `ls ../../<to directory where you downloaded #1 & #2 above>`
@@ -34,7 +37,7 @@
 	4. Run the script:  `./setup1st.sh`
 	5. Verify `External` directory created in project root and that its symbolic links list actual files/dirs.
 
-4. Building for **iOS** (which you downloaded the SDL source code for above) requires an iOS framework.
+5. Building for **iOS** (which you downloaded the SDL source code for above) requires an iOS framework.
    SDL's own Xcode projects only build a framework for macOS (you'll need to do this) but not for iOS.  However this
    HelloVulkanSDL repo includes additional Xcode projects to build the iOS frameworks for SDL:
 	1. `> cd ./Xcode/iOSFrameworks`
@@ -60,3 +63,6 @@ FOR BUILD PROCESS TO FIND:
 3. SDL_image:\
 	Link this the same way as #2 above.\
 	Example:  `ln -s ..\..\Modules\3rdParty\SDL2_image-2.0.5 SDL_image`
+4. glm:\
+	`> ln -s <path/to/glm> glm`
+
