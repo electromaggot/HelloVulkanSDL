@@ -35,9 +35,17 @@ More-specific instructions/links are in each platform-centric subdirectory.
 
 Whatever location you install these to, the Project will have to know where to find them, so it can include their header files and link with their library binaries.\
 In the root directory of the HelloVulkanSDL Project, there will be a subdirectory called **`External`** where the Project's build process will look to find these dependencies.  So while you can modify the build settings, it's easiest to do one of these two options:\
-&nbsp; &nbsp; A. Either install the packages to this `External` directory.\
-&nbsp; &nbsp; B. Or set up *symbolic links* from within this directory to the locations where you actually have them installed.\
+&nbsp; &nbsp; A. Either install the packages to this `External` directory. &nbsp; ...or...\
+&nbsp; &nbsp; B. Set up *symbolic links* from within this directory to the locations where you actually have them installed.\
 &nbsp; &nbsp; &nbsp; &nbsp; To assist you, each platform-specific directory contains a `setup1st` script you can run to set up the links.\
-&nbsp; &nbsp; &nbsp; &nbsp; However, it requires a minor edit first.\
+&nbsp; &nbsp; &nbsp; &nbsp; However, it requires minor editing first.\
 &nbsp; &nbsp; &nbsp; &nbsp; The script generally assumes you have already installed these packages, where you want them,\
 &nbsp; &nbsp; &nbsp; &nbsp; so won't overzealously try to install them for you.
+
+## Attributions
+
+This project owes much inspiration and appreciation to:
+- [Alexander Overvoorde](https://github.com/Overv)'s excellent [Vulkan Tutorial](https://vulkan-tutorial.com/), which influenced much of my code and from which I blatantly stole sample shaders and assets, in order to rework and re-present them here.  His unrestrictive license is generous and I strive to do the same.
+- [Sascha Willems](https://www.saschawillems.de) for his outstanding [Examples](https://github.com/SaschaWillems/Vulkan), contributions to the community, sharing knowledge and helping devs on online forums.
+- LunarG for MoltenVK, for free, especially given Apple's limited support for it and their announced deprecation of OpenGL (a back-stab to the open 3D graphics standard to which Apple owes their early iPhone/AppStore success).
+- Khronos and partner companies for Vulkan.
