@@ -37,7 +37,7 @@
 \* - If, for whatever reason, the setup script fails to work, here's how to manually replicate what it does.\
 FOR BUILD PROCESS TO FIND:
 1. VulkanSDK:\
-	`> cd ./External`<br/>
+	`> cd .\External`<br/>
 	`> mklink /J VulkanSDK <path\to\where\you\installed\sdk>`<br/>
 	Example from my machine:  `mklink /J VulkanSDK ..\..\Modules\3rdParty\VulkanSDK`
 2. SDL:\
