@@ -29,7 +29,7 @@ Clang/LLVM is the targetted compiler, C++14/libc++ the intended language variant
 This project requires the following:
  1. Vulkan SDK
  2. Simple DirectMedia Layer (SDL)
- 3. OpenGL Mathematics (glm)
+ 3. OpenGL Mathematics (glm) (*note that this is included in the Windows version of #1*)
 
 More-specific instructions/links are in each platform-centric subdirectory.
 
@@ -49,3 +49,4 @@ This project owes much inspiration and appreciation to:
 - [Sascha Willems](https://www.saschawillems.de) for his outstanding [Examples](https://github.com/SaschaWillems/Vulkan), contributions to the community, sharing knowledge and helping devs on online forums.
 - LunarG for MoltenVK, for free, especially given Apple's limited support for it and their announced deprecation of OpenGL (a back-stab to the open 3D graphics standard to which Apple owes their early iPhone/AppStore success).
 - Khronos and partner companies for Vulkan.
+- [Inigo Quilez](https://www.iquilezles.org) for his awe-inspiring work (and sharing his secrets) too.
