@@ -9,14 +9,14 @@ REM  IMPORTANT!: Change EXTERNAL_LIBRARY_PATH below to match where your VulkanSD
 REM   SDL directories reside, relative to the 'External' directory in project root.
 REM
 
-set EXTERNAL_LIBRARY_PATH=..\..\..\Modules\3rdParty
+set EXTERNAL_LIBRARY_PATH=..\..\..\..\Modules\3rdParty
 
 if not exist %EXTERNAL_LIBRARY_PATH% (
   echo Warning: directory '%EXTERNAL_LIBRARY_PATH%' not found.
   echo You must set EXTERNAL_LIBRARY_PATH, by editing it inside this script,
   echo to the location of your VulkanSDK and SDL directories; assuming
   echo you installed them into a common parent directory.
-  exit
+  goto :EOF 
 )
 setlocal
 
@@ -39,7 +39,12 @@ if exist VulkanSDK (
 )
 mklink /J VulkanSDK %EXTERNAL_LIBRARY_PATH%\VulkanSDK
 
-cd ..\VisualStudio\build
+cd ..\VisualStudio
+
+if not exist build (
+  mkdir build
+)
+cd build
 
 echo Create one common 'build/compiledShaders' directory...
 
