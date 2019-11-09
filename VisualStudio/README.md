@@ -17,17 +17,66 @@
 	 &nbsp; &nbsp; Similar to above, you'll probably want to download: &nbsp; `SDL2_image-devel-2.0.<x>-VC.zip`\
 	 &nbsp; &nbsp; &nbsp; &nbsp; ("\<x>" is latest)\
 	 &nbsp; &nbsp; and unzip it the same way.
-3. Lastly, grab **glm**: &nbsp; https://glm.g-truc.net \
-	 Download using the upper-left link, e.g.: &nbsp; `glm-0.9.9.<x>.zip`\
-	 unzip/open/move the directory as you did previously.
 
-4. To set up symbolic links (skip this if you installed everything to the `.\External` directory),\
+3. To set up symbolic links (skip this if you installed everything to the `.\External` directory),\
    edit and run the `setup1st.bat` script* as follows. &nbsp; From **Command Prompt**:
-    1. `cd` to where you downloaded/cloned, then into the **`VisualStudio`** directory.
-    2. Make sure you have the relative path correct: `dir ..\..\<to directory where you downloaded #1 & #2 above>` 
-    3. `notepad setup1st.bat` and replace the `EXTERNAL_LIBRARY_PATH`'s value with the one you just saw.
-    4. Run the batch file:  `.\setup1st.bat`
-    5. Verify `External` directory created in project root and that its junction links list actual files/dirs.
+	1. `cd` to where you downloaded/cloned, then into the **`VisualStudio`** directory.
+	2. Make sure you have the relative path correct: `dir ..\..\<to directory where you downloaded #1 & #2 above>` 
+	3. `notepad setup1st.bat` and replace the `EXTERNAL_LIBRARY_PATH`'s value with the one you just saw.
+	   Also examine the SDK and SDL version numbers &ndash; which are part of the filenames/directory-names you
+	   downloaded and extracted &ndash; to make sure those in the script are up-to-date and match exactly.  Save and exit.
+	4. Run the batch file:  `.\setup1st.bat`
+	5. Verify `External` directory created in project root and that its junction links list actual files/dirs.
+
+4. Set up `build` directory and symbolic links **(skip this if you just ran the `setup1st.bat` file in #3.iv. above)**\
+   with the following hierarchy, which the running `.exe` will expect:
+
+VisualStudio
+<div style="width: 100%; display: table"><div style="display: table-row"><div style="width: 600px; display: table-cell">
+<ul>
+	<li>build<ul>
+		<li>compiledShaders</li>
+		<li>x64<ul>
+			<li>Debug<ul>
+				<li>compiledShaders</li>
+				<li>textures</li>
+			</ul></li>
+			<li>Release<ul>
+				<li>compiledShaders</li>
+				<li>textures</li>
+			</ul></li>
+		</ul></li>
+		<li>x86<ul>
+			<li>Debug<ul>
+				<li>compiledShaders</li>
+				<li>textures</li>
+			</ul></li>
+			<li>Release<ul>
+				<li>compiledShaders</li>
+				<li>textures</li>
+			</ul></li>
+		</ul></li>
+	</ul></li>
+</ul>
+</div>
+<div style="display: table-cell">
+	mkdir build<br>
+	mkdir compiledShaders
+	mkdir x64<br>
+	mkdir Debug<br>
+	mklink /J compiledShaders ..\..\compiledShaders<br>
+	mklink /J textures ..\..\..\..\assets\textures<br>
+	mkdir Release<br>
+	mklink /J compiledShaders ..\..\compiledShaders<br>
+	mklink /J textures ..\..\..\..\assets\textures<br>
+	mkdir x86<br>
+	mkdir Debug<br>
+	mklink /J compiledShaders ..\..\compiledShaders<br>
+	mklink /J textures ..\..\..\..\assets\textures<br>
+	mkdir Release<br>
+	mklink /J compiledShaders ..\..\compiledShaders<br>
+	mklink /J textures ..\..\..\..\assets\textures<br>
+</div></div></div>
 
 5. Open `VisualStudio\HelloVulkanSDL.sln`, build, and run.\
 	To try different demos, change the `iMode` variable atop the `HelloApplication::Init()` method in the `HelloTriangle.cpp` file.
@@ -47,6 +96,3 @@ FOR BUILD PROCESS TO FIND:
 3. SDL_image:\
 	Link this the same way as #2 above.\
 	Example:  `mklink /J SDL2_image-2.0.5 ..\..\Modules\3rdParty\SDL2_image-2.0.5`
-4. glm:\
-	`> mklink /J glm <path\to\glm>`
-
