@@ -32,8 +32,8 @@
    with the following hierarchy, which the running `.exe` will expect:
 
 VisualStudio
-<div style="width: 100%; display: table"><div style="display: table-row"><div style="width: 600px; display: table-cell">
-<ul>
+<table><tbody><tr>
+<td><ul>
 	<li>build<ul>
 		<li>compiledShaders</li>
 		<li>x64<ul>
@@ -57,26 +57,25 @@ VisualStudio
 			</ul></li>
 		</ul></li>
 	</ul></li>
-</ul>
-</div>
-<div style="display: table-cell">
-	mkdir build<br>
+</ul></td>
+<td><pre><code>	mkdir build
 	mkdir compiledShaders
-	mkdir x64<br>
-	mkdir Debug<br>
-	mklink /J compiledShaders ..\..\compiledShaders<br>
-	mklink /J textures ..\..\..\..\assets\textures<br>
-	mkdir Release<br>
-	mklink /J compiledShaders ..\..\compiledShaders<br>
-	mklink /J textures ..\..\..\..\assets\textures<br>
-	mkdir x86<br>
-	mkdir Debug<br>
-	mklink /J compiledShaders ..\..\compiledShaders<br>
-	mklink /J textures ..\..\..\..\assets\textures<br>
-	mkdir Release<br>
-	mklink /J compiledShaders ..\..\compiledShaders<br>
-	mklink /J textures ..\..\..\..\assets\textures<br>
-</div></div></div>
+	mkdir x64
+	mkdir Debug
+	mklink /J compiledShaders ..\..\compiledShaders
+	mklink /J textures ..\..\..\..\assets\textures
+	mkdir Release
+	mklink /J compiledShaders ..\..\compiledShaders
+	mklink /J textures ..\..\..\..\assets\textures
+	mkdir x86
+	mkdir Debug
+	mklink /J compiledShaders ..\..\compiledShaders
+	mklink /J textures ..\..\..\..\assets\textures
+	mkdir Release
+	mklink /J compiledShaders ..\..\compiledShaders
+	mklink /J textures ..\..\..\..\assets\textures
+</code></pre></td>
+</tr></tbody></table>
 
 5. Open `VisualStudio\HelloVulkanSDL.sln`, build, and run.\
 	To try different demos, change the `iMode` variable atop the `HelloApplication::Init()` method in the `HelloTriangle.cpp` file.
