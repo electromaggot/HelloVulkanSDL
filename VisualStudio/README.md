@@ -28,12 +28,38 @@
 	4. Run the batch file:  `.\setup1st.bat`
 	5. Verify `External` directory created in project root and that its junction links list actual files/dirs.
 
-4. Set up `build` directory and symbolic links **(skip this if you just ran the `setup1st.bat` file in #3.iv. above)**\
-   with the following hierarchy, which the running `.exe` will expect:
+4. Ensure `build` directory has symbolic links **(skip this if you just ran the `setup1st.bat` file in #3.iv. above)**.\
+   The running `.exe` expects to find `compiledShaders` and `textures` subdirectories in its same working directory.\
+   These are set up as links at install time (right now) to avoid redundantly copying big files every build.\
+   If this was not done via `setup1st.bat` or it failed, refer to
+   [Build Directory](https://github.com/electromaggot/HelloVulkanSDL/edit/master/VisualStudio#build-directory) below.
 
-VisualStudio
+5. Open `VisualStudio\HelloVulkanSDL.sln`, build, and run.\
+	To try different demos, change the `iMode` variable atop the `HelloApplication::Init()` method in the `HelloTriangle.cpp` file.
+
+<br/>
+
+\* - If, for whatever reason, the setup script fails to work, here's how to manually replicate its setup of the `External` directory.\
+FOR BUILD PROCESS TO FIND:
+1. VulkanSDK:\
+	`> cd .\External`<br/>
+	`> mklink /J VulkanSDK <path\to\where\you\installed\sdk>`<br/>
+	Example from my machine:  `mklink /J VulkanSDK ..\..\Modules\3rdParty\VulkanSDK`
+2. SDL:\
+	Link this unzipped library like #1 above:\
+	`> mklink /J SDL2-2.0.<xx> <path\to\where\you\installed\sdl2>`\
+	Example from my machine:  `mklink /J SDL2-2.0.10 ..\..\Modules\3rdParty\SDL2-2.0.10`
+3. SDL_image:\
+	Link this the same way as #2 above.\
+	Example:  `mklink /J SDL2_image-2.0.5 ..\..\Modules\3rdParty\SDL2_image-2.0.5`
+	
+### Build Directory
+
 <table><tbody><tr>
-<td><ul>
+	<td>Hierarchy within <b>VisualStudio</b> directory</td>
+	<td><b>Command Prompt</b> commands to set up</td>
+</tr>
+<tr><td><ul>
 	<li>build<ul>
 		<li>compiledShaders</li>
 		<li>x64<ul>
@@ -58,40 +84,31 @@ VisualStudio
 		</ul></li>
 	</ul></li>
 </ul></td>
-<td><pre><code>	mkdir build
-	mkdir compiledShaders
-	mkdir x64
-	mkdir Debug
-	mklink /J compiledShaders ..\..\compiledShaders
-	mklink /J textures ..\..\..\..\assets\textures
-	mkdir Release
-	mklink /J compiledShaders ..\..\compiledShaders
-	mklink /J textures ..\..\..\..\assets\textures
-	mkdir x86
-	mkdir Debug
-	mklink /J compiledShaders ..\..\compiledShaders
-	mklink /J textures ..\..\..\..\assets\textures
-	mkdir Release
-	mklink /J compiledShaders ..\..\compiledShaders
-	mklink /J textures ..\..\..\..\assets\textures
-</code></pre></td>
+<td><pre>mkdir build
+cd build
+mkdir compiledShaders
+mkdir x64
+cd x64
+mkdir Debug
+cd Debug
+mklink /J compiledShaders ..\..\compiledShaders
+mklink /J textures ..\..\..\..\assets\textures
+cd ..
+mkdir Release
+cd Release
+mklink /J compiledShaders ..\..\compiledShaders
+mklink /J textures ..\..\..\..\assets\textures
+cd ..\..
+mkdir x86
+cd x86
+mkdir Debug
+cd Debug
+mklink /J compiledShaders ..\..\compiledShaders
+mklink /J textures ..\..\..\..\assets\textures
+cd ..
+mkdir Release
+cd Release
+mklink /J compiledShaders ..\..\compiledShaders
+mklink /J textures ..\..\..\..\assets\textures
+</pre></td>
 </tr></tbody></table>
-
-5. Open `VisualStudio\HelloVulkanSDL.sln`, build, and run.\
-	To try different demos, change the `iMode` variable atop the `HelloApplication::Init()` method in the `HelloTriangle.cpp` file.
-
-<br/>
-
-\* - If, for whatever reason, the setup script fails to work, here's how to manually replicate what it does.\
-FOR BUILD PROCESS TO FIND:
-1. VulkanSDK:\
-	`> cd .\External`<br/>
-	`> mklink /J VulkanSDK <path\to\where\you\installed\sdk>`<br/>
-	Example from my machine:  `mklink /J VulkanSDK ..\..\Modules\3rdParty\VulkanSDK`
-2. SDL:\
-	Link this unzipped library like #1 above:\
-	`> mklink /J SDL2-2.0.<xx> <path\to\where\you\installed\sdl2>`\
-	Example from my machine:  `mklink /J SDL2-2.0.10 ..\..\Modules\3rdParty\SDL2-2.0.10`
-3. SDL_image:\
-	Link this the same way as #2 above.\
-	Example:  `mklink /J SDL2_image-2.0.5 ..\..\Modules\3rdParty\SDL2_image-2.0.5`
