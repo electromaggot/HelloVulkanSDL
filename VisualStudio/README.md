@@ -22,7 +22,7 @@
    edit and run the `setup1st.bat` script* as follows. &nbsp; From **Command Prompt**:
 	1. `cd` to where you downloaded/cloned, then into the **`VisualStudio`** directory.
 	2. Make sure you have the relative path correct: `dir ..\..\<to directory where you downloaded #1 & #2 above>` 
-	3. `notepad setup1st.bat` and replace the `EXTERNAL_LIBRARY_PATH`'s value with the one you just saw.
+	3. `notepad setup1st.bat` and replace the `EXTERNAL_LIBRARY_PATH`'s value with the one you just saw.\
 	   Also examine the SDK and SDL version numbers &ndash; which are part of the filenames/directory-names you
 	   downloaded and extracted &ndash; to make sure those in the script are up-to-date and match exactly.  Save and exit.
 	4. Run the batch file:  `.\setup1st.bat`
