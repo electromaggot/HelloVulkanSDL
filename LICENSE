@@ -8,8 +8,8 @@ means.
 In jurisdictions that recognize copyright laws, the author or authors
 of this software dedicate any and all copyright interest in the
 software to the public domain. We make this dedication for the benefit
-of the public at large [[and to the detriment of our heirs and
-successors]]*. We intend this dedication to be an overt act of
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
 relinquishment in perpetuity of all present and future rights to this
 software under copyright law.
 
@@ -21,9 +21,4 @@ OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-For more information, please refer to <https://unlicense.org>
-
-[[ * -- Edit by Tadd: Uh, this part above seems a bit melodramatic,
-despite being in the original Unlicense verbiage.  Any "heirs and
-successors" will be just fine, and in the spirit of sharing, may
-in fact benefit from more open, "considerate of others" world. ]]
+For more information, please refer to <http://unlicense.org/>
