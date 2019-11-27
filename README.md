@@ -8,7 +8,7 @@ General Features:
   - a bonus shader-based ray-marching example (thanks [ShaderToy](https://www.shadertoy.com/))!
 - **Object-oriented** encapsulation of Vulkan's extensive setup
 - [RAII](https://en.cppreference.com/w/cpp/language/raii) and injected dependencies (making their heirarchy obvious)
-- Design goals: code that's [reusable, modular, minimalist](https://github.com/electromaggot/HelloVulkanSDL/wiki#design-goals)
+- Design goals: code that's [reusable, modular, minimalist](https://github.com/electromaggot/HelloVulkanSDL/wiki/Not%E2%80%90so%E2%80%90frequently-Asked-Questions#design-goals)
 
 Specific Features:
 - Ranking mechanism to automatically choose the best graphics device
@@ -19,12 +19,12 @@ Supports:
 - Windows (Visual Studio 2019) &nbsp; &rarr; &nbsp; [Windows Build Instructions](https://github.com/electromaggot/HelloVulkanSDL/tree/master/VisualStudio#windows-build-instructions)
 - (Android and VR platform support coming soon!__[*](https://github.com/electromaggot/HelloVulkanSDL#contributing)__)
 
-**Windows Requisites** and **Language Notes:** Yes, Visual Studio 2019 is required for this project.  [Why?](https://github.com/electromaggot/HelloVulkanSDL/wiki#why-visual-studio-2019-only)\
+**Windows Requisites** and **Language Notes:** Yes, Visual Studio 2019 is required for this project.  [Why?](https://github.com/electromaggot/HelloVulkanSDL/wiki/Not%E2%80%90so%E2%80%90frequently-Asked-Questions#why-visual-studio-2019-only)\
 Clang/LLVM is the targeted compiler, C++14/libc++ the intended language variant.
 
-Why another "Hello Vulkan" project?  Hopefully this one is different.  [Some reasoning and justification here](https://github.com/electromaggot/HelloVulkanSDL/wiki#why-another-hello-vulkan-or-hello-triangle-etc-when-there-are-many-others-on-github).
+Why another "Hello Vulkan" project?  Hopefully this one is different.  [Some reasoning and justification here](https://github.com/electromaggot/HelloVulkanSDL/wiki/Not%E2%80%90so%E2%80%90frequently-Asked-Questions#why-another-hello-vulkan-or-hello-triangle-etc-when-there-are-many-others-on-github).
 
-Find a note about my [choice of Unlicense here](https://github.com/electromaggot/HelloVulkanSDL/wiki/Home/_edit#license-related-personal-comment).
+Find a note about my [choice of Unlicense here](https://github.com/electromaggot/HelloVulkanSDL/wiki/Not%E2%80%90so%E2%80%90frequently-Asked-Questions#license-related-personal-comment).
 
 ## General Build Dependencies
 
