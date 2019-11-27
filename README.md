@@ -46,7 +46,7 @@ In the root directory of the HelloVulkanSDL Project, there will be a subdirector
 
 ## Contributing
 
-__&#42;__ &ndash; I could use your help!  This project isn't perfect, but I seek to perfect it.  If you see problems with how I'm doing something, please submit an issue and tell me.  If you'd like to contribute with a pull-request, please do!  If you don't like SDL, I tried to generalize it to an interface (`iPlatform`) and I added GLFW/WTF files too, but I didn't test these.  Feel free to fix and PR.  The same goes for the aforementioned Android/VR additions.  If you help, of course I'll give you credit as a contributor here.
+__&#42;__ &ndash; I could use your help!  This project isn't perfect, but I seek to perfect it.  If you see problems with how I'm doing something, please submit an issue and tell me.  If you'd like to contribute with a pull-request, please do!  If you don't like SDL, I tried to generalize it to an interface (`iPlatform`) and I added GLFW/STB/WTF files too, but I didn't test these.  Feel free to fix and PR.  The same goes for the aforementioned Android/VR additions.  If you help, of course I'll give you credit as a contributor here.
 
 ## Acknowledgements
 
