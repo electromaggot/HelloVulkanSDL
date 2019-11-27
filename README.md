@@ -33,11 +33,11 @@ This project requires the following:
  2. Simple DirectMedia Layer (SDL)
  3. OpenGL Mathematics (glm) (*note that this is included in the Windows version of #1*)
 
-More-specific instructions/links are in each platform-centric subdirectory.
+More-specific instructions/links are in each platform-centric subdirectory. &nbsp; (again: [Windows here](https://github.com/electromaggot/HelloVulkanSDL/tree/master/VisualStudio#windows-build-instructions), [Mac here](https://github.com/electromaggot/HelloVulkanSDL/tree/master/Xcode#mac-build-instructions))
 
-Whatever location you install these to, the Project will have to know where to find them, so it can include their header files and link with their library binaries.\
+Whatever location you install these dependencies to, the Project will have to know where to find them, so it can include their header files and link with their library binaries.\
 In the root directory of the HelloVulkanSDL Project, there will be a subdirectory called **`External`** where the Project's build process looks to find these dependencies.  So while you can modify the build settings, it's easiest to do one of these two options:\
-&nbsp; &nbsp; A. Either install the packages to this `External` directory. &nbsp; ...or...\
+&nbsp; &nbsp; A. Either install the packages to this **`External`** directory. &nbsp; ...or...\
 &nbsp; &nbsp; B. Set up *symbolic links* from within this directory to the locations where you actually have them installed.\
 &nbsp; &nbsp; &nbsp; &nbsp; To assist you, each platform-specific directory contains a `setup1st` script you can run to set up the links.\
 &nbsp; &nbsp; &nbsp; &nbsp; However, it requires minor editing first.\
