@@ -315,7 +315,7 @@
 				9EEBF713228067FC00AC0B7F /* Apple */,
 			);
 			name = Platform;
-			path = ../src/Platform;
+			path = ../src/VulkanModule/Platform;
 			sourceTree = "<group>";
 		};
 		9E6B2DE32332AFDE00F7575D /* iOS */ = {
@@ -345,7 +345,7 @@
 				9EBD618F232EBC14005ADF20 /* Objects */,
 			);
 			name = Vulkan;
-			path = ../src/Vulkan;
+			path = ../src/VulkanModule;
 			sourceTree = "<group>";
 		};
 		9EA5CCFD23144B7D00178010 /* 3DObjects */ = {
@@ -987,7 +987,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../src/Vulkan/Setup,
+					../src/VulkanModule/Setup,
 					../External/VulkanSDK/MoltenVK/include,
 					../External/VulkanSDK/MoltenVK/include/vulkan,
 					../External/glm,
@@ -1028,7 +1028,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../src/Vulkan/Setup,
+					../src/VulkanModule/Setup,
 					../External/VulkanSDK/MoltenVK/include,
 					../External/VulkanSDK/MoltenVK/include/vulkan,
 					../External/glm,
