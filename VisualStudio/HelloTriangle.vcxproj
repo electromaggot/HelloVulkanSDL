@@ -21,54 +21,54 @@
   <ItemGroup>
     <ClInclude Include="..\src\AppConstants.h" />
     <ClInclude Include="..\src\HelloTriangle.h" />
-    <ClInclude Include="..\src\Platform\FileSystem.h" />
-    <ClInclude Include="..\src\Platform\ImageHandling\iImageSource.h" />
-    <ClInclude Include="..\src\Platform\ImageHandling\ImageSDL.h" />
-    <ClInclude Include="..\src\Platform\ImageHandling\ImageSTB.h" />
-    <ClInclude Include="..\src\Platform\ImageHandling\sdlEquivalents.h" />
-    <ClInclude Include="..\src\Platform\OSAbstraction\iPlatform.h" />
-    <ClInclude Include="..\src\Platform\OSAbstraction\PlatformGLFW.h" />
-    <ClInclude Include="..\src\Platform\OSAbstraction\PlatformSDL.h" />
-    <ClInclude Include="..\src\Platform\PlatformExtension.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\3DObjects\VertexBasedObject.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\BufferBase.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\CommandBufferBase.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\Descriptors.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\Mipmaps.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\PrimitiveBuffer.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\TextureImage.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\UniformBuffer.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\UniformBufferObjects.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\Vertex2D.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\Vertex2DColored.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\Vertex2DTextured.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\Vertex2DTextureTinted.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\VertexNull.h" />
-    <ClInclude Include="..\src\Vulkan\AddOns\VertexTypes\VertexType.h" />
-    <ClInclude Include="..\src\Vulkan\Assist\DebugReport.h" />
-    <ClInclude Include="..\src\Vulkan\Assist\DeviceAssessment.h" />
-    <ClInclude Include="..\src\Vulkan\Assist\DeviceProfile.h" />
-    <ClInclude Include="..\src\Vulkan\Assist\DeviceRanking.h" />
-    <ClInclude Include="..\src\Vulkan\Assist\Helpers.h" />
-    <ClInclude Include="..\src\Vulkan\Assist\Utility.h" />
-    <ClInclude Include="..\src\Vulkan\Assist\ValidationLayers.h" />
-    <ClInclude Include="..\src\Vulkan\Assist\VulkanPlatform.h" />
-    <ClInclude Include="..\src\Vulkan\Objects\CommandObjects.h" />
-    <ClInclude Include="..\src\Vulkan\Objects\DeviceQueues.h" />
-    <ClInclude Include="..\src\Vulkan\Objects\Framebuffers.h" />
-    <ClInclude Include="..\src\Vulkan\Objects\GraphicsDevice.h" />
-    <ClInclude Include="..\src\Vulkan\Objects\GraphicsPipeline.h" />
-    <ClInclude Include="..\src\Vulkan\Objects\RenderPass.h" />
-    <ClInclude Include="..\src\Vulkan\Objects\ShaderModules.h" />
-    <ClInclude Include="..\src\Vulkan\Objects\Swapchain.h" />
-    <ClInclude Include="..\src\Vulkan\Objects\SyncObjects.h" />
-    <ClInclude Include="..\src\Vulkan\Objects\VulkanInstance.h" />
-    <ClInclude Include="..\src\Vulkan\Objects\WindowSurface.h" />
-    <ClInclude Include="..\src\Vulkan\Setup\RenderSettings.h" />
-    <ClInclude Include="..\src\Vulkan\Setup\Shader.h" />
-    <ClInclude Include="..\src\Vulkan\Setup\VulkanConfigure.h" />
-    <ClInclude Include="..\src\Vulkan\Setup\VulkanSetup.h" />
-    <ClInclude Include="..\src\Vulkan\Setup\VulkanSingleton.h" />
+    <ClInclude Include="..\src\VulkanModule\Platform\FileSystem.h" />
+    <ClInclude Include="..\src\VulkanModule\Platform\ImageHandling\iImageSource.h" />
+    <ClInclude Include="..\src\VulkanModule\Platform\ImageHandling\ImageSDL.h" />
+    <ClInclude Include="..\src\VulkanModule\Platform\ImageHandling\ImageSTB.h" />
+    <ClInclude Include="..\src\VulkanModule\Platform\ImageHandling\sdlEquivalents.h" />
+    <ClInclude Include="..\src\VulkanModule\Platform\OSAbstraction\iPlatform.h" />
+    <ClInclude Include="..\src\VulkanModule\Platform\OSAbstraction\PlatformGLFW.h" />
+    <ClInclude Include="..\src\VulkanModule\Platform\OSAbstraction\PlatformSDL.h" />
+    <ClInclude Include="..\src\VulkanModule\Platform\PlatformExtension.h" />
+    <ClInclude Include="..\src\VulkanModule\addons\3dobjects\vertexbasedobject.h" />
+    <ClInclude Include="..\src\VulkanModule\AddOns\BufferBase.h" />
+    <ClInclude Include="..\src\VulkanModule\AddOns\CommandBufferBase.h" />
+    <ClInclude Include="..\src\VulkanModule\AddOns\Descriptors.h" />
+    <ClInclude Include="..\src\VulkanModule\AddOns\Mipmaps.h" />
+    <ClInclude Include="..\src\VulkanModule\AddOns\PrimitiveBuffer.h" />
+    <ClInclude Include="..\src\VulkanModule\AddOns\TextureImage.h" />
+    <ClInclude Include="..\src\VulkanModule\AddOns\UniformBuffer.h" />
+    <ClInclude Include="..\src\VulkanModule\AddOns\UniformBufferObjects.h" />
+    <ClInclude Include="..\src\VulkanModule\AddOns\VertexTypes\Vertex2D.h" />
+    <ClInclude Include="..\src\VulkanModule\AddOns\VertexTypes\Vertex2DColored.h" />
+    <ClInclude Include="..\src\VulkanModule\AddOns\VertexTypes\Vertex2DTextured.h" />
+    <ClInclude Include="..\src\VulkanModule\AddOns\VertexTypes\Vertex2DTextureTinted.h" />
+    <ClInclude Include="..\src\VulkanModule\AddOns\VertexTypes\VertexNull.h" />
+    <ClInclude Include="..\src\VulkanModule\AddOns\VertexTypes\VertexType.h" />
+    <ClInclude Include="..\src\VulkanModule\Assist\DebugReport.h" />
+    <ClInclude Include="..\src\VulkanModule\Assist\DeviceAssessment.h" />
+    <ClInclude Include="..\src\VulkanModule\Assist\DeviceProfile.h" />
+    <ClInclude Include="..\src\VulkanModule\Assist\DeviceRanking.h" />
+    <ClInclude Include="..\src\VulkanModule\Assist\Helpers.h" />
+    <ClInclude Include="..\src\VulkanModule\Assist\Utility.h" />
+    <ClInclude Include="..\src\VulkanModule\Assist\ValidationLayers.h" />
+    <ClInclude Include="..\src\VulkanModule\Assist\VulkanPlatform.h" />
+    <ClInclude Include="..\src\VulkanModule\Objects\CommandObjects.h" />
+    <ClInclude Include="..\src\VulkanModule\Objects\DeviceQueues.h" />
+    <ClInclude Include="..\src\VulkanModule\Objects\Framebuffers.h" />
+    <ClInclude Include="..\src\VulkanModule\Objects\GraphicsDevice.h" />
+    <ClInclude Include="..\src\VulkanModule\Objects\GraphicsPipeline.h" />
+    <ClInclude Include="..\src\VulkanModule\Objects\RenderPass.h" />
+    <ClInclude Include="..\src\VulkanModule\Objects\ShaderModules.h" />
+    <ClInclude Include="..\src\VulkanModule\Objects\Swapchain.h" />
+    <ClInclude Include="..\src\VulkanModule\Objects\SyncObjects.h" />
+    <ClInclude Include="..\src\VulkanModule\Objects\VulkanInstance.h" />
+    <ClInclude Include="..\src\VulkanModule\Objects\WindowSurface.h" />
+    <ClInclude Include="..\src\VulkanModule\Setup\RenderSettings.h" />
+    <ClInclude Include="..\src\VulkanModule\Setup\Shader.h" />
+    <ClInclude Include="..\src\VulkanModule\Setup\VulkanConfigure.h" />
+    <ClInclude Include="..\src\VulkanModule\Setup\VulkanSetup.h" />
+    <ClInclude Include="..\src\VulkanModule\Setup\VulkanSingleton.h" />
     <ClInclude Include="src\optional.h" />
     <ClInclude Include="src\PlatformConstants.h" />
     <ClInclude Include="src\PlatformSpecifics.h" />
@@ -76,40 +76,40 @@
   <ItemGroup>
     <ClCompile Include="..\src\HelloTriangle.cpp" />
     <ClCompile Include="..\src\main.cpp" />
-    <ClCompile Include="..\src\Platform\FileSystem.cpp" />
-    <ClCompile Include="..\src\Platform\OSAbstraction\PlatformGLFW.cpp">
+    <ClCompile Include="..\src\VulkanModule\Platform\FileSystem.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Platform\OSAbstraction\PlatformGLFW.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\src\Platform\OSAbstraction\PlatformSDL.cpp" />
-    <ClCompile Include="..\src\Platform\PlatformCommon.cpp" />
-    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Quad2D.cpp" />
-    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Quad2DColored.cpp" />
-    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Quad2DTextured.cpp" />
-    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Quad2DTextureTinted.cpp" />
-    <ClCompile Include="..\src\Vulkan\AddOns\3DObjects\Triangle2DColored.cpp" />
-    <ClCompile Include="..\src\Vulkan\AddOns\Descriptors.cpp" />
-    <ClCompile Include="..\src\Vulkan\AddOns\PrimitiveBuffer.cpp" />
-    <ClCompile Include="..\src\Vulkan\AddOns\TextureImage.cpp" />
-    <ClCompile Include="..\src\Vulkan\AddOns\UniformBuffer.cpp" />
-    <ClCompile Include="..\src\Vulkan\AddOns\VertexTypes\VertexTypes.cpp" />
-    <ClCompile Include="..\src\Vulkan\Assist\DebugReport.cpp" />
-    <ClCompile Include="..\src\Vulkan\Assist\DeviceAssessment.cpp" />
-    <ClCompile Include="..\src\Vulkan\Assist\DeviceRanking.cpp" />
-    <ClCompile Include="..\src\Vulkan\Assist\Utility.cpp" />
-    <ClCompile Include="..\src\Vulkan\Assist\ValidationLayers.cpp" />
-    <ClCompile Include="..\src\Vulkan\Assist\vkEnumStrings.cpp" />
-    <ClCompile Include="..\src\Vulkan\Objects\CommandObjects.cpp" />
-    <ClCompile Include="..\src\Vulkan\Objects\DeviceQueues.cpp" />
-    <ClCompile Include="..\src\Vulkan\Objects\Framebuffers.cpp" />
-    <ClCompile Include="..\src\Vulkan\Objects\GraphicsDevice.cpp" />
-    <ClCompile Include="..\src\Vulkan\Objects\GraphicsPipeline.cpp" />
-    <ClCompile Include="..\src\Vulkan\Objects\RenderPass.cpp" />
-    <ClCompile Include="..\src\Vulkan\Objects\ShaderModules.cpp" />
-    <ClCompile Include="..\src\Vulkan\Objects\Swapchain.cpp" />
-    <ClCompile Include="..\src\Vulkan\Objects\SyncObjects.cpp" />
-    <ClCompile Include="..\src\Vulkan\Objects\VulkanInstance.cpp" />
-    <ClCompile Include="..\src\Vulkan\Objects\WindowSurface.cpp" />
-    <ClCompile Include="..\src\Vulkan\Setup\VulkanSetup.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Platform\OSAbstraction\PlatformSDL.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Platform\PlatformCommon.cpp" />
+    <ClCompile Include="..\src\VulkanModule\AddOns\3DObjects\Quad2D.cpp" />
+    <ClCompile Include="..\src\VulkanModule\AddOns\3DObjects\Quad2DColored.cpp" />
+    <ClCompile Include="..\src\VulkanModule\AddOns\3DObjects\Quad2DTextured.cpp" />
+    <ClCompile Include="..\src\VulkanModule\AddOns\3DObjects\Quad2DTextureTinted.cpp" />
+    <ClCompile Include="..\src\VulkanModule\AddOns\3DObjects\Triangle2DColored.cpp" />
+    <ClCompile Include="..\src\VulkanModule\AddOns\Descriptors.cpp" />
+    <ClCompile Include="..\src\VulkanModule\AddOns\PrimitiveBuffer.cpp" />
+    <ClCompile Include="..\src\VulkanModule\AddOns\TextureImage.cpp" />
+    <ClCompile Include="..\src\VulkanModule\AddOns\UniformBuffer.cpp" />
+    <ClCompile Include="..\src\VulkanModule\AddOns\VertexTypes\VertexTypes.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Assist\DebugReport.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Assist\DeviceAssessment.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Assist\DeviceRanking.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Assist\Utility.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Assist\ValidationLayers.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Assist\vkEnumStrings.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Objects\CommandObjects.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Objects\DeviceQueues.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Objects\Framebuffers.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Objects\GraphicsDevice.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Objects\GraphicsPipeline.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Objects\RenderPass.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Objects\ShaderModules.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Objects\Swapchain.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Objects\SyncObjects.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Objects\VulkanInstance.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Objects\WindowSurface.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Setup\VulkanSetup.cpp" />
     <ClCompile Include="src\LocalFileSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -218,7 +218,7 @@
       <NoEntryPoint />
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y /d "$(ProjectDir)..\External\VulkanSDK\1.1.121.2\Lib\*.dll" "$(TargetDir)"
+      <Command>xcopy /y /d "$(ProjectDir)..\External\VulkanSDK\Lib\*.dll" "$(TargetDir)"
 xcopy /y /d "$(ProjectDir)..\External\SDL2\lib\$(Platform)\*.dll" "$(TargetDir)"
 xcopy /y /d "$(ProjectDir)..\External\SDL2_image\lib\$(Platform)\*.dll" "$(TargetDir)"</Command>
     </PostBuildEvent>
@@ -269,7 +269,7 @@ compile.bat</Command>
       <AdditionalDependencies>vulkan-1.lib;SDL2.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y /d "$(ProjectDir)..\External\VulkanSDK\1.1.121.2\Lib\*.dll" "$(TargetDir)"
+      <Command>xcopy /y /d "$(ProjectDir)..\External\VulkanSDK\Lib\*.dll" "$(TargetDir)"
 xcopy /y /d "$(ProjectDir)..\External\SDL2\lib\$(Platform)\*.dll" "$(TargetDir)"
 xcopy /y /d "$(ProjectDir)..\External\SDL2_image\lib\$(Platform)\*.dll" "$(TargetDir)"</Command>
     </PostBuildEvent>
