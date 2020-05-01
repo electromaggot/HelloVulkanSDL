@@ -85,7 +85,7 @@ void ShaderModules::createShaderStageInfos()
 			.flags	= 0,
 			.stage	= shaderStageBits[iShader],
 			.module	= shaderModules[iShader],
-			.pSpecializationInfo = nullptr,
-			.pName	= nameFunctionEntrypoints[iShader]
+			.pName	= nameFunctionEntrypoints[iShader],
+			.pSpecializationInfo = nullptr
 		};
 }

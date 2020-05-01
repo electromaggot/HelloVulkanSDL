@@ -12,6 +12,7 @@
 
 #include "AppConstants.h"	// (one of only two tie-ins from our Vulkan module back to the App)
 
+#undef __cpp_impl_three_way_comparison		//TJ: otherwise "spaceship operator" errors-out with: std::partial_ordering not supported
 #include "vulkan/vulkan.hpp"		// for error to_string(VkResult)
 
 
@@ -55,10 +56,10 @@ void VulkanInstance::createInstance(iPlatform& platform, ValidationLayers& layer
 		.pNext					 = nullptr,
 		.flags					 = 0,
 		.pApplicationInfo		 = &appInfo,
-		.enabledExtensionCount	 = platform.getVulkanExtensionCount(),
-		.ppEnabledExtensionNames = platform.getSupportedVulkanExtensions(),
 		.enabledLayerCount		 = layers.NumEnabledLayers(),
-		.ppEnabledLayerNames	 = layers.ppEnabledLayerNames()
+		.ppEnabledLayerNames	 = layers.ppEnabledLayerNames(),
+		.enabledExtensionCount	 = platform.getVulkanExtensionCount(),
+		.ppEnabledExtensionNames = platform.getSupportedVulkanExtensions()
 	};
 
 	Log(NOTE, "Initializing Vulkan runtime instance...");
