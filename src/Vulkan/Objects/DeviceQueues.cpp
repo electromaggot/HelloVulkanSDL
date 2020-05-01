@@ -18,46 +18,47 @@ DeviceQueues::DeviceQueues()
 
 // For the given physical device and display surface pair, query all Queue Families
 //	for the specific ones that support Graphics commands and Present operation.
-// Return an assessment of how "suitable" the queue/family is for the most typical
+// Return an assessment of how "suitable" the queue/family is for our most typical
 //	purpose, which is rendering graphics and presenting them to a display device.
 //
 QueueFitness DeviceQueues::DetermineFamilyIndices(VkPhysicalDevice& physicalDevice, VkSurfaceKHR& surface)
 {
+	suitability = NOT_SUPPORTED;
+
 	uint32_t nFamilies = 0;
 	vkGetPhysicalDeviceQueueFamilyProperties(physicalDevice, &nFamilies, nullptr);
 	if (nFamilies == 0)
-		Log(ERROR, "Physical Device selected supports NO Queue Families.");
+		Log(ERROR, "Physical Device supports NO Queue Families.");
+	else {
+		VkQueueFamilyProperties familyProperties[nFamilies];
+		vkGetPhysicalDeviceQueueFamilyProperties(physicalDevice, &nFamilies, familyProperties);
 
-	VkQueueFamilyProperties familyProperties[nFamilies];
-	vkGetPhysicalDeviceQueueFamilyProperties(physicalDevice, &nFamilies, familyProperties);
-
-	suitability = NOT_SUPPORTED;
-
-	for (int iFamily = 0; iFamily < nFamilies; ++iFamily)
-	{
-		VkQueueFamilyProperties& family = familyProperties[iFamily];
-
-		if (family.queueCount > 0)
+		for (int iFamily = 0; iFamily < nFamilies; ++iFamily)
 		{
-			bool supportsGraphics = (family.queueFlags & VK_QUEUE_GRAPHICS_BIT);
+			VkQueueFamilyProperties& family = familyProperties[iFamily];
 
-			VkBool32 supportsPresent = false;
-			vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, iFamily, surface, &supportsPresent);
+			if (family.queueCount > 0)
+			{
+				bool supportsGraphics = (family.queueFlags & VK_QUEUE_GRAPHICS_BIT);
 
-			if (supportsGraphics && supportsPresent) {	// Ideally one queue family supporting both
-				indexGraphicsFamily	= iFamily;			//	Graphics and Present is preferred,
-				indexPresentFamily	= iFamily;
-				suitability = IDEAL_EXCLUSIVE;
-				break;									//	so if found, quit early successfully.
+				VkBool32 supportsPresent = false;
+				vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, iFamily, surface, &supportsPresent);
+
+				if (supportsGraphics && supportsPresent) {	// Ideally one queue family supporting both
+					indexGraphicsFamily = iFamily;			//	Graphics and Present is preferred,
+					indexPresentFamily = iFamily;
+					suitability = IDEAL_EXCLUSIVE;
+					break;									//	so if found, quit early successfully.
+				}
+				if (supportsGraphics && indexGraphicsFamily == INDEX_UNDEFINED) { // Otherwise, accept non-overlapping
+					indexGraphicsFamily = iFamily;								  //  families (favoring first-found)...
+					suitability |= SUPPORTS_GRAPHICS;
+				}
+				if (supportsPresent && indexPresentFamily == INDEX_UNDEFINED) {
+					indexPresentFamily = iFamily;
+					suitability |= SUPPORTS_PRESENT;
+				}																  //  ...and keep looking.
 			}
-			if (supportsGraphics && indexGraphicsFamily == INDEX_UNDEFINED)	{ // Otherwise, accept non-overlapping
-				indexGraphicsFamily = iFamily;								  //  families (favoring first-found)...
-				suitability |= SUPPORTS_GRAPHICS;
-			}
-			if (supportsPresent && indexPresentFamily == INDEX_UNDEFINED) {
-				indexPresentFamily = iFamily;
-				suitability |= SUPPORTS_PRESENT;
-			}																  //  ...and keep looking.
 		}
 	}
 	return suitability;
