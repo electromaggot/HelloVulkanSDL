@@ -27,17 +27,17 @@ if not exist ..\External (
 )
 cd ..\External
 if exist SDL2 (
-  del SDL2
+  rmdir SDL2
 )
-mklink /J SDL2 %EXTERNAL_LIBRARY_PATH%\SDL2-2.0.10
+mklink /J SDL2 %EXTERNAL_LIBRARY_PATH%\SDL2-2.0.12
 if exist SDL2_image (
-  del SDL2_image
+  rmdir SDL2_image
 )
 mklink /J SDL2_image %EXTERNAL_LIBRARY_PATH%\SDL2_image-2.0.5
 if exist VulkanSDK (
-  del VulkanSDK
+  rmdir VulkanSDK
 )
-mklink /J VulkanSDK %EXTERNAL_LIBRARY_PATH%\VulkanSDK
+mklink /J VulkanSDK %EXTERNAL_LIBRARY_PATH%\VulkanSDK\1.2.135.0
 
 cd ..\VisualStudio
 
@@ -88,11 +88,11 @@ exit /B
   cd %SUBDIRNAME%
 
   if exist textures (
-    del textures
+    rmdir textures
   )
   mklink /J textures ..\..\..\..\assets\textures
   if exist compiledShaders (
-    del compiledShaders
+    rmdir compiledShaders
   )
   mklink /J compiledShaders ..\..\compiledShaders
   cd ..
