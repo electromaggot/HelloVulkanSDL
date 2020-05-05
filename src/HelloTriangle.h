@@ -59,10 +59,6 @@ private:
 	SyncObjects&	syncObjects;
 	VkExtent2D&		swapchainExtent;
 
-	//TJ_TODO: hoping to streamline this one soon:
-	CommandObjects*	pCommandObjects;
-	UniformBuffer*	pUniformBuffer;
-
 		// METHODS
 public:
 	void Run();
@@ -72,4 +68,6 @@ private:
 	void prepareForMainLoop();
 	void update();
 	void draw();
+	void updateSpinOnZAxis(float time, float aspectRatio);
+	void updateRayCast(float time);
 };

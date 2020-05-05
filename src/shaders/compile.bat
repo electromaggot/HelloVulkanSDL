@@ -8,10 +8,13 @@ REM  Assumes all source files are in this script's same directory, while the des
 REM	is different (included with the "build" products) as specified below.
 REM
 
-set COMPILER=..\..\External\VulkanSDK\1.1.126.0\Bin\glslangValidator.exe
+set COMPILER=..\..\External\VulkanSDK\Bin\glslangValidator.exe
 
 set DSTDIR=..\..\VisualStudio\build\compiledShaders
 
+if not exist "%DSTDIR%" (
+  mkdir "%DSTDIR%"
+)
 
 for %%F in (*.vert *.frag) do (
 

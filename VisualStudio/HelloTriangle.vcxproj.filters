@@ -44,6 +44,12 @@
     <Filter Include="Vulkan\AddOns\VertexTypes">
       <UniqueIdentifier>{01cb5cf0-9da6-4744-ad29-0be1430bd9c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\GUISystem">
+      <UniqueIdentifier>{c73bc4b0-1df1-4a08-99df-bf954384375a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vulkan\AddOns\Renderables">
+      <UniqueIdentifier>{911a83b6-0eb7-4446-9b56-d92108328079}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\AppConstants.h">
@@ -205,6 +211,24 @@
     <ClInclude Include="..\src\VulkanModule\Platform\ImageHandling\sdlEquivalents.h">
       <Filter>Platform\ImageHandling</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\VulkanModule\Platform\GUISystem\imgui.h">
+      <Filter>Platform\GUISystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VulkanModule\Platform\GUISystem\imgui_impl_sdl.h">
+      <Filter>Platform\GUISystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VulkanModule\AddOns\Renderables\AddOns.h">
+      <Filter>Vulkan\AddOns\Renderables</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VulkanModule\AddOns\Renderables\FixedRenderable.h">
+      <Filter>Vulkan\AddOns\Renderables</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VulkanModule\AddOns\Renderables\iRenderable.h">
+      <Filter>Vulkan\AddOns\Renderables</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VulkanModule\Objects\EventObjects.h">
+      <Filter>Vulkan\Objects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\HelloTriangle.cpp">
@@ -311,6 +335,18 @@
     </ClCompile>
     <ClCompile Include="src\LocalFileSystem.cpp">
       <Filter>Platform\Microsoft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VulkanModule\Platform\GUISystem\imgui_impl_sdl.cpp">
+      <Filter>Platform\GUISystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VulkanModule\AddOns\Renderables\AddOns.cpp">
+      <Filter>Vulkan\AddOns\Renderables</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VulkanModule\AddOns\Renderables\FixedRenderable.cpp">
+      <Filter>Vulkan\AddOns\Renderables</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VulkanModule\Objects\EventObjects.cpp">
+      <Filter>Vulkan\Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
