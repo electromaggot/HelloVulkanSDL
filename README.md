@@ -1,5 +1,5 @@
+![snapshots of all demos](https://github.com/electromaggot/HelloVulkanSDL/blob/master/screenshots.png)
 # HelloVulkanSDL
-
 Starting-point for platform-independent graphics projects based on [Vulkan](https://www.khronos.org/vulkan/) and [SDL](https://www.libsdl.org/).
 
 General Features:
