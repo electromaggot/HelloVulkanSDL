@@ -19,6 +19,9 @@
 #if TARGET_OS_IPHONE	// Why Apple still has emplace_back as "experimental," lord knows.
 						//	Also, they don't support it having non-default constructors, so this:
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED > __IPHONE_12_0	// Later added: Actually they seem to have fixed it now!  That is,
+														//	iOS emplace_back is no longer the non-portable __emplace_back.
+														//TODO: DEPRECATE and DELETE all of this later.
 	#define emplace_back1(p1)		__emplace_back(p1)
 
 									// Yes, this one is specific to one specific class: Described
@@ -31,7 +34,7 @@
 
 	#define emplace_back(...)	GET_MACRO(__VA_ARGS__, emplace_back2, emplace_back1)(__VA_ARGS__)
 
-
+#endif
 #endif
 
 

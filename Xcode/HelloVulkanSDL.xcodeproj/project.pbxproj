@@ -32,6 +32,14 @@
 		9E38920C23297DCE0024D111 /* Descriptors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E389209232973490024D111 /* Descriptors.cpp */; };
 		9E3CA04422834D9A007494D6 /* DeviceQueues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CA04222834D9A007494D6 /* DeviceQueues.cpp */; };
 		9E3CA0452287E62C007494D6 /* DeviceQueues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CA04222834D9A007494D6 /* DeviceQueues.cpp */; };
+		9E4480572462D8ED009A8EA4 /* imgui_impl_sdl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4480562462D8ED009A8EA4 /* imgui_impl_sdl.cpp */; };
+		9E44805E2462DA13009A8EA4 /* AddOns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E44805A2462DA13009A8EA4 /* AddOns.cpp */; };
+		9E44805F2462DA13009A8EA4 /* AddOns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E44805A2462DA13009A8EA4 /* AddOns.cpp */; };
+		9E4480602462DA13009A8EA4 /* FixedRenderable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E44805C2462DA13009A8EA4 /* FixedRenderable.cpp */; };
+		9E4480612462DA13009A8EA4 /* FixedRenderable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E44805C2462DA13009A8EA4 /* FixedRenderable.cpp */; };
+		9E4480622462DA22009A8EA4 /* imgui_impl_sdl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4480562462D8ED009A8EA4 /* imgui_impl_sdl.cpp */; };
+		9E4480652462DAE1009A8EA4 /* EventObjects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4480632462DAE0009A8EA4 /* EventObjects.cpp */; };
+		9E4480662462DB12009A8EA4 /* EventObjects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4480632462DAE0009A8EA4 /* EventObjects.cpp */; };
 		9E6B2DD7233272A800F7575D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1124EB220F998F00DBA190 /* IOKit.framework */; };
 		9E6B2DD8233272E000F7575D /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2DAE17232E8BFA004ADDCB /* IOSurface.framework */; };
 		9E6B2DD92332730200F7575D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1124E7220F988100DBA190 /* Metal.framework */; };
@@ -153,6 +161,16 @@
 		9E38920A232973490024D111 /* Descriptors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Descriptors.h; sourceTree = "<group>"; };
 		9E3CA04222834D9A007494D6 /* DeviceQueues.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DeviceQueues.cpp; sourceTree = "<group>"; };
 		9E3CA04322834D9A007494D6 /* DeviceQueues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceQueues.h; sourceTree = "<group>"; };
+		9E4480542462D8ED009A8EA4 /* imgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui.h; sourceTree = "<group>"; };
+		9E4480552462D8ED009A8EA4 /* imgui_impl_sdl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_sdl.h; sourceTree = "<group>"; };
+		9E4480562462D8ED009A8EA4 /* imgui_impl_sdl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_impl_sdl.cpp; sourceTree = "<group>"; };
+		9E4480592462DA13009A8EA4 /* AddOns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOns.h; sourceTree = "<group>"; };
+		9E44805A2462DA13009A8EA4 /* AddOns.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AddOns.cpp; sourceTree = "<group>"; };
+		9E44805B2462DA13009A8EA4 /* iRenderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRenderable.h; sourceTree = "<group>"; };
+		9E44805C2462DA13009A8EA4 /* FixedRenderable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FixedRenderable.cpp; sourceTree = "<group>"; };
+		9E44805D2462DA13009A8EA4 /* FixedRenderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedRenderable.h; sourceTree = "<group>"; };
+		9E4480632462DAE0009A8EA4 /* EventObjects.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EventObjects.cpp; sourceTree = "<group>"; };
+		9E4480642462DAE0009A8EA4 /* EventObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventObjects.h; sourceTree = "<group>"; };
 		9E6B2DDF2332790A00F7575D /* MoltenVK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MoltenVK.framework; path = ../External/VulkanSDK/MoltenVK/iOS/framework/MoltenVK.framework; sourceTree = "<group>"; };
 		9E6B2DE12332AF5300F7575D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/iOS/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		9E6C1B0E234BF74900A86F04 /* Mipmaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mipmaps.h; sourceTree = "<group>"; };
@@ -233,7 +251,7 @@
 		9EF5A4EF231ED00300524830 /* UniformBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniformBuffer.h; sourceTree = "<group>"; };
 		9EF5A4F0231ED00300524830 /* UniformBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UniformBuffer.cpp; sourceTree = "<group>"; };
 		9EF5A4F3231EF79000524830 /* BufferBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferBase.h; sourceTree = "<group>"; };
-		9EF5A4F4231F083D00524830 /* UniformBufferObjects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UniformBufferObjects.h; sourceTree = "<group>"; };
+		9EF5A4F4231F083D00524830 /* UniformBufferLiterals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UniformBufferLiterals.h; sourceTree = "<group>"; };
 		9EFA5B2A22DD0CF100B63757 /* VulkanConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VulkanConfigure.h; sourceTree = "<group>"; };
 		9EFA5B2D22EB466500B63757 /* DeviceAssessment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DeviceAssessment.cpp; sourceTree = "<group>"; };
 		9EFA5B2E22EB466500B63757 /* DeviceAssessment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceAssessment.h; sourceTree = "<group>"; };
@@ -308,6 +326,7 @@
 			children = (
 				9EBD6192232EEA07005ADF20 /* OSAbstraction */,
 				9EBD6193232EEA37005ADF20 /* ImageHandling */,
+				9E4480532462D850009A8EA4 /* GUISystem */,
 				9EC4858D2231A31F007C7242 /* PlatformExtension.h */,
 				9EC4858A222DE445007C7242 /* PlatformCommon.cpp */,
 				9EFA5B4223024AA900B63757 /* FileSystem.cpp */,
@@ -316,6 +335,29 @@
 			);
 			name = Platform;
 			path = ../src/VulkanModule/Platform;
+			sourceTree = "<group>";
+		};
+		9E4480532462D850009A8EA4 /* GUISystem */ = {
+			isa = PBXGroup;
+			children = (
+				9E4480562462D8ED009A8EA4 /* imgui_impl_sdl.cpp */,
+				9E4480552462D8ED009A8EA4 /* imgui_impl_sdl.h */,
+				9E4480542462D8ED009A8EA4 /* imgui.h */,
+			);
+			name = GUISystem;
+			path = GUISystem/stubs;
+			sourceTree = "<group>";
+		};
+		9E4480582462D99D009A8EA4 /* Renderables */ = {
+			isa = PBXGroup;
+			children = (
+				9E44805A2462DA13009A8EA4 /* AddOns.cpp */,
+				9E4480592462DA13009A8EA4 /* AddOns.h */,
+				9E44805B2462DA13009A8EA4 /* iRenderable.h */,
+				9E44805C2462DA13009A8EA4 /* FixedRenderable.cpp */,
+				9E44805D2462DA13009A8EA4 /* FixedRenderable.h */,
+			);
+			path = Renderables;
 			sourceTree = "<group>";
 		};
 		9E6B2DE32332AFDE00F7575D /* iOS */ = {
@@ -444,6 +486,8 @@
 				9E82E5A82203B51600AC8F7D /* CommandObjects.h */,
 				9E82E5A42203B51600AC8F7D /* SyncObjects.cpp */,
 				9E82E5A62203B51600AC8F7D /* SyncObjects.h */,
+				9E4480632462DAE0009A8EA4 /* EventObjects.cpp */,
+				9E4480642462DAE0009A8EA4 /* EventObjects.h */,
 				9E3CA04222834D9A007494D6 /* DeviceQueues.cpp */,
 				9E3CA04322834D9A007494D6 /* DeviceQueues.h */,
 			);
@@ -544,6 +588,7 @@
 		9EF5A4E42315BE3B00524830 /* AddOns */ = {
 			isa = PBXGroup;
 			children = (
+				9E4480582462D99D009A8EA4 /* Renderables */,
 				9EA5CCFD23144B7D00178010 /* 3DObjects */,
 				9EF5A4EE231EB31400524830 /* VertexTypes */,
 				9E389209232973490024D111 /* Descriptors.cpp */,
@@ -553,7 +598,7 @@
 				9E6C1B0E234BF74900A86F04 /* Mipmaps.h */,
 				9EF5A4F0231ED00300524830 /* UniformBuffer.cpp */,
 				9EF5A4EF231ED00300524830 /* UniformBuffer.h */,
-				9EF5A4F4231F083D00524830 /* UniformBufferObjects.h */,
+				9EF5A4F4231F083D00524830 /* UniformBufferLiterals.h */,
 				9EF5A4E02314D26400524830 /* PrimitiveBuffer.cpp */,
 				9EF5A4E12314D26400524830 /* PrimitiveBuffer.h */,
 				9E87F5CD232183880009062F /* CommandBufferBase.h */,
@@ -716,13 +761,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EF5A4EA231B236B00524830 /* Quad2DColored.cpp in Sources */,
+				9E4480622462DA22009A8EA4 /* imgui_impl_sdl.cpp in Sources */,
 				9E82E5BD220A345B00AC8F7D /* VulkanInstance.cpp in Sources */,
 				9EFA5B4523024AA900B63757 /* FileSystem.cpp in Sources */,
 				9E82E5BE220A345B00AC8F7D /* CommandObjects.cpp in Sources */,
+				9E4480662462DB12009A8EA4 /* EventObjects.cpp in Sources */,
 				9EFA5B3822F8C4D100B63757 /* DeviceRanking.cpp in Sources */,
 				9E82E5BF220A345B00AC8F7D /* Swapchain.cpp in Sources */,
 				9E82E5C0220A345B00AC8F7D /* ValidationLayers.cpp in Sources */,
 				9EFA5B3022EB466500B63757 /* DeviceAssessment.cpp in Sources */,
+				9E44805F2462DA13009A8EA4 /* AddOns.cpp in Sources */,
 				9EFA5B402301265E00B63757 /* ShaderModules.cpp in Sources */,
 				9E2DAE07232A86E2004ADDCB /* Vertex2D.h in Sources */,
 				9E82E5C1220A345B00AC8F7D /* HelloTriangle.cpp in Sources */,
@@ -745,6 +793,7 @@
 				9E3CA0452287E62C007494D6 /* DeviceQueues.cpp in Sources */,
 				9EF5A4F2231ED06000524830 /* UniformBuffer.cpp in Sources */,
 				9EFA5B3422F1C7E200B63757 /* Utility.cpp in Sources */,
+				9E4480612462DA13009A8EA4 /* FixedRenderable.cpp in Sources */,
 				9E82E5C9220A345B00AC8F7D /* VulkanSetup.cpp in Sources */,
 				9EA5CD01231450BE00178010 /* Triangle2DColored.cpp in Sources */,
 				9EF5A4ED231B27BA00524830 /* VertexTypes.cpp in Sources */,
@@ -763,9 +812,12 @@
 				9E82E5BA2208B4BE00AC8F7D /* VulkanInstance.cpp in Sources */,
 				9EFA5B4423024AA900B63757 /* FileSystem.cpp in Sources */,
 				9EFA5B2B22DD0CF100B63757 /* VulkanConfigure.h in Sources */,
+				9E44805E2462DA13009A8EA4 /* AddOns.cpp in Sources */,
+				9E4480652462DAE1009A8EA4 /* EventObjects.cpp in Sources */,
 				9EFA5B3722F8C4D100B63757 /* DeviceRanking.cpp in Sources */,
 				9E82E5B12203B51700AC8F7D /* CommandObjects.cpp in Sources */,
 				9E2DAE0B232CE035004ADDCB /* Quad2DTextureTinted.cpp in Sources */,
+				9E4480572462D8ED009A8EA4 /* imgui_impl_sdl.cpp in Sources */,
 				9E82E5AC2203B51700AC8F7D /* Swapchain.cpp in Sources */,
 				9EFA5B2F22EB466500B63757 /* DeviceAssessment.cpp in Sources */,
 				9EFA5B3F2301265E00B63757 /* ShaderModules.cpp in Sources */,
@@ -781,6 +833,7 @@
 				9EA6482922003B7500FD3DB0 /* main.cpp in Sources */,
 				9EEBF70E226DFBF700AC0B7F /* DebugReport.cpp in Sources */,
 				9EC48588222CB4D6007C7242 /* LocalVkEnumerateInstanceVersion.cpp in Sources */,
+				9E4480602462DA13009A8EA4 /* FixedRenderable.cpp in Sources */,
 				9E82E5B22203B51700AC8F7D /* GraphicsDevice.cpp in Sources */,
 				9EA648352200C7E400FD3DB0 /* vkEnumStrings.cpp in Sources */,
 				9E87F5CB23217A210009062F /* TextureImage.cpp in Sources */,
