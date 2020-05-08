@@ -26,8 +26,8 @@
     <ClInclude Include="..\src\VulkanModule\AddOns\Renderables\iRenderable.h" />
     <ClInclude Include="..\src\VulkanModule\Objects\EventObjects.h" />
     <ClInclude Include="..\src\VulkanModule\Platform\FileSystem.h" />
-    <ClInclude Include="..\src\VulkanModule\Platform\GUISystem\imgui.h" />
-    <ClInclude Include="..\src\VulkanModule\Platform\GUISystem\imgui_impl_sdl.h" />
+    <ClInclude Include="..\src\VulkanModule\Platform\GUISystem\stubs\imgui.h" />
+    <ClInclude Include="..\src\VulkanModule\Platform\GUISystem\stubs\imgui_impl_sdl.h" />
     <ClInclude Include="..\src\VulkanModule\Platform\ImageHandling\iImageSource.h" />
     <ClInclude Include="..\src\VulkanModule\Platform\ImageHandling\ImageSDL.h" />
     <ClInclude Include="..\src\VulkanModule\Platform\ImageHandling\ImageSTB.h" />
@@ -86,7 +86,7 @@
     <ClCompile Include="..\src\VulkanModule\AddOns\Renderables\FixedRenderable.cpp" />
     <ClCompile Include="..\src\VulkanModule\Objects\EventObjects.cpp" />
     <ClCompile Include="..\src\VulkanModule\Platform\FileSystem.cpp" />
-    <ClCompile Include="..\src\VulkanModule\Platform\GUISystem\imgui_impl_sdl.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Platform\GUISystem\stubs\imgui_impl_sdl.cpp" />
     <ClCompile Include="..\src\VulkanModule\Platform\OSAbstraction\PlatformGLFW.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

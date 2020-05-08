@@ -211,12 +211,6 @@
     <ClInclude Include="..\src\VulkanModule\Platform\ImageHandling\sdlEquivalents.h">
       <Filter>Platform\ImageHandling</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\VulkanModule\Platform\GUISystem\imgui.h">
-      <Filter>Platform\GUISystem</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\VulkanModule\Platform\GUISystem\imgui_impl_sdl.h">
-      <Filter>Platform\GUISystem</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\VulkanModule\AddOns\Renderables\AddOns.h">
       <Filter>Vulkan\AddOns\Renderables</Filter>
     </ClInclude>
@@ -228,6 +222,12 @@
     </ClInclude>
     <ClInclude Include="..\src\VulkanModule\Objects\EventObjects.h">
       <Filter>Vulkan\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VulkanModule\Platform\GUISystem\stubs\imgui.h">
+      <Filter>Platform\GUISystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VulkanModule\Platform\GUISystem\stubs\imgui_impl_sdl.h">
+      <Filter>Platform\GUISystem</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -336,9 +336,6 @@
     <ClCompile Include="src\LocalFileSystem.cpp">
       <Filter>Platform\Microsoft</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\VulkanModule\Platform\GUISystem\imgui_impl_sdl.cpp">
-      <Filter>Platform\GUISystem</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\VulkanModule\AddOns\Renderables\AddOns.cpp">
       <Filter>Vulkan\AddOns\Renderables</Filter>
     </ClCompile>
@@ -347,6 +344,9 @@
     </ClCompile>
     <ClCompile Include="..\src\VulkanModule\Objects\EventObjects.cpp">
       <Filter>Vulkan\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VulkanModule\Platform\GUISystem\stubs\imgui_impl_sdl.cpp">
+      <Filter>Platform\GUISystem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
