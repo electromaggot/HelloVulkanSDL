@@ -189,6 +189,8 @@ void HelloApplication::draw()
 	//	...then restore Fence back to unsignaled state.
 	vkResetFences(device, 1, &syncObjects.inFlightFences[iCurrentFrame]);
 
+	vulkan.command.RecordRenderablesForNextFrame(vulkan, iNextImage);
+
 	vulkan.command.renderables.UpdateUniformBuffers(iNextImage);
 
 	// SUBMIT --------------------------------------------------------------------------------------
@@ -203,7 +205,7 @@ void HelloApplication::draw()
 		.waitSemaphoreCount = 1,
 		.pWaitSemaphores = &syncObjects.imageAvailableSemaphores[iCurrentFrame],
 		.pWaitDstStageMask = &waitStageFlags,
-		.commandBufferCount = (uint32_t)allRenderablesCommandBuffers.size(),
+		.commandBufferCount = (uint32_t) allRenderablesCommandBuffers.size(),
 		.pCommandBuffers = allRenderablesCommandBuffers.data(),
 		.signalSemaphoreCount = 1,
 		.pSignalSemaphores = &syncObjects.renderFinishedSemaphores[iCurrentFrame]
@@ -211,7 +213,7 @@ void HelloApplication::draw()
 	VkSubmitInfo submits[] = { submitInfo };
 	int numSubmits = N_ELEMENTS_IN_ARRAY(submits);
 
-	call = vkQueueSubmit(graphicsQueue, numSubmits, submits, syncObjects.inFlightFences[iCurrentFrame]);
+	call = vkQueueSubmit(deviceQueue, numSubmits, submits, syncObjects.inFlightFences[iCurrentFrame]);
 
 	if (call != VK_SUCCESS)
 		Fatal("Queue Submit draw command buffer FAILURE" + ErrStr(call));
@@ -229,7 +231,7 @@ void HelloApplication::draw()
 		.pResults = nullptr
 	};
 
-	call = vkQueuePresentKHR(presentQueue, &presentInfo);
+	call = vkQueuePresentKHR(deviceQueue, &presentInfo);
 
 	if (platform.IsWindowResized() || call == VK_ERROR_OUT_OF_DATE_KHR
 		|| call == VK_SUBOPTIMAL_KHR)

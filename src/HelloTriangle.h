@@ -36,8 +36,7 @@ public:
 		:	vulkan(platform),	//	...initializes almost all of Vulkan.
 			device(vulkan.device.getLogical()),
 			swapchain(vulkan.swapchain.getVkSwapchain()),
-			graphicsQueue(vulkan.device.Queues.Graphics()),
-			presentQueue(vulkan.device.Queues.Present()),
+			deviceQueue(vulkan.device.Queues.getCurrent()),
 			syncObjects(vulkan.syncObjects),
 			swapchainExtent(vulkan.swapchain.getExtent())
 	{ }
@@ -54,8 +53,7 @@ private:
 	// Convenience references used every frame:
 	VkDevice&		device;
 	VkSwapchainKHR&	swapchain;
-	VkQueue&		graphicsQueue;
-	VkQueue&		presentQueue;
+	VkQueue&		deviceQueue;
 	SyncObjects&	syncObjects;
 	VkExtent2D&		swapchainExtent;
 
