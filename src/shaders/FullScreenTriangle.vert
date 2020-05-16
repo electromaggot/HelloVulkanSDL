@@ -7,7 +7,8 @@
 //	Note however that Tadd did rework slightly to wind counter-clockwise and backface-cull.
 
 
-layout (location = 0) out vec2 outUV;
+//layout (location = 0) out vec2 outUV;	 // if you need this, uncomment to receive it in the frag shader, otherwise:
+vec2 outUV;
 
 void main() 
 {
