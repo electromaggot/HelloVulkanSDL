@@ -13,6 +13,8 @@
 		9E1124ED220F9A0900DBA190 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1124E7220F988100DBA190 /* Metal.framework */; };
 		9E1124F1220F9AD000DBA190 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1124F0220F9AD000DBA190 /* Cocoa.framework */; };
 		9E1124F4220F9D2E00DBA190 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1124F3220F9D2E00DBA190 /* QuartzCore.framework */; };
+		9E128D9A247C350E00032E8E /* Logging.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E128D98247C350D00032E8E /* Logging.cpp */; };
+		9E128D9C247C365B00032E8E /* Logging.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E128D98247C350D00032E8E /* Logging.cpp */; };
 		9E240CED2334ED46003D0269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E240CEC2334ED46003D0269 /* LaunchScreen.storyboard */; };
 		9E2A27802215331B00B4FDBC /* PlatformSDL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2A277C2215331B00B4FDBC /* PlatformSDL.cpp */; };
 		9E2A27812215331B00B4FDBC /* PlatformSDL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2A277C2215331B00B4FDBC /* PlatformSDL.cpp */; };
@@ -139,6 +141,9 @@
 		9E1124EE220F9A0900DBA190 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		9E1124F0220F9AD000DBA190 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9E1124F3220F9D2E00DBA190 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9E128D98247C350D00032E8E /* Logging.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logging.cpp; sourceTree = "<group>"; };
+		9E128D99247C350E00032E8E /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		9E128D9B247C358D00032E8E /* Universal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Universal.h; sourceTree = "<group>"; };
 		9E240CEC2334ED46003D0269 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E2A277C2215331B00B4FDBC /* PlatformSDL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlatformSDL.cpp; sourceTree = "<group>"; };
 		9E2A277D2215331B00B4FDBC /* iPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPlatform.h; sourceTree = "<group>"; };
@@ -224,7 +229,7 @@
 		9EA5CCFE231450BE00178010 /* Triangle2DColored.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle2DColored.cpp; sourceTree = "<group>"; };
 		9EA5CCFF231450BE00178010 /* Vertex2DColored.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vertex2DColored.h; sourceTree = "<group>"; };
 		9EA6481C22003AC200FD3DB0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../src/main.cpp; sourceTree = "<group>"; };
-		9EA6482122003B2900FD3DB0 /* HelloTriangle-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloTriangle-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EA6482122003B2900FD3DB0 /* HelloTriangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloTriangle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA648342200C65500FD3DB0 /* vkEnumStrings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vkEnumStrings.cpp; sourceTree = "<group>"; };
 		9EA64839220162B700FD3DB0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EA6483C2201635000FD3DB0 /* HelloTriangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloTriangle.cpp; sourceTree = "<group>"; };
@@ -321,14 +326,25 @@
 			name = macOS;
 			sourceTree = "<group>";
 		};
+		9E128D97247C349900032E8E /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				9E128D98247C350D00032E8E /* Logging.cpp */,
+				9E128D99247C350E00032E8E /* Logging.h */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
 		9E2A277B2215308500B4FDBC /* Platform */ = {
 			isa = PBXGroup;
 			children = (
 				9EBD6192232EEA07005ADF20 /* OSAbstraction */,
 				9EBD6193232EEA37005ADF20 /* ImageHandling */,
 				9E4480532462D850009A8EA4 /* GUISystem */,
+				9E128D97247C349900032E8E /* Logger */,
 				9EC4858D2231A31F007C7242 /* PlatformExtension.h */,
 				9EC4858A222DE445007C7242 /* PlatformCommon.cpp */,
+				9E128D9B247C358D00032E8E /* Universal.h */,
 				9EFA5B4223024AA900B63757 /* FileSystem.cpp */,
 				9EFA5B4323024AA900B63757 /* FileSystem.h */,
 				9EEBF713228067FC00AC0B7F /* Apple */,
@@ -418,7 +434,7 @@
 		9EA6482222003B2900FD3DB0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9EA6482122003B2900FD3DB0 /* HelloTriangle-iOS.app */,
+				9EA6482122003B2900FD3DB0 /* HelloTriangle.app */,
 				9E82E5D4220A345B00AC8F7D /* HelloTriangle-macOS.app */,
 			);
 			name = Products;
@@ -658,7 +674,7 @@
 			);
 			name = "HelloTriangle-iOS";
 			productName = VulkanSDLDemo;
-			productReference = 9EA6482122003B2900FD3DB0 /* HelloTriangle-iOS.app */;
+			productReference = 9EA6482122003B2900FD3DB0 /* HelloTriangle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -779,6 +795,7 @@
 				9E3808392303019200FDF839 /* LocalFileSystem.cpp in Sources */,
 				9E2A27812215331B00B4FDBC /* PlatformSDL.cpp in Sources */,
 				9E82E5C3220A345B00AC8F7D /* RenderPass.cpp in Sources */,
+				9E128D9C247C365B00032E8E /* Logging.cpp in Sources */,
 				9E82E5C4220A345B00AC8F7D /* main.cpp in Sources */,
 				9EEBF710226EBD2000AC0B7F /* DebugReport.cpp in Sources */,
 				9EC48589222CB504007C7242 /* LocalVkEnumerateInstanceVersion.cpp in Sources */,
@@ -827,6 +844,7 @@
 				9E3CA04422834D9A007494D6 /* DeviceQueues.cpp in Sources */,
 				9E3808382303019200FDF839 /* LocalFileSystem.cpp in Sources */,
 				9EA6484022017D4600FD3DB0 /* HelloTriangle.cpp in Sources */,
+				9E128D9A247C350E00032E8E /* Logging.cpp in Sources */,
 				9E82E5B32203B51700AC8F7D /* GraphicsPipeline.cpp in Sources */,
 				9E2A27802215331B00B4FDBC /* PlatformSDL.cpp in Sources */,
 				9E82E5AE2203B51700AC8F7D /* RenderPass.cpp in Sources */,
@@ -927,7 +945,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.megaphonestudios.HelloVulkanSDL-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.megaphonestudios.HelloVulkanSDL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
@@ -1000,7 +1018,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.megaphonestudios.HelloVulkanSDL-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.megaphonestudios.HelloVulkanSDL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
@@ -1159,8 +1177,8 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.megaphonestudios.HelloVulkanSDL-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.megaphonestudios.HelloVulkanSDL;
+				PRODUCT_NAME = HelloTriangle;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1229,8 +1247,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.megaphonestudios.HelloVulkanSDL-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.megaphonestudios.HelloVulkanSDL;
+				PRODUCT_NAME = HelloTriangle;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
