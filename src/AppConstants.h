@@ -36,6 +36,13 @@ extern struct Constants
 	const int DefaultWindowWidth	= 1280;
 	const int DefaultWindowHeight	= 720;
 #endif
+	// NOTE on WINDOW SIZE - which, even for a full-screen app on a mobile device, is still
+	//						 considered its "display window" - the surface the app renders to...
+	// The above define some starting sizes (and as you can see, per-platform), but as for the
+	//	actual "window size" variables themselves - and their definitive value* - those remain
+	//	PLATFORM-DEPENDENT, therefore reside in the iPlatform and OS Abstraction classes.
+	// * - window size may subsequently change from values above, if app implements a means to
+	//	save/retrieve size, or as user interacts via drag-resize, maximize, rotate device, etc.
 
 	VkClearValue DefaultClearColor = { { { 0.0f, 0.0f, 0.0f, 1.0f } } };
 
