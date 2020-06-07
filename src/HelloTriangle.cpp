@@ -110,11 +110,11 @@ void HelloApplication::Run()
 		if (platform.IsWindowMinimized())
 			platform.AwaitEvent();
 
-		UpdateRender();
+		updateRender();
 	}
 }
 
-void HelloApplication::UpdateRender()
+void HelloApplication::updateRender()
 {
 	update();
 
@@ -131,7 +131,7 @@ void HelloApplication::ForceUpdateRender(void* pOurself)
 		if (pSelf->platform.isWindowResized)
 			pSelf->vulkan.RecreateRenderingRudiments();
 
-		pSelf->UpdateRender();
+		pSelf->updateRender();
 	}
 }
 

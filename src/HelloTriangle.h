@@ -60,11 +60,11 @@ private:
 		// METHODS
 public:
 	void Run();
-	void UpdateRender();
 	void Init();
 	void DialogBox(const char* message) { platform.DialogBox(message); }
 private:
 	void prepareForMainLoop();
+	void updateRender();
 	void update();
 	void draw();
 	void updateSpinOnZAxis(float time, float aspectRatio);
