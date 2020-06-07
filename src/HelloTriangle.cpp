@@ -93,6 +93,8 @@ void HelloApplication::Init()
 	vulkan.command.PostInitPrepBuffers(vulkan);
 
 	prepareForMainLoop();
+
+	platform.RegisterForceRenderCallback(HelloApplication::ForceUpdateRender, this);
 }
 
 
@@ -108,12 +110,30 @@ void HelloApplication::Run()
 		if (platform.IsWindowMinimized())
 			platform.AwaitEvent();
 
-		update();
-
-		draw();
+		UpdateRender();
 	}
 }
 
+void HelloApplication::UpdateRender()
+{
+	update();
+
+	draw();
+}
+
+// Let an external caller force a redraw.  One example: "live window resizing" or pseudorealtime rendering while dragging:
+//	an operation that otherwise fully blocks, but may have a Watcher applied that gets called per each change in dimension.
+//
+void HelloApplication::ForceUpdateRender(void* pOurself)
+{
+	HelloApplication* pSelf = static_cast<HelloApplication*>(pOurself);
+	if (pSelf) {
+		if (pSelf->platform.isWindowResized)
+			pSelf->vulkan.RecreateRenderingRudiments();
+
+		pSelf->UpdateRender();
+	}
+}
 
 // "Step forward" all active game elements (e.g. those that move)
 //	according to the time that has passed since the previous step.
@@ -175,69 +195,65 @@ void HelloApplication::draw()
 	vkWaitForFences(device, 1, &syncObjects.inFlightFences[iCurrentFrame], VK_TRUE, NO_TIMEOUT);
 
 	call = vkAcquireNextImageKHR(device, swapchain, NO_TIMEOUT,
-		syncObjects.imageAvailableSemaphores[iCurrentFrame],
-		VK_NULL_HANDLE, &iNextImage);
-
-	if (call == VK_ERROR_OUT_OF_DATE_KHR)
-	{
-		vulkan.RecreateRenderingRudiments();
-		return;
-	}
-	else if (call != VK_SUCCESS && call != VK_SUBOPTIMAL_KHR)
-		Log(ERROR, "Acquire Next Image" + ErrStr(call));
+								 syncObjects.imageAvailableSemaphores[iCurrentFrame],
+								 VK_NULL_HANDLE, &iNextImage);
+	const char* called = "Acquire Next Image";
 
 	//	...then restore Fence back to unsignaled state.
 	vkResetFences(device, 1, &syncObjects.inFlightFences[iCurrentFrame]);
 
-	vulkan.command.RecordRenderablesForNextFrame(vulkan, iNextImage);
+	if (call == VK_SUCCESS)
+	{
+		vulkan.command.RecordRenderablesForNextFrame(vulkan, iNextImage);
 
-	vulkan.command.renderables.UpdateUniformBuffers(iNextImage);
+		vulkan.command.renderables.UpdateUniformBuffers(iNextImage);
 
-	// SUBMIT --------------------------------------------------------------------------------------
+		// SUBMIT --------------------------------------------------------------------------------------
 
-	VkPipelineStageFlags waitStageFlags = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT;
+		VkPipelineStageFlags waitStageFlags = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT;
 
-	vector<VkCommandBuffer> allRenderablesCommandBuffers = vulkan.command.BuffersForFrame(iNextImage);
+		vector<VkCommandBuffer> allRenderablesCommandBuffers = vulkan.command.BuffersForFrame(iNextImage);
 
-	VkSubmitInfo submitInfo = {
-		.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO,
-		.pNext = nullptr,
-		.waitSemaphoreCount = 1,
-		.pWaitSemaphores = &syncObjects.imageAvailableSemaphores[iCurrentFrame],
-		.pWaitDstStageMask = &waitStageFlags,
-		.commandBufferCount = (uint32_t) allRenderablesCommandBuffers.size(),
-		.pCommandBuffers = allRenderablesCommandBuffers.data(),
-		.signalSemaphoreCount = 1,
-		.pSignalSemaphores = &syncObjects.renderFinishedSemaphores[iCurrentFrame]
-	};
-	VkSubmitInfo submits[] = { submitInfo };
-	int numSubmits = N_ELEMENTS_IN_ARRAY(submits);
+		VkSubmitInfo submitInfo = {
+			.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO,
+			.pNext = nullptr,
+			.waitSemaphoreCount = 1,
+			.pWaitSemaphores = &syncObjects.imageAvailableSemaphores[iCurrentFrame],
+			.pWaitDstStageMask = &waitStageFlags,
+			.commandBufferCount = (uint32_t) allRenderablesCommandBuffers.size(),
+			.pCommandBuffers = allRenderablesCommandBuffers.data(),
+			.signalSemaphoreCount = 1,
+			.pSignalSemaphores = &syncObjects.renderFinishedSemaphores[iCurrentFrame]
+		};
+		VkSubmitInfo submits[] = { submitInfo };
+		int numSubmits = N_ELEMENTS_IN_ARRAY(submits);
 
-	call = vkQueueSubmit(deviceQueue, numSubmits, submits, syncObjects.inFlightFences[iCurrentFrame]);
+		call = vkQueueSubmit(deviceQueue, numSubmits, submits, syncObjects.inFlightFences[iCurrentFrame]);
+		called = "Queue Submit draw command buffer FAILURE";
 
-	if (call != VK_SUCCESS)
-		Fatal("Queue Submit draw command buffer FAILURE" + ErrStr(call));
+		if (call == VK_SUCCESS)
+		{
+			// PRESENT -------------------------------------------------------------------------------------
 
-	// PRESENT -------------------------------------------------------------------------------------
+			VkPresentInfoKHR presentInfo = {
+				.sType = VK_STRUCTURE_TYPE_PRESENT_INFO_KHR,
+				.pNext = nullptr,
+				.waitSemaphoreCount = 1,
+				.pWaitSemaphores = &syncObjects.renderFinishedSemaphores[iCurrentFrame],
+				.swapchainCount = 1,
+				.pSwapchains = &swapchain,
+				.pImageIndices = &iNextImage,
+				.pResults = nullptr
+			};
 
-	VkPresentInfoKHR presentInfo = {
-		.sType = VK_STRUCTURE_TYPE_PRESENT_INFO_KHR,
-		.pNext = nullptr,
-		.waitSemaphoreCount = 1,
-		.pWaitSemaphores = &syncObjects.renderFinishedSemaphores[iCurrentFrame],
-		.swapchainCount = 1,
-		.pSwapchains = &swapchain,
-		.pImageIndices = &iNextImage,
-		.pResults = nullptr
-	};
-
-	call = vkQueuePresentKHR(deviceQueue, &presentInfo);
-
-	if (platform.IsWindowResized() || call == VK_ERROR_OUT_OF_DATE_KHR
-		|| call == VK_SUBOPTIMAL_KHR)
+			call = vkQueuePresentKHR(deviceQueue, &presentInfo);
+			called = "Queue Present";
+		}
+	}
+	if (platform.IsWindowResized() || call == VK_ERROR_OUT_OF_DATE_KHR || call == VK_SUBOPTIMAL_KHR)
 		vulkan.RecreateRenderingRudiments();
 	else if (call != VK_SUCCESS)
-		Log(ERROR, "Queue Present" + ErrStr(call));
+		Log(ERROR, called + ErrStr(call));
 
 	iCurrentFrame = (iCurrentFrame + 1) % syncObjects.MaxFramesInFlight;
 }

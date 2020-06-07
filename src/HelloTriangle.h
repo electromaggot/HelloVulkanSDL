@@ -60,6 +60,7 @@ private:
 		// METHODS
 public:
 	void Run();
+	void UpdateRender();
 	void Init();
 	void DialogBox(const char* message) { platform.DialogBox(message); }
 private:
@@ -68,4 +69,6 @@ private:
 	void draw();
 	void updateSpinOnZAxis(float time, float aspectRatio);
 	void updateRayCast(float time);
+
+	static void ForceUpdateRender(void* pOurself);
 };
