@@ -50,6 +50,9 @@
     <Filter Include="Vulkan\AddOns\Renderables">
       <UniqueIdentifier>{911a83b6-0eb7-4446-9b56-d92108328079}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\Logger">
+      <UniqueIdentifier>{f965b468-118a-415c-9faf-8674ce16e0ac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\AppConstants.h">
@@ -229,6 +232,9 @@
     <ClInclude Include="..\src\VulkanModule\Platform\GUISystem\stubs\imgui_impl_sdl.h">
       <Filter>Platform\GUISystem</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\VulkanModule\Platform\Logger\Logging.h">
+      <Filter>Platform\Logger</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\HelloTriangle.cpp">
@@ -347,6 +353,9 @@
     </ClCompile>
     <ClCompile Include="..\src\VulkanModule\Platform\GUISystem\stubs\imgui_impl_sdl.cpp">
       <Filter>Platform\GUISystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VulkanModule\Platform\Logger\Logging.cpp">
+      <Filter>Platform\Logger</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

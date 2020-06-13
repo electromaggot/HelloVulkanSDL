@@ -32,6 +32,7 @@
     <ClInclude Include="..\src\VulkanModule\Platform\ImageHandling\ImageSDL.h" />
     <ClInclude Include="..\src\VulkanModule\Platform\ImageHandling\ImageSTB.h" />
     <ClInclude Include="..\src\VulkanModule\Platform\ImageHandling\sdlEquivalents.h" />
+    <ClInclude Include="..\src\VulkanModule\Platform\Logger\Logging.h" />
     <ClInclude Include="..\src\VulkanModule\Platform\OSAbstraction\iPlatform.h" />
     <ClInclude Include="..\src\VulkanModule\Platform\OSAbstraction\PlatformGLFW.h" />
     <ClInclude Include="..\src\VulkanModule\Platform\OSAbstraction\PlatformSDL.h" />
@@ -87,6 +88,7 @@
     <ClCompile Include="..\src\VulkanModule\Objects\EventObjects.cpp" />
     <ClCompile Include="..\src\VulkanModule\Platform\FileSystem.cpp" />
     <ClCompile Include="..\src\VulkanModule\Platform\GUISystem\stubs\imgui_impl_sdl.cpp" />
+    <ClCompile Include="..\src\VulkanModule\Platform\Logger\Logging.cpp" />
     <ClCompile Include="..\src\VulkanModule\Platform\OSAbstraction\PlatformGLFW.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
