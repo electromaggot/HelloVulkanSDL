@@ -20,6 +20,7 @@
 // Created 1/27/19 by Tadd Jensen
 //	© 0000 (uncopyrighted; use at will)
 //
+#include "AppSettings.h"
 #include "PlatformSDL.h"
 #include "VulkanSetup.h"
 
@@ -27,13 +28,16 @@
 class HelloApplication
 {
 private:
+	AppSettings		settings;
+
 	PlatformSDL		platform;	// SDL is target "platform" (i/o abstraction layer).
 
 	VulkanSetup		vulkan;		// This one instantiation...
 
 public:
 	HelloApplication()
-		:	vulkan(platform),	//	...initializes almost all of Vulkan.
+		:	platform(settings),
+			vulkan(platform),	//	...initializes almost all of Vulkan.
 			device(vulkan.device.getLogical()),
 			swapchain(vulkan.swapchain.getVkSwapchain()),
 			deviceQueue(vulkan.device.Queues.getCurrent()),

@@ -22,6 +22,8 @@ extern struct Constants
 
 	const StrPtr WindowTitle		= "Vulkan Demo";
 
+	const StrPtr SettingsFileName	= "Settings.json";
+
 #define COMPARE_AGAINST		IPHONE_X		// These comparison cases are for
 #if COMPARE_AGAINST == SHADERTOY_16x9		//	test and are all temporary!
 	const int DefaultWindowWidth	= 640;
@@ -43,6 +45,9 @@ extern struct Constants
 	//	PLATFORM-DEPENDENT, therefore reside in the iPlatform and OS Abstraction classes.
 	// * - window size may subsequently change from values above, if app implements a means to
 	//	save/retrieve size, or as user interacts via drag-resize, maximize, rotate device, etc.
+
+	const int MaxSaneScreenWidth	= 7680 * 2;		// 8K x 2 values. Simply sanity-
+	const int MaxSaneScreenHeight	= 4320 * 2;		//	check on pixel-related ranges.
 
 	VkClearValue DefaultClearColor = { { { 0.0f, 0.0f, 0.0f, 1.0f } } };
 
