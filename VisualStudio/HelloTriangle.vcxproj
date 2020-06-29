@@ -21,6 +21,8 @@
   <ItemGroup>
     <ClInclude Include="..\src\AppConstants.h" />
     <ClInclude Include="..\src\HelloTriangle.h" />
+    <ClInclude Include="..\src\Settings\AppSettings.h" />
+    <ClInclude Include="..\src\Settings\json.hpp" />
     <ClInclude Include="..\src\VulkanModule\AddOns\Renderables\AddOns.h" />
     <ClInclude Include="..\src\VulkanModule\AddOns\Renderables\FixedRenderable.h" />
     <ClInclude Include="..\src\VulkanModule\AddOns\Renderables\iRenderable.h" />
@@ -83,6 +85,13 @@
   <ItemGroup>
     <ClCompile Include="..\src\HelloTriangle.cpp" />
     <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\Settings\AppSettings.cpp" />
+    <ClCompile Include="..\src\Settings\jsonConvert_c.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\VulkanModule\AddOns\Renderables\AddOns.cpp" />
     <ClCompile Include="..\src\VulkanModule\AddOns\Renderables\FixedRenderable.cpp" />
     <ClCompile Include="..\src\VulkanModule\Objects\EventObjects.cpp" />

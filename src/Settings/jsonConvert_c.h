@@ -1,6 +1,6 @@
 //
-// jsonConvert.c
-//	Application Settings
+// jsonConvert_c.h
+//	Application Settings - C code in an H file
 //
 // Convert JSON to/from our app's objects.
 //

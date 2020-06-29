@@ -53,6 +53,9 @@
     <Filter Include="Platform\Logger">
       <UniqueIdentifier>{f965b468-118a-415c-9faf-8674ce16e0ac}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HelloTriangle\Settings">
+      <UniqueIdentifier>{8f0b7924-2ec6-478f-8ecc-38e89504cd30}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\AppConstants.h">
@@ -235,6 +238,12 @@
     <ClInclude Include="..\src\VulkanModule\Platform\Logger\Logging.h">
       <Filter>Platform\Logger</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\Settings\AppSettings.h">
+      <Filter>HelloTriangle\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Settings\json.hpp">
+      <Filter>HelloTriangle\Settings</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\HelloTriangle.cpp">
@@ -356,6 +365,12 @@
     </ClCompile>
     <ClCompile Include="..\src\VulkanModule\Platform\Logger\Logging.cpp">
       <Filter>Platform\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Settings\AppSettings.cpp">
+      <Filter>HelloTriangle\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Settings\jsonConvert_c.h">
+      <Filter>HelloTriangle\Settings</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -16,10 +16,11 @@
 
 #include <iostream>			//
 #include <fstream>			// basic file operations
+#include <iomanip>			//
 using namespace std;		//
 
 
-#include "jsonConvert.c"	// directly pull-in json methods (this is
+#include "jsonConvert_c.h"	// directly pull-in json methods (this is
 							//	the only place they'll get compiled)
 json jsonSettings;
 
