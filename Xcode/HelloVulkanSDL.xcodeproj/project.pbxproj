@@ -42,7 +42,7 @@
 		9E4480622462DA22009A8EA4 /* imgui_impl_sdl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4480562462D8ED009A8EA4 /* imgui_impl_sdl.cpp */; };
 		9E4480652462DAE1009A8EA4 /* EventObjects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4480632462DAE0009A8EA4 /* EventObjects.cpp */; };
 		9E4480662462DB12009A8EA4 /* EventObjects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4480632462DAE0009A8EA4 /* EventObjects.cpp */; };
-		9E61A5E024A8284300AF6133 /* jsonConvert.c in Sources */ = {isa = PBXBuildFile; fileRef = 9E61A5DD24A8284300AF6133 /* jsonConvert.c */; };
+		9E61A5E024A8284300AF6133 /* jsonConvert_c.h in Sources */ = {isa = PBXBuildFile; fileRef = 9E61A5DD24A8284300AF6133 /* jsonConvert_c.h */; };
 		9E61A5E124A8284300AF6133 /* AppSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E61A5DF24A8284300AF6133 /* AppSettings.cpp */; };
 		9E61A5E224A8298800AF6133 /* AppSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E61A5DF24A8284300AF6133 /* AppSettings.cpp */; };
 		9E6B2DD7233272A800F7575D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1124EB220F998F00DBA190 /* IOKit.framework */; };
@@ -179,7 +179,7 @@
 		9E44805D2462DA13009A8EA4 /* FixedRenderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedRenderable.h; sourceTree = "<group>"; };
 		9E4480632462DAE0009A8EA4 /* EventObjects.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EventObjects.cpp; sourceTree = "<group>"; };
 		9E4480642462DAE0009A8EA4 /* EventObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventObjects.h; sourceTree = "<group>"; };
-		9E61A5DD24A8284300AF6133 /* jsonConvert.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jsonConvert.c; sourceTree = "<group>"; };
+		9E61A5DD24A8284300AF6133 /* jsonConvert_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jsonConvert_c.h; sourceTree = "<group>"; };
 		9E61A5DE24A8284300AF6133 /* AppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettings.h; sourceTree = "<group>"; };
 		9E61A5DF24A8284300AF6133 /* AppSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppSettings.cpp; sourceTree = "<group>"; };
 		9E61A5E424A830DC00AF6133 /* json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
@@ -388,7 +388,7 @@
 			children = (
 				9E61A5DF24A8284300AF6133 /* AppSettings.cpp */,
 				9E61A5DE24A8284300AF6133 /* AppSettings.h */,
-				9E61A5DD24A8284300AF6133 /* jsonConvert.c */,
+				9E61A5DD24A8284300AF6133 /* jsonConvert_c.h */,
 				9E61A5E424A830DC00AF6133 /* json.hpp */,
 			);
 			path = Settings;
@@ -876,7 +876,7 @@
 				9E82E5B22203B51700AC8F7D /* GraphicsDevice.cpp in Sources */,
 				9EA648352200C7E400FD3DB0 /* vkEnumStrings.cpp in Sources */,
 				9E87F5CB23217A210009062F /* TextureImage.cpp in Sources */,
-				9E61A5E024A8284300AF6133 /* jsonConvert.c in Sources */,
+				9E61A5E024A8284300AF6133 /* jsonConvert_c.h in Sources */,
 				9E38920B232973490024D111 /* Descriptors.cpp in Sources */,
 				9EC4858B222DE445007C7242 /* PlatformCommon.cpp in Sources */,
 				9E2DAE0D232CE1A5004ADDCB /* Quad2DTextured.cpp in Sources */,
