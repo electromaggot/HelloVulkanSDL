@@ -16,6 +16,7 @@
 //
 #include "json.hpp"
 using json = nlohmann::json;
+using value_t = nlohmann::detail::value_t;
 
 #include "AppSettings.h"
 

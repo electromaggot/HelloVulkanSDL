@@ -34,6 +34,8 @@ public:
 	void Save();
 	void Retrieve();
 
+	bool isInitialized = false;
+
 	// APP/WINDOWING-SYSTEM/GRAPHICS STARTUP SETTINGS
 
 	int startingWindowWidth;

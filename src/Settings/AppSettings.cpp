@@ -40,6 +40,9 @@ void AppSettings::Save()
 {
 	jsonSettings = *this;		// (this does indeed work! although not in reverse)
 
+	if (jsonSettings.empty() || jsonSettings.type() == value_t::null)
+		return;
+
 	ofstream	settingsFile;
 	settingsFile.open(AppConstants.SettingsFileName);
 	if (settingsFile.is_open())
@@ -62,19 +65,39 @@ void AppSettings::Retrieve()
 			settingsFile.close();
 		}
 		else {
-			Log(NOTE, "File \"%s\" not found, using default settings.", AppConstants.SettingsFileName);
+			Log(LOW, "File \"%s\" not found, using default settings.", AppConstants.SettingsFileName);
 			return;
 		}
+		if (jsonRetrieved.empty() || jsonRetrieved.type() == value_t::null) {
+			Log(ERROR, "File \"%s\" empty, corrupt, or not JSON as expected.", AppConstants.SettingsFileName);
+			return;
+		}
+		void jsonKeyToInt(const char* key, int& intTo, json& jsonFrom);
 
-		startingWindowWidth	 = jsonRetrieved["startingWindowWidth"];
-		startingWindowHeight = jsonRetrieved["startingWindowHeight"];
-		startingWindowX		 = jsonRetrieved["startingWindowX"];
-		startingWindowY		 = jsonRetrieved["startingWindowY"];
+		jsonKeyToInt("startingWindowWidth",	 startingWindowWidth,  jsonRetrieved);
+		jsonKeyToInt("startingWindowHeight", startingWindowHeight, jsonRetrieved);
+		jsonKeyToInt("startingWindowX",		 startingWindowX,	   jsonRetrieved);
+		jsonKeyToInt("startingWindowY",		 startingWindowY,	   jsonRetrieved);
+
+		if (startingWindowWidth <= 0 || startingWindowHeight <= 0) {
+			Log(ERROR, "File \"%s\" lacks CRITICAL startup values.", AppConstants.SettingsFileName);
+			return;
+		}
+		isInitialized = true;
 
 		jsonSettings = jsonRetrieved;
 	}
 	catch (exception& ex) {
 		Log(ERROR, "Retrieve() JSON parse threw: %s", ex.what());
 		Log(NOTE,  "Using default settings and abandoning saved ones.");
+	}
+}
+
+inline void jsonKeyToInt(const char* key, int& intTo, json& jsonFrom) {
+	try {
+		intTo = jsonFrom[key];
+	}
+	catch (exception& ex) {
+		Log(ERROR, "json[%s] unresolved, using default. (%s)", key, ex.what());
 	}
 }

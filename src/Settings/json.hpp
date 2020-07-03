@@ -21,6 +21,10 @@
 
 namespace nlohmann
 {
+	namespace detail {
+		enum class value_t { null };
+	};
+
 	template<template<typename U, typename V, typename... Args> class ObjectType = std::map,
 		template<typename U, typename... Args> class ArrayType = std::vector,
 		class StringType = std::string, class BooleanType = bool,
@@ -68,7 +72,7 @@ namespace nlohmann
 
 
 		int operator[](const char*)	const {
-			return 0;
+			return -1;
 		}
 
 		friend std::ostream& operator<<(std::ostream& o, const basic_json& j) {
@@ -77,6 +81,17 @@ namespace nlohmann
 
 		friend std::istream& operator>>(std::istream& i, basic_json& j) {
 		   return i;
+		}
+		// Input stream note: the original (nlohmann/json) version of the above method parses JSON when passed
+		//	it, throwing exceptions on parse errors.  This stub isn't supposed to do anything, so won't throw,
+		//	given valid JSON or not.  To ignore JSON handling, file or none, the below methods may be helpful:
+
+		bool empty() {
+			return true;
+		}
+
+		detail::value_t type() {
+			return detail::value_t::null;
 		}
 	};
 
