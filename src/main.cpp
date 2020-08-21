@@ -7,14 +7,15 @@
 #include "HelloTriangle.h"
 
 #include "AppConstants.h"
+#include "Logging.h"
 
 
 int main(int argc, char* argv[])
 {
-	HelloApplication app;
-
 	AppConstants.setExePath(argv[0]);
-	std::cout << "PATH: " << AppConstants.getExePath() << std::endl;
+	Log(RAW, "RUNNING %s", AppConstants.getExePath());
+
+	HelloApplication app;
 
 	try {
 		app.Init();
@@ -22,7 +23,7 @@ int main(int argc, char* argv[])
 	} catch (const exception& e) {
 		const char* message = e.what();
 		app.DialogBox(message);
-		std::cerr << message << std::endl;
+		Log(RAW, "FAIL: %s", message);
 		return EXIT_FAILURE;
 	}
 
