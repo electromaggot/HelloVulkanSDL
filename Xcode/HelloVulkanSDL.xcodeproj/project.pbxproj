@@ -20,16 +20,12 @@
 		9E2A27812215331B00B4FDBC /* PlatformSDL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2A277C2215331B00B4FDBC /* PlatformSDL.cpp */; };
 		9E2DAE03232A81CC004ADDCB /* Quad2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DAE02232A81CC004ADDCB /* Quad2D.cpp */; };
 		9E2DAE04232A81CC004ADDCB /* Quad2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DAE02232A81CC004ADDCB /* Quad2D.cpp */; };
-		9E2DAE06232A86E2004ADDCB /* Vertex2D.h in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DAE05232A86E2004ADDCB /* Vertex2D.h */; };
-		9E2DAE07232A86E2004ADDCB /* Vertex2D.h in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DAE05232A86E2004ADDCB /* Vertex2D.h */; };
 		9E2DAE0B232CE035004ADDCB /* Quad2DTextureTinted.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DAE0A232CE035004ADDCB /* Quad2DTextureTinted.cpp */; };
 		9E2DAE0D232CE1A5004ADDCB /* Quad2DTextured.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DAE0C232CE1A5004ADDCB /* Quad2DTextured.cpp */; };
 		9E2DAE0E232CE24A004ADDCB /* Quad2DTextured.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DAE0C232CE1A5004ADDCB /* Quad2DTextured.cpp */; };
 		9E2DAE0F232CE24E004ADDCB /* Quad2DTextureTinted.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DAE0A232CE035004ADDCB /* Quad2DTextureTinted.cpp */; };
 		9E2DAE15232DEDA1004ADDCB /* MoltenVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2DAE14232DEDA0004ADDCB /* MoltenVK.framework */; };
 		9E2DAE18232E8BFA004ADDCB /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2DAE17232E8BFA004ADDCB /* IOSurface.framework */; };
-		9E3808382303019200FDF839 /* LocalFileSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E3808372303019200FDF839 /* LocalFileSystem.cpp */; };
-		9E3808392303019200FDF839 /* LocalFileSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E3808372303019200FDF839 /* LocalFileSystem.cpp */; };
 		9E38920B232973490024D111 /* Descriptors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E389209232973490024D111 /* Descriptors.cpp */; };
 		9E38920C23297DCE0024D111 /* Descriptors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E389209232973490024D111 /* Descriptors.cpp */; };
 		9E3CA04422834D9A007494D6 /* DeviceQueues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CA04222834D9A007494D6 /* DeviceQueues.cpp */; };
@@ -42,7 +38,6 @@
 		9E4480622462DA22009A8EA4 /* imgui_impl_sdl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4480562462D8ED009A8EA4 /* imgui_impl_sdl.cpp */; };
 		9E4480652462DAE1009A8EA4 /* EventObjects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4480632462DAE0009A8EA4 /* EventObjects.cpp */; };
 		9E4480662462DB12009A8EA4 /* EventObjects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4480632462DAE0009A8EA4 /* EventObjects.cpp */; };
-		9E61A5E024A8284300AF6133 /* jsonConvert_c.h in Sources */ = {isa = PBXBuildFile; fileRef = 9E61A5DD24A8284300AF6133 /* jsonConvert_c.h */; };
 		9E61A5E124A8284300AF6133 /* AppSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E61A5DF24A8284300AF6133 /* AppSettings.cpp */; };
 		9E61A5E224A8298800AF6133 /* AppSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E61A5DF24A8284300AF6133 /* AppSettings.cpp */; };
 		9E6B2DD7233272A800F7575D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1124EB220F998F00DBA190 /* IOKit.framework */; };
@@ -105,8 +100,6 @@
 		9EF5A4ED231B27BA00524830 /* VertexTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5A4EB231B27BA00524830 /* VertexTypes.cpp */; };
 		9EF5A4F1231ED00300524830 /* UniformBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5A4F0231ED00300524830 /* UniformBuffer.cpp */; };
 		9EF5A4F2231ED06000524830 /* UniformBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5A4F0231ED00300524830 /* UniformBuffer.cpp */; };
-		9EFA5B2B22DD0CF100B63757 /* VulkanConfigure.h in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA5B2A22DD0CF100B63757 /* VulkanConfigure.h */; };
-		9EFA5B2C22DD30F200B63757 /* VulkanConfigure.h in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA5B2A22DD0CF100B63757 /* VulkanConfigure.h */; };
 		9EFA5B2F22EB466500B63757 /* DeviceAssessment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA5B2D22EB466500B63757 /* DeviceAssessment.cpp */; };
 		9EFA5B3022EB466500B63757 /* DeviceAssessment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA5B2D22EB466500B63757 /* DeviceAssessment.cpp */; };
 		9EFA5B3322F1C7E200B63757 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA5B3122F1C7E200B63757 /* Utility.cpp */; };
@@ -164,7 +157,7 @@
 		9E2DAE11232D8428004ADDCB /* TexturedQuad.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = TexturedQuad.vert; path = ../shaders/TexturedQuad.vert; sourceTree = "<group>"; };
 		9E2DAE14232DEDA0004ADDCB /* MoltenVK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MoltenVK.framework; path = ../External/VulkanSDK/MoltenVK/macOS/framework/MoltenVK.framework; sourceTree = "<group>"; };
 		9E2DAE17232E8BFA004ADDCB /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
-		9E3808372303019200FDF839 /* LocalFileSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LocalFileSystem.cpp; path = src/LocalFileSystem.cpp; sourceTree = SOURCE_ROOT; };
+		9E3808372303019200FDF839 /* LocalFileSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LocalFileSystem.h; path = src/LocalFileSystem.h; sourceTree = SOURCE_ROOT; };
 		9E389209232973490024D111 /* Descriptors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Descriptors.cpp; sourceTree = "<group>"; };
 		9E38920A232973490024D111 /* Descriptors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Descriptors.h; sourceTree = "<group>"; };
 		9E3CA04222834D9A007494D6 /* DeviceQueues.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DeviceQueues.cpp; sourceTree = "<group>"; };
@@ -210,7 +203,7 @@
 		9E82E5B72208A0E600AC8F7D /* VulkanSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VulkanSingleton.h; sourceTree = "<group>"; };
 		9E82E5B82208B4BE00AC8F7D /* VulkanInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VulkanInstance.h; sourceTree = "<group>"; };
 		9E82E5B92208B4BE00AC8F7D /* VulkanInstance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VulkanInstance.cpp; sourceTree = "<group>"; };
-		9E82E5D4220A345B00AC8F7D /* HelloTriangle-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloTriangle-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E82E5D4220A345B00AC8F7D /* HelloTriangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloTriangle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E87F5BE232147CF0009062F /* 21_shader_ubo.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 21_shader_ubo.vert; path = ../shaders/21_shader_ubo.vert; sourceTree = "<group>"; };
 		9E87F5BF232147D00009062F /* 21_shader_ubo.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 21_shader_ubo.frag; path = ../shaders/21_shader_ubo.frag; sourceTree = "<group>"; };
 		9E87F5C0232147D00009062F /* 25_shader_textures.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 25_shader_textures.vert; path = ../shaders/25_shader_textures.vert; sourceTree = "<group>"; };
@@ -225,6 +218,7 @@
 		9E87F5FB2323071F0009062F /* iImageSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iImageSource.h; sourceTree = "<group>"; };
 		9E87F5FC2323071F0009062F /* ImageSTB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSTB.h; sourceTree = "<group>"; };
 		9E87F5FD2323071F0009062F /* ImageSDL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSDL.h; sourceTree = "<group>"; };
+		9E8CE2AB24EC8DB000BD7B37 /* FileSystemSDL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSystemSDL.h; sourceTree = "<group>"; };
 		9EA5CCF2230F025000178010 /* PlatformConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlatformConstants.h; path = src/PlatformConstants.h; sourceTree = SOURCE_ROOT; };
 		9EA5CCF3230F4EA600178010 /* Helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		9EA5CCF4230F7E0A00178010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -348,12 +342,11 @@
 				9EBD6192232EEA07005ADF20 /* OSAbstraction */,
 				9EBD6193232EEA37005ADF20 /* ImageHandling */,
 				9E4480532462D850009A8EA4 /* GUISystem */,
+				9E8CE2AA24EC709100BD7B37 /* FileSystem */,
 				9E128D97247C349900032E8E /* Logger */,
 				9EC4858D2231A31F007C7242 /* PlatformExtension.h */,
 				9EC4858A222DE445007C7242 /* PlatformCommon.cpp */,
 				9E128D9B247C358D00032E8E /* Universal.h */,
-				9EFA5B4223024AA900B63757 /* FileSystem.cpp */,
-				9EFA5B4323024AA900B63757 /* FileSystem.h */,
 				9EEBF713228067FC00AC0B7F /* Apple */,
 			);
 			name = Platform;
@@ -424,6 +417,16 @@
 			path = ../src/VulkanModule;
 			sourceTree = "<group>";
 		};
+		9E8CE2AA24EC709100BD7B37 /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				9E8CE2AB24EC8DB000BD7B37 /* FileSystemSDL.h */,
+				9EFA5B4223024AA900B63757 /* FileSystem.cpp */,
+				9EFA5B4323024AA900B63757 /* FileSystem.h */,
+			);
+			path = FileSystem;
+			sourceTree = "<group>";
+		};
 		9EA5CCFD23144B7D00178010 /* 3DObjects */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,7 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				9EA6482122003B2900FD3DB0 /* HelloTriangle.app */,
-				9E82E5D4220A345B00AC8F7D /* HelloTriangle-macOS.app */,
+				9E82E5D4220A345B00AC8F7D /* HelloTriangle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -613,7 +616,7 @@
 			children = (
 				9EA5CCF2230F025000178010 /* PlatformConstants.h */,
 				9E07254723316854005C38E4 /* PlatformSpecifics.h */,
-				9E3808372303019200FDF839 /* LocalFileSystem.cpp */,
+				9E3808372303019200FDF839 /* LocalFileSystem.h */,
 				9EC48587222CB4D6007C7242 /* LocalVkEnumerateInstanceVersion.cpp */,
 				9EEBF7122280645A00AC0B7F /* optional.h */,
 			);
@@ -675,7 +678,7 @@
 			);
 			name = "HelloTriangle-macOS";
 			productName = VulkanSDLDemo;
-			productReference = 9E82E5D4220A345B00AC8F7D /* HelloTriangle-macOS.app */;
+			productReference = 9E82E5D4220A345B00AC8F7D /* HelloTriangle.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9EA6482022003B2900FD3DB0 /* HelloTriangle-iOS */ = {
@@ -807,11 +810,9 @@
 				9EFA5B3022EB466500B63757 /* DeviceAssessment.cpp in Sources */,
 				9E44805F2462DA13009A8EA4 /* AddOns.cpp in Sources */,
 				9EFA5B402301265E00B63757 /* ShaderModules.cpp in Sources */,
-				9E2DAE07232A86E2004ADDCB /* Vertex2D.h in Sources */,
 				9E82E5C1220A345B00AC8F7D /* HelloTriangle.cpp in Sources */,
 				9E2DAE04232A81CC004ADDCB /* Quad2D.cpp in Sources */,
 				9E82E5C2220A345B00AC8F7D /* GraphicsPipeline.cpp in Sources */,
-				9E3808392303019200FDF839 /* LocalFileSystem.cpp in Sources */,
 				9E2A27812215331B00B4FDBC /* PlatformSDL.cpp in Sources */,
 				9E82E5C3220A345B00AC8F7D /* RenderPass.cpp in Sources */,
 				9E128D9C247C365B00032E8E /* Logging.cpp in Sources */,
@@ -837,7 +838,6 @@
 				9E2DAE0F232CE24E004ADDCB /* Quad2DTextureTinted.cpp in Sources */,
 				9E2DAE0E232CE24A004ADDCB /* Quad2DTextured.cpp in Sources */,
 				9E82E5CA220A345B00AC8F7D /* Framebuffers.cpp in Sources */,
-				9EFA5B2C22DD30F200B63757 /* VulkanConfigure.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,7 +848,6 @@
 				9EF5A4E9231B228900524830 /* Quad2DColored.cpp in Sources */,
 				9E82E5BA2208B4BE00AC8F7D /* VulkanInstance.cpp in Sources */,
 				9EFA5B4423024AA900B63757 /* FileSystem.cpp in Sources */,
-				9EFA5B2B22DD0CF100B63757 /* VulkanConfigure.h in Sources */,
 				9E44805E2462DA13009A8EA4 /* AddOns.cpp in Sources */,
 				9E4480652462DAE1009A8EA4 /* EventObjects.cpp in Sources */,
 				9EFA5B3722F8C4D100B63757 /* DeviceRanking.cpp in Sources */,
@@ -859,11 +858,9 @@
 				9E82E5AC2203B51700AC8F7D /* Swapchain.cpp in Sources */,
 				9EFA5B2F22EB466500B63757 /* DeviceAssessment.cpp in Sources */,
 				9EFA5B3F2301265E00B63757 /* ShaderModules.cpp in Sources */,
-				9E2DAE06232A86E2004ADDCB /* Vertex2D.h in Sources */,
 				9E82E59B22037F2300AC8F7D /* ValidationLayers.cpp in Sources */,
 				9E2DAE03232A81CC004ADDCB /* Quad2D.cpp in Sources */,
 				9E3CA04422834D9A007494D6 /* DeviceQueues.cpp in Sources */,
-				9E3808382303019200FDF839 /* LocalFileSystem.cpp in Sources */,
 				9EA6484022017D4600FD3DB0 /* HelloTriangle.cpp in Sources */,
 				9E128D9A247C350E00032E8E /* Logging.cpp in Sources */,
 				9E82E5B32203B51700AC8F7D /* GraphicsPipeline.cpp in Sources */,
@@ -876,7 +873,6 @@
 				9E82E5B22203B51700AC8F7D /* GraphicsDevice.cpp in Sources */,
 				9EA648352200C7E400FD3DB0 /* vkEnumStrings.cpp in Sources */,
 				9E87F5CB23217A210009062F /* TextureImage.cpp in Sources */,
-				9E61A5E024A8284300AF6133 /* jsonConvert_c.h in Sources */,
 				9E38920B232973490024D111 /* Descriptors.cpp in Sources */,
 				9EC4858B222DE445007C7242 /* PlatformCommon.cpp in Sources */,
 				9E2DAE0D232CE1A5004ADDCB /* Quad2DTextured.cpp in Sources */,
@@ -968,7 +964,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.megaphonestudios.HelloVulkanSDL;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HelloTriangle;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1041,7 +1037,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.megaphonestudios.HelloVulkanSDL;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HelloTriangle;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				TARGETED_DEVICE_FAMILY = "1,2";
