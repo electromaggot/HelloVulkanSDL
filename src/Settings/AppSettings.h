@@ -36,7 +36,11 @@ public:
 
 	bool isInitialized = false;
 
-	// APP/WINDOWING-SYSTEM/GRAPHICS STARTUP SETTINGS
+	// APP/GENERAL SETTINGS
+
+	bool isDebugLogToFile = true;
+
+	// WINDOWING-SYSTEM/GRAPHICS STARTUP SETTINGS
 
 	int startingWindowWidth;
 	int startingWindowHeight;

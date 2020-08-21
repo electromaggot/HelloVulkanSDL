@@ -28,15 +28,13 @@
 class HelloApplication
 {
 private:
-	AppSettings		settings;
-
 	PlatformSDL		platform;	// SDL is target "platform" (i/o abstraction layer).
 
 	VulkanSetup		vulkan;		// This one instantiation...
 
 public:
 	HelloApplication()
-		:	platform(settings),
+		:	platform(),
 			vulkan(platform),	//	...initializes almost all of Vulkan.
 			device(vulkan.device.getLogical()),
 			swapchain(vulkan.swapchain.getVkSwapchain()),

@@ -13,6 +13,8 @@
 #endif
 
 #include "PlatformConstants.h"
+#include "VulkanPlatform.h"
+#include "AppSettings.h"
 
 
 extern struct Constants
@@ -23,6 +25,11 @@ extern struct Constants
 	const StrPtr WindowTitle		= "Vulkan Demo";
 
 	const StrPtr SettingsFileName	= "Settings.json";
+
+	const StrPtr DebugLogFileName	= "DebugLog.txt";
+
+	const StrPtr CompanyName		= "GitHubProject";
+	const StrPtr ProjectName		= "HelloTriangle";
 
 #define COMPARE_AGAINST		IPHONE_X		// These comparison cases are for
 #if COMPARE_AGAINST == SHADERTOY_16x9		//	test and are all temporary!
@@ -62,6 +69,9 @@ extern struct Constants
 private:
 	StrPtr	exePath					= nullptr;
 
+public:
+	AppSettings	 Settings;			// singleton, instantiate LAST: uses
+									//		constants initialized above
 } AppConstants;
 
 
