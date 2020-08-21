@@ -97,7 +97,7 @@ protected:	// (discourage standalone (non-derived) instantiation)
 			// The below methods are deprecated, but in lieu of coding an Obj-C wrapper:
 			#pragma clang diagnostic ignored "-Wdeprecated"
 			FSFindFolder(kUserDomain, folderType, kCreateFolder, &ref);
-			FSRefMakePath(&ref, (UInt8*) &localPath, pathMax);
+			FSRefMakePath(&ref, (UInt8*) &localPath, (UInt32) pathMax);
 		#endif
 		if (strlen(localPath) < pathMax) {		// there's room to append to path
 			appendTrailingSlash(localPath);
