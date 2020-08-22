@@ -43,7 +43,7 @@ namespace nlohmann
 
 			template <
 				class... Args,
-				enable_if_t<std::is_constructible<basic_json, Args...>::value, int> = 0 >
+				std::enable_if_t<std::is_constructible<basic_json, Args...>::value, int> = 0 >
 			json_ref(Args && ... args)
 				: owned_value(std::forward<Args>(args)...), value_ref(&owned_value),
 				  is_rvalue(true) {}

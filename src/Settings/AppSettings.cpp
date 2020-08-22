@@ -13,12 +13,7 @@
 
 #include "VulkanPlatform.h"
 #include "AppConstants.h"
-
-#include <iostream>			//
-#include <fstream>			// basic file operations
-#include <iomanip>			//
-using namespace std;		//
-
+#include "FileSystem.h"
 
 #include "jsonConvert_c.h"	// directly pull-in json methods (this is
 							//	the only place they'll get compiled)
@@ -43,11 +38,16 @@ void AppSettings::Save()
 	if (jsonSettings.empty() || jsonSettings.type() == value_t::null)
 		return;
 
+	string fileName = AppConstants.SettingsFileName;
+	fileName = FileSystem::AppLocalStorageDirectory() + fileName;
+	const char* filePath = fileName.c_str();
+	Log(RAW, "%s", filePath);
+
 	ofstream	settingsFile;
-	settingsFile.open(AppConstants.SettingsFileName);
+	settingsFile.open(filePath);
 	if (settingsFile.is_open())
 	{
-		settingsFile << setw(2) << jsonSettings << endl;
+		settingsFile << std::setw(2) << jsonSettings << endl;
 		settingsFile.close();
 	}
 }
@@ -57,8 +57,12 @@ void AppSettings::Retrieve()
 	try {
 		json jsonRetrieved;
 
+		string fileName = AppConstants.SettingsFileName;
+		fileName = FileSystem::AppLocalStorageDirectory() + fileName;
+		const char* filePath = fileName.c_str();
+
 		ifstream settingsFile;
-		settingsFile.open(AppConstants.SettingsFileName);
+		settingsFile.open(filePath);
 		if (settingsFile.is_open())
 		{
 			settingsFile >> jsonRetrieved;
