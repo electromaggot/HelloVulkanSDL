@@ -61,12 +61,12 @@ protected:	// (discourage standalone (non-derived) instantiation)
 		try {
 			fs::create_directories(localPath);	// throws on failure, returns true on "was created" (regardless of "if exists")
 
-			//Log(RAW, "STORAGE %s", localPath.c_str());					//TJ_TODO: causes infinite loop!
+			Log(RAW, "STORAGE %s", localPath.c_str());
 			return localPath;
 		}
 		catch(exception e) {
-			//Log(ERROR, "Failed to create directories: %s", localPath);	//TJ_TODO: again, can't log from here!
-			return "";	// indicate error: path assembled above invalid for storage
+			Fatal("Failed to create directories: %s\nException: %s", localPath.c_str(), e.what());
 		}
+		return "";	// indicate error: path assembled above otherwise invalid for storage
 	}
 };
