@@ -82,6 +82,7 @@
     <ClInclude Include="src\optional.h" />
     <ClInclude Include="src\PlatformConstants.h" />
     <ClInclude Include="src\PlatformSpecifics.h" />
+    <ClInclude Include="src\LocalFileSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\HelloTriangle.cpp" />
@@ -132,7 +133,6 @@
     <ClCompile Include="..\src\VulkanModule\Objects\VulkanInstance.cpp" />
     <ClCompile Include="..\src\VulkanModule\Objects\WindowSurface.cpp" />
     <ClCompile Include="..\src\VulkanModule\Setup\VulkanSetup.cpp" />
-    <ClCompile Include="src\LocalFileSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\src\shaders\09_shader_base.frag" />

@@ -202,6 +202,9 @@
     <ClInclude Include="..\src\VulkanModule\Objects\WindowSurface.h">
       <Filter>Vulkan\Objects</Filter>
     </ClInclude>
+    <ClInclude Include="src\LocalFileSystem.h">
+      <Filter>Platform\Microsoft</Filter>
+    </ClInclude>
     <ClInclude Include="src\optional.h">
       <Filter>Platform\Microsoft</Filter>
     </ClInclude>
@@ -350,9 +353,6 @@
     </ClCompile>
     <ClCompile Include="..\src\VulkanModule\Platform\OSAbstraction\PlatformGLFW.cpp">
       <Filter>Platform\OSAbstraction</Filter>
-    </ClCompile>
-    <ClCompile Include="src\LocalFileSystem.h">
-      <Filter>Platform\Microsoft</Filter>
     </ClCompile>
     <ClCompile Include="..\src\VulkanModule\AddOns\Renderables\AddOns.cpp">
       <Filter>Vulkan\AddOns\Renderables</Filter>
