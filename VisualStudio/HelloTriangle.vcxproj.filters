@@ -56,6 +56,9 @@
     <Filter Include="HelloTriangle\Settings">
       <UniqueIdentifier>{8f0b7924-2ec6-478f-8ecc-38e89504cd30}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\FileSystem">
+      <UniqueIdentifier>{53738977-9e27-4468-9d52-d6d339dbd234}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\AppConstants.h">
@@ -81,9 +84,6 @@
     </ClInclude>
     <ClInclude Include="..\src\VulkanModule\Platform\ImageHandling\ImageSTB.h">
       <Filter>Platform\ImageHandling</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\VulkanModule\Platform\FileSystem.h">
-      <Filter>Platform</Filter>
     </ClInclude>
     <ClInclude Include="..\src\VulkanModule\Platform\PlatformExtension.h">
       <Filter>Platform</Filter>
@@ -244,6 +244,12 @@
     <ClInclude Include="..\src\Settings\json.hpp">
       <Filter>HelloTriangle\Settings</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\VulkanModule\Platform\FileSystem\FileSystem.h">
+      <Filter>Platform\FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VulkanModule\Platform\FileSystem\FileSystemSDL.h">
+      <Filter>Platform\FileSystem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\HelloTriangle.cpp">
@@ -254,9 +260,6 @@
     </ClCompile>
     <ClCompile Include="..\src\VulkanModule\Platform\OSAbstraction\PlatformSDL.cpp">
       <Filter>Platform\OSAbstraction</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\VulkanModule\Platform\FileSystem.cpp">
-      <Filter>Platform</Filter>
     </ClCompile>
     <ClCompile Include="..\src\VulkanModule\Platform\PlatformCommon.cpp">
       <Filter>Platform</Filter>
@@ -348,7 +351,7 @@
     <ClCompile Include="..\src\VulkanModule\Platform\OSAbstraction\PlatformGLFW.cpp">
       <Filter>Platform\OSAbstraction</Filter>
     </ClCompile>
-    <ClCompile Include="src\LocalFileSystem.cpp">
+    <ClCompile Include="src\LocalFileSystem.h">
       <Filter>Platform\Microsoft</Filter>
     </ClCompile>
     <ClCompile Include="..\src\VulkanModule\AddOns\Renderables\AddOns.cpp">
@@ -371,6 +374,9 @@
     </ClCompile>
     <ClCompile Include="..\src\Settings\jsonConvert_c.h">
       <Filter>HelloTriangle\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VulkanModule\Platform\FileSystem\FileSystem.cpp">
+      <Filter>Platform\FileSystem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
