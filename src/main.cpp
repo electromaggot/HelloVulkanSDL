@@ -13,7 +13,7 @@
 int main(int argc, char* argv[])
 {
 	AppConstants.setExePath(argv[0]);
-	Log(RAW, "RUNNING %s", AppConstants.getExePath());
+	LogStartup();
 
 	HelloApplication app;
 
