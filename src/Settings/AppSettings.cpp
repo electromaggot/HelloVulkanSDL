@@ -21,6 +21,7 @@ json jsonSettings;
 
 
 AppSettings::AppSettings()
+	: filePath(FileSystem::AppLocalStorageDirectory() + AppConstants.SettingsFileName)
 {
 	try {
 		Retrieve();

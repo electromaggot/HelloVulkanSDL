@@ -25,6 +25,8 @@
 #ifndef AppSettings_h
 #define AppSettings_h
 
+#include <string>
+
 
 class AppSettings
 {
@@ -33,6 +35,8 @@ public:
 
 	void Save();
 	void Retrieve();
+
+	std::string filePath;
 
 	bool isInitialized = false;
 
