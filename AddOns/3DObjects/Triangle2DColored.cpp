@@ -47,7 +47,7 @@ VertexBasedObject Triangle2DColored = {
            /     |     \
           /     CCW     \
 (-.5,.5)  \      |      /  (.5,.5)
-        o  `-----------'  o
+        o  `-----------´  o
        1         |         2
                  v
                   +y
