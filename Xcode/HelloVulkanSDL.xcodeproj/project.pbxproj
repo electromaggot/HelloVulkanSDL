@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,7 +24,6 @@
 		9E2DAE0D232CE1A5004ADDCB /* Quad2DTextured.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DAE0C232CE1A5004ADDCB /* Quad2DTextured.cpp */; };
 		9E2DAE0E232CE24A004ADDCB /* Quad2DTextured.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DAE0C232CE1A5004ADDCB /* Quad2DTextured.cpp */; };
 		9E2DAE0F232CE24E004ADDCB /* Quad2DTextureTinted.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DAE0A232CE035004ADDCB /* Quad2DTextureTinted.cpp */; };
-		9E2DAE15232DEDA1004ADDCB /* MoltenVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2DAE14232DEDA0004ADDCB /* MoltenVK.framework */; };
 		9E2DAE18232E8BFA004ADDCB /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2DAE17232E8BFA004ADDCB /* IOSurface.framework */; };
 		9E38920B232973490024D111 /* Descriptors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E389209232973490024D111 /* Descriptors.cpp */; };
 		9E38920C23297DCE0024D111 /* Descriptors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E389209232973490024D111 /* Descriptors.cpp */; };
@@ -43,7 +42,6 @@
 		9E6B2DD7233272A800F7575D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1124EB220F998F00DBA190 /* IOKit.framework */; };
 		9E6B2DD8233272E000F7575D /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2DAE17232E8BFA004ADDCB /* IOSurface.framework */; };
 		9E6B2DD92332730200F7575D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1124E7220F988100DBA190 /* Metal.framework */; };
-		9E6B2DE02332790A00F7575D /* MoltenVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B2DDF2332790A00F7575D /* MoltenVK.framework */; };
 		9E6B2DE22332AF5300F7575D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6B2DE12332AF5300F7575D /* Images.xcassets */; };
 		9E82E59B22037F2300AC8F7D /* ValidationLayers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E59922037F2300AC8F7D /* ValidationLayers.cpp */; };
 		9E82E5AC2203B51700AC8F7D /* Swapchain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E82E59C2203B51600AC8F7D /* Swapchain.cpp */; };
@@ -85,11 +83,11 @@
 		9EA6482922003B7500FD3DB0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EA6481C22003AC200FD3DB0 /* main.cpp */; };
 		9EA648352200C7E400FD3DB0 /* vkEnumStrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EA648342200C65500FD3DB0 /* vkEnumStrings.cpp */; };
 		9EA6484022017D4600FD3DB0 /* HelloTriangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EA6483C2201635000FD3DB0 /* HelloTriangle.cpp */; };
-		9EC48588222CB4D6007C7242 /* LocalVkEnumerateInstanceVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EC48587222CB4D6007C7242 /* LocalVkEnumerateInstanceVersion.cpp */; };
-		9EC48589222CB504007C7242 /* LocalVkEnumerateInstanceVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EC48587222CB4D6007C7242 /* LocalVkEnumerateInstanceVersion.cpp */; };
 		9EC4858B222DE445007C7242 /* PlatformCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4858A222DE445007C7242 /* PlatformCommon.cpp */; };
 		9EC4858C222DE445007C7242 /* PlatformCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4858A222DE445007C7242 /* PlatformCommon.cpp */; };
 		9ECA3982220255BE00B2A7B3 /* compiledShaders in Resources */ = {isa = PBXBuildFile; fileRef = 9ECA3981220255BE00B2A7B3 /* compiledShaders */; };
+		9EEA190B2AF0742A00EB47F4 /* MoltenVK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EEA190A2AF0742A00EB47F4 /* MoltenVK.xcframework */; };
+		9EEA190C2AF0743D00EB47F4 /* MoltenVK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EEA190A2AF0742A00EB47F4 /* MoltenVK.xcframework */; };
 		9EEBF70E226DFBF700AC0B7F /* DebugReport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBF70D226DFBF700AC0B7F /* DebugReport.cpp */; };
 		9EEBF710226EBD2000AC0B7F /* DebugReport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBF70D226DFBF700AC0B7F /* DebugReport.cpp */; };
 		9EF5A4E22314D26400524830 /* PrimitiveBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5A4E02314D26400524830 /* PrimitiveBuffer.cpp */; };
@@ -155,7 +153,6 @@
 		9E2DAE0C232CE1A5004ADDCB /* Quad2DTextured.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Quad2DTextured.cpp; sourceTree = "<group>"; };
 		9E2DAE10232D8428004ADDCB /* TexturedQuad.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = TexturedQuad.frag; path = ../shaders/TexturedQuad.frag; sourceTree = "<group>"; };
 		9E2DAE11232D8428004ADDCB /* TexturedQuad.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = TexturedQuad.vert; path = ../shaders/TexturedQuad.vert; sourceTree = "<group>"; };
-		9E2DAE14232DEDA0004ADDCB /* MoltenVK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MoltenVK.framework; path = ../External/VulkanSDK/MoltenVK/macOS/framework/MoltenVK.framework; sourceTree = "<group>"; };
 		9E2DAE17232E8BFA004ADDCB /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
 		9E3808372303019200FDF839 /* LocalFileSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LocalFileSystem.h; path = src/LocalFileSystem.h; sourceTree = SOURCE_ROOT; };
 		9E389209232973490024D111 /* Descriptors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Descriptors.cpp; sourceTree = "<group>"; };
@@ -176,7 +173,6 @@
 		9E61A5DE24A8284300AF6133 /* AppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettings.h; sourceTree = "<group>"; };
 		9E61A5DF24A8284300AF6133 /* AppSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppSettings.cpp; sourceTree = "<group>"; };
 		9E61A5E424A830DC00AF6133 /* json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
-		9E6B2DDF2332790A00F7575D /* MoltenVK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MoltenVK.framework; path = ../External/VulkanSDK/MoltenVK/iOS/framework/MoltenVK.framework; sourceTree = "<group>"; };
 		9E6B2DE12332AF5300F7575D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/iOS/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		9E6C1B0E234BF74900A86F04 /* Mipmaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mipmaps.h; sourceTree = "<group>"; };
 		9E6C1B0F234BF96200A86F04 /* sdlEquivalents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdlEquivalents.h; sourceTree = "<group>"; };
@@ -236,7 +232,6 @@
 		9EA6483C2201635000FD3DB0 /* HelloTriangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloTriangle.cpp; sourceTree = "<group>"; };
 		9EC485852225801D007C7242 /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		9EC48586222B0E86007C7242 /* VulkanPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VulkanPlatform.h; sourceTree = "<group>"; };
-		9EC48587222CB4D6007C7242 /* LocalVkEnumerateInstanceVersion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LocalVkEnumerateInstanceVersion.cpp; path = src/LocalVkEnumerateInstanceVersion.cpp; sourceTree = SOURCE_ROOT; };
 		9EC4858A222DE445007C7242 /* PlatformCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlatformCommon.cpp; sourceTree = "<group>"; };
 		9EC4858D2231A31F007C7242 /* PlatformExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformExtension.h; sourceTree = "<group>"; };
 		9ECA3981220255BE00B2A7B3 /* compiledShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = compiledShaders; sourceTree = "<group>"; };
@@ -244,6 +239,7 @@
 		9ECA39852202560E00B2A7B3 /* compile.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = compile.sh; sourceTree = "<group>"; };
 		9ECA39862202560E00B2A7B3 /* 09_shader_base.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 09_shader_base.vert; sourceTree = "<group>"; };
 		9ED90BD42337F7ED0004BAFA /* RenderSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderSettings.h; sourceTree = "<group>"; };
+		9EEA190A2AF0742A00EB47F4 /* MoltenVK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MoltenVK.xcframework; path = "../External/VulkanSDK/MoltenVK/MoltenVK.xcframework"; sourceTree = "<group>"; };
 		9EEBF70C226DFBF700AC0B7F /* DebugReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugReport.h; sourceTree = "<group>"; };
 		9EEBF70D226DFBF700AC0B7F /* DebugReport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DebugReport.cpp; sourceTree = "<group>"; };
 		9EEBF7122280645A00AC0B7F /* optional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = optional.h; path = src/optional.h; sourceTree = SOURCE_ROOT; };
@@ -278,6 +274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EEA190B2AF0742A00EB47F4 /* MoltenVK.xcframework in Frameworks */,
 				9E1124EA220F991000DBA190 /* CoreServices.framework in Frameworks */,
 				9E1124F4220F9D2E00DBA190 /* QuartzCore.framework in Frameworks */,
 				9E1124F1220F9AD000DBA190 /* Cocoa.framework in Frameworks */,
@@ -286,7 +283,6 @@
 				9E1124ED220F9A0900DBA190 /* Metal.framework in Frameworks */,
 				9E87F5F8232225D20009062F /* SDL2.framework in Frameworks */,
 				9E87F5FA232225E70009062F /* SDL2_image.framework in Frameworks */,
-				9E2DAE15232DEDA1004ADDCB /* MoltenVK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +290,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EEA190C2AF0743D00EB47F4 /* MoltenVK.xcframework in Frameworks */,
 				9E6B2DD7233272A800F7575D /* IOKit.framework in Frameworks */,
 				9E6B2DD8233272E000F7575D /* IOSurface.framework in Frameworks */,
 				9E6B2DD92332730200F7575D /* Metal.framework in Frameworks */,
 				9E1124E3220F8F7300DBA190 /* SDL_iOS.framework in Frameworks */,
 				9E87F5CF232192750009062F /* SDL_image_iOS.framework in Frameworks */,
-				9E6B2DE02332790A00F7575D /* MoltenVK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +306,6 @@
 			isa = PBXGroup;
 			children = (
 				9E1124EE220F9A0900DBA190 /* MetalKit.framework */,
-				9E6B2DDF2332790A00F7575D /* MoltenVK.framework */,
 				9E1124E2220F8F7300DBA190 /* SDL_iOS.framework */,
 				9E87F5CE232192750009062F /* SDL_image_iOS.framework */,
 			);
@@ -320,7 +315,6 @@
 		9E07254523313B2B005C38E4 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				9E2DAE14232DEDA0004ADDCB /* MoltenVK.framework */,
 				9E87F5F7232225D20009062F /* SDL2.framework */,
 				9E87F5F9232225E70009062F /* SDL2_image.framework */,
 			);
@@ -478,6 +472,7 @@
 		9EA6482A22003B9C00FD3DB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9EEA190A2AF0742A00EB47F4 /* MoltenVK.xcframework */,
 				9E1124E9220F991000DBA190 /* CoreServices.framework */,
 				9E1124F3220F9D2E00DBA190 /* QuartzCore.framework */,
 				9E1124F0220F9AD000DBA190 /* Cocoa.framework */,
@@ -617,7 +612,6 @@
 				9EA5CCF2230F025000178010 /* PlatformConstants.h */,
 				9E07254723316854005C38E4 /* PlatformSpecifics.h */,
 				9E3808372303019200FDF839 /* LocalFileSystem.h */,
-				9EC48587222CB4D6007C7242 /* LocalVkEnumerateInstanceVersion.cpp */,
 				9EEBF7122280645A00AC0B7F /* optional.h */,
 			);
 			name = Apple;
@@ -705,7 +699,7 @@
 		9EA6481622003A9000FD3DB0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					9EA6482022003B2900FD3DB0 = {
 						CreatedOnToolsVersion = 10.0;
@@ -818,7 +812,6 @@
 				9E128D9C247C365B00032E8E /* Logging.cpp in Sources */,
 				9E82E5C4220A345B00AC8F7D /* main.cpp in Sources */,
 				9EEBF710226EBD2000AC0B7F /* DebugReport.cpp in Sources */,
-				9EC48589222CB504007C7242 /* LocalVkEnumerateInstanceVersion.cpp in Sources */,
 				9E82E5C5220A345B00AC8F7D /* GraphicsDevice.cpp in Sources */,
 				9E82E5C6220A345B00AC8F7D /* vkEnumStrings.cpp in Sources */,
 				9EC4858C222DE445007C7242 /* PlatformCommon.cpp in Sources */,
@@ -868,7 +861,6 @@
 				9E82E5AE2203B51700AC8F7D /* RenderPass.cpp in Sources */,
 				9EA6482922003B7500FD3DB0 /* main.cpp in Sources */,
 				9EEBF70E226DFBF700AC0B7F /* DebugReport.cpp in Sources */,
-				9EC48588222CB4D6007C7242 /* LocalVkEnumerateInstanceVersion.cpp in Sources */,
 				9E4480602462DA13009A8EA4 /* FixedRenderable.cpp in Sources */,
 				9E82E5B22203B51700AC8F7D /* GraphicsDevice.cpp in Sources */,
 				9EA648352200C7E400FD3DB0 /* vkEnumStrings.cpp in Sources */,
@@ -926,12 +918,12 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					../External/VulkanSDK/MoltenVK/macOS/framework,
 					"../External/SDL/Xcode/SDL/build/Products/$(CONFIGURATION)",
 					"../External/SDL_image/Xcode/build/Products/$(CONFIGURATION)",
 				);
@@ -1006,12 +998,12 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					../External/VulkanSDK/MoltenVK/macOS/framework,
 					"../External/SDL/Xcode/SDL/build/Products/$(CONFIGURATION)",
 					"../External/SDL_image/Xcode/build/Products/$(CONFIGURATION)",
 				);
@@ -1061,11 +1053,13 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1103,11 +1097,13 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1153,6 +1149,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1166,10 +1163,7 @@
 				DEVELOPMENT_TEAM = VZKR5Q6878;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					../External/VulkanSDK/MoltenVK/iOS/framework,
-					iOSFrameworks,
-				);
+				FRAMEWORK_SEARCH_PATHS = iOSFrameworks;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1190,7 +1184,7 @@
 					iOSFrameworks/SDL_image_iOS.framework/Headers,
 				);
 				INFOPLIST_FILE = Resources/iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1230,6 +1224,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1243,10 +1238,7 @@
 				DEVELOPMENT_TEAM = VZKR5Q6878;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					../External/VulkanSDK/MoltenVK/iOS/framework,
-					iOSFrameworks,
-				);
+				FRAMEWORK_SEARCH_PATHS = iOSFrameworks;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1261,7 +1253,7 @@
 					iOSFrameworks/SDL_image_iOS.framework/Headers,
 				);
 				INFOPLIST_FILE = Resources/iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
