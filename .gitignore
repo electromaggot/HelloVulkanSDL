@@ -40,6 +40,12 @@ project.xcworkspace/
 *.swp
 *~
 
+# LINUX
+CMakeCache.txt
+cmake_install.cmake
+CMakeFiles
+CMake*/Makefile
+
 # GOOGLE
 # Also Android Studio files
 .idea
