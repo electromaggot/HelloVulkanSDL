@@ -40,6 +40,11 @@ project.xcworkspace/
 *.swp
 *~
 
+# LINUX
+CMake*
+cmake*
+Makefile
+
 # GOOGLE
 # Also Android Studio files
 .idea
