@@ -4,7 +4,7 @@ The following was tested on a Pi 5. It might work on Pi 4 (but Pi 3 and prior/le
 
 ### What is already installed
 
-Pi5's Bookworm Linux comes with the following packages pre-installed (so you don't need to!),\
+Pi5's Bookworm Linux comes with the following packages pre-installed (so you don't need to!)\
 in their "stable" release versions for arm64:&emsp;...as of 10/31/2023\
 &ensp; VULKAN: &ensp;                   `  libvulkan1 (1.3.239.0-1)                                                 `\
 &ensp; SDL: &emsp; &nbsp; &nbsp; &nbsp; `  libsdl2-2.0-0 (2.26.5+dfsg-1)        libsdl2-image-2.0-0 (2.6.3+dfsg-1)  `\
@@ -24,7 +24,7 @@ This project additionally requires Linux versions of the following:\
 
 **1\. Vulkan SDK**\
 &emsp; This is slightly more complicated than installing the Ubuntu version of VulkanSDK.\
-&emsp; Requires two steps:\
+&emsp; Requires two big steps:\
 &emsp; &emsp; 1.1. Install pre-requisites for Raspberry Pi.\
 &emsp; &emsp; 1.2. Download, extract, and build the SDK.
  
