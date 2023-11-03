@@ -8,17 +8,18 @@ You will need:
 
    LunarG develops this SDK's Linux version on Ubuntu and provides their builds, making it really easy to download/install via `apt`.
 
-   Simply following the instructions at  https://vulkan.lunarg.com/sdk/home#linux  ...
+   Simply following the instructions at [LunarG](https://vulkan.lunarg.com/doc/view/1.3.268.0/linux/getting_started_ubuntu.html#install-the-sdk) and [here](https://vulkan.lunarg.com/sdk/home#linux) ...
 
    The **Ubuntu Packages** Tab says to do this: 
    ```ruby
    wget -qO- https://packages.lunarg.com/lunarg-signing-key-pub.asc | sudo tee /etc/apt/trusted.gpg.d/lunarg.asc
-   sudo wget -qO /etc/apt/sources.list.d/lunarg-vulkan-1.3.243-jammy.list https://packages.lunarg.com/vulkan/1.3.243/lunarg-vulkan-1.3.243-jammy.list
+   sudo wget -qO /etc/apt/sources.list.d/lunarg-vulkan-jammy.list http://packages.lunarg.com/vulkan/lunarg-vulkan-jammy.list
    sudo apt update
    sudo apt install vulkan-sdk
    ``` 
+   ("Jammy" is the 22.04 release's code name. Update that string above to its future/current version.)
 
-2. **SDL** Linux version
+3. **SDL** Linux version
 
    Grab the Simple Directmedia Layer libraries:
    ```ruby
@@ -32,7 +33,7 @@ You will need:
    ```
    SDL's source code has helpful documentation, available here:  https://github.com/libsdl-org/SDL/releases
   
-3. **GLM** on Linux
+4. **GLM** on Linux
 
    OpenGL's Math library is excellent, still totally relevant, and invaluable even for Vulkan:
    ```ruby
