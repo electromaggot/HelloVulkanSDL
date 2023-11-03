@@ -2,6 +2,10 @@
 
 COMPILER=/usr/bin/glslangValidator
 
+if [ -n "$(lsb_release -a | grep bookworm)" ]; then
+  COMPILER=/usr/local/src/VulkanSDK/aarch64/bin/glslangValidator
+fi
+
 DSTDIR=../../CMakeLinux/compiledShaders
 
 
