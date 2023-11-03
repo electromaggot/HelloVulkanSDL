@@ -100,13 +100,14 @@ Now navigate to the new Vulkan directory and run the script located there:
   $ source setup-env.sh
 ```
 \_\_\_\_**1.2.4.** BUILD/INSTALL_____________________________________________________________________\
-As per the LunarG instructions:  (beware! the following can take around 4.5 hours to
-				  complete on a Pi5*, so you may want to run it overnight)
+As per the LunarG instructions:\
+&emsp;&emsp; ***(but beware! the following can take around 4.5 hours to
+                 complete on a Pi5\*, so you may want to run it overnight)***
 ```ruby
   $ ./vulkansdk -j 1
 ```
-(* - although CPU occupancy appeared to hover at 25%, so only one of the Cortex-A76's
-     cores seems to have been used here by the terminal/shell-script.)
+&emsp;&emsp; (* - although CPU occupancy appeared to hover at 25%, so perhaps only one of\
+&emsp;&emsp;&emsp;&emsp; the Cortex-A76's four cores was utilized here by the terminal/shell-script.)
      
 \_\_\_\_**1.2.5.** TEST IT OUT_______________________________________________________________________\
 Since Pi Bookworm defaults to Wayland, run this and you should see LunarG's 3D spinning cube:
@@ -129,7 +130,7 @@ However we'd like the version with header files too, so do this:
 
 Note that the Vulkan SDK installation steps (#1 above) already installed this!  So now we don't have to.
 
-
+\
 Installing this Project
 -----------------------
 ```bash
@@ -147,6 +148,7 @@ To build the project:
 &emsp; which is in `VulkanSDK/1.3.268.0/aarch64/bin` -- instructions to be added here on how to copy or link or\
 &emsp; include those into the shell's environment variables... ***FORTHCOMING!]***
 
+\
 Finally
 -------
 When running this program, you may see the following error messages print to the console:
