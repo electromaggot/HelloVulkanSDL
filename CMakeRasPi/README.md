@@ -36,11 +36,11 @@ This project additionally requires Linux versions of the following:\
   $ sudo apt upgrade
 ```
 &emsp; LunarG's instructions say to also do this, although I found it was already present &nbsp; &rarr; &nbsp; `$ sudo apt install xz-utils`\
-&emsp; The following line installs the ICD or Installable Client Driver:
+&emsp; The following line installs Vulkan's ICD or Installable Client Driver:
 ```ruby
   $ sudo apt install mesa-vulkan-drivers vulkan-tools
 
-  $ apt list --installed | grep -i vulkan
+  $ apt list --installed | grep vulkan
 ```
 &emsp; The above command should now show these additional Vulkan components as present:
 ```brainfuck
@@ -49,7 +49,7 @@ This project additionally requires Linux versions of the following:\
 ```
 &emsp; Enter the following shell command; it does differ from LunarG's instructions (which fail)...
 ```ruby
-  $ sudo apt install libglm-dev cmake libxcb-dri3-0 libxcb-present0 libpciaccess0 \
+  sudo apt install libglm-dev cmake libxcb-dri3-0 libxcb-present0 libpciaccess0 \
 	libpng-dev libxcb-keysyms1-dev libxcb-dri3-dev libx11-dev g++ gcc \
 	libwayland-dev libxrandr-dev libxcb-randr0-dev libxcb-ewmh-dev \
 	python-is-python3 2to3 python3 bison libx11-xcb-dev liblz4-dev libzstd-dev python3-distutils \
@@ -118,7 +118,7 @@ Since Pi Bookworm defaults to Wayland, run this and you should see LunarG's 3D s
  for X-Windows, unless you have alternately set it as your windowing environment instead of Wayland)
 
 \
-**3. SDL-dev**
+**2. SDL-dev**
 
 As said above, SDL is mostly already installed in the official Bookworm distribution for the Pi5.
 However we'd like the version with header files too, so do this:
@@ -126,7 +126,7 @@ However we'd like the version with header files too, so do this:
   $ sudo apt install libsdl2-dev libsdl2-image-dev
 ```
 
-**4. GLM**
+**3. GLM**
 
 Note that the Vulkan SDK installation steps (#1 above) already installed this!  So now we don't have to.
 
