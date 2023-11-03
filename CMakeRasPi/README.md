@@ -57,7 +57,7 @@ This project additionally requires Linux versions of the following:\
 	qtbase5-dev qt5-qmake qtbase5-dev-tools
 ```
 > Side note - here were LunarG's failure points, modules that errored-out when trying to install them:\
-> &emsp;&emsp;&emsp;&emsp;&emsp;`python` seems no longer available, so replaced with `python-is-python3` `2to3`.\
+> &emsp;&emsp;&emsp;&emsp;&emsp;`python` is perhaps deprecated, so replaced with `python-is-python3` `2to3`.\
 > &emsp;&emsp;&emsp;&emsp;&emsp;`libmirclient-dev` also appears to be no longer available, so was removed.\
 > &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Remainder of build succeeds without it.  Note: `$ sudo apt list *libmir*`\
 > &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;does not show "libmirclient"... (although is `libmirplatform` a replacement?)\
