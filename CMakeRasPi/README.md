@@ -149,9 +149,15 @@ To run:
   $ cd build
   $ ./HelloTriangle
 ```
-***\[TODO:*** should make successfully!... however `compiledShaders/compileLinux.sh` could not find `glslangValidator`\
+***\[TODO:*** should make successfully!... however `compiledShaders/compileLinux.sh` cannot find `glslangValidator`\
 &emsp; which is in `VulkanSDK/1.3.268.0/aarch64/bin` -- instructions to be added here on how to copy or link or\
 &emsp; include those into the shell's environment variables... ***FORTHCOMING!]***
+
+To fix this issue temporarily, edit `build/compiledShaders/compileLinux.sh` and change the line\
+`COMPILER=/usr/bin/glslangValidator`\
+to this:\
+`COMPILER=/usr/local/src/VulkanSDK/aarch64/bin/glslangValidator`\
+(or whatever path you installed VulkanSDK to)
 
 \
 Finally
