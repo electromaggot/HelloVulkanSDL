@@ -1,8 +1,9 @@
 ## Mac Build Instructions
 
-0. After cloning this project
-   (or downloading, double-clicking to unzip, dragging somewhere, then opening **Terminal**.app),\
-   `cd` to the project's directory, which is assumed to be `./` when appearing below.
+0. Clone not only this project, but also https://github.com/electromaggot/VulkanModule into the same directory.\
+   (Alternately, if you prefer ZIPs: download both, double-click each, and drag the two extracted directories into \
+    the same parent directory.)  Finally, open the Mac **Terminal**.app, then\
+   `cd HelloVulkanSDL` to this project's directory, which is assumed to be `./` when appearing below.
 
 1. Download the latest **Vulkan SDK**: &nbsp; https://vulkan.lunarg.com/sdk/home#mac \
    Double-click the `.tar.gz` and drag/`mv` to relocate or rename the extracted directory as follows.\
