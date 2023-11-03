@@ -137,12 +137,17 @@ Installing this Project
   $ cd <your project directory>
   $ git clone https://github.com/electromaggot/HelloVulkanSDL.git
   $ git clone https://github.com/electromaggot/VulkanModule.git
-  $ cd HelloVulkanSDL
+  $ cd HelloVulkanSDL/CMakeRasPi
 ```
 To build the project:
 ```ruby
   $ cmake .
   $ make
+```
+To run:
+```ruby
+  $ cd build
+  $ ./HelloTriangle
 ```
 ***\[TODO:*** should make successfully!... however `compiledShaders/compileLinux.sh` could not find `glslangValidator`\
 &emsp; which is in `VulkanSDK/1.3.268.0/aarch64/bin` -- instructions to be added here on how to copy or link or\
