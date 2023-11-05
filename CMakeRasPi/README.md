@@ -117,6 +117,16 @@ Since Pi Bookworm defaults to Wayland, run this and you should see LunarG's 3D s
 (otherwise running `vkcube` or `vkcubepp` error-out with "Cannot connect to XCB" as they are intended
  for X-Windows, unless you have alternately set it as your windowing environment instead of Wayland)
 
+\_\_\_\_**1.2.6.** SYMLINK EXECUTABLE_____________________________________________________________\
+The Shader Compiler is a key program just built by the `vulkansdk` script, but such binaries reside
+in the SDK's source directory.  Instead of moving these executables, which could change if you update
+the SDK later, symbolic links are easy to create and forgive changed destinations.  The following
+does so for the compiler `glslang` but feel free to link additional SDK binaries you find helpful.
+```shell
+  $ cd /usr/local/bin
+  $ ln -s ../src/VulkanSDK/aarch64/bin/glslang
+```
+
 \
 **2. SDL-dev**
 
