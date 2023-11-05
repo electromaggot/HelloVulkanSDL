@@ -2,8 +2,8 @@
 
 COMPILER=/usr/bin/glslangValidator
 
-if [ -n "$(lsb_release -a | grep bookworm)" ]; then
-  COMPILER=/usr/local/src/VulkanSDK/aarch64/bin/glslangValidator
+if [ -n "$(grep -i "name.*debian" /etc/os-release)" ]; then
+  COMPILER=/usr/local/bin/glslang
 fi
 
 DSTDIR=../../CMakeLinux/compiledShaders
