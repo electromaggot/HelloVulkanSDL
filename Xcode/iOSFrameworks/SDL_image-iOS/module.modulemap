@@ -1,8 +1,0 @@
-framework module Foo {
-	umbrella header "SDL_image-iOS.h"
-
-	//header "another-header.h"
-
-	export *
-	module * { export * }
-}
