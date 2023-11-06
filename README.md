@@ -15,8 +15,8 @@ Specific Features:
 - Abstracts some basic 3D objects and vertex types
 
 Supports:
-- iOS and macOS (Xcode 14) &nbsp; &rarr; &nbsp; [Mac Build Instructions](https://github.com/electromaggot/HelloVulkanSDL/tree/master/Xcode#mac-build-instructions)
-- Windows (Visual Studio 2019) &nbsp; &rarr; &nbsp; [Windows Build Instructions](https://github.com/electromaggot/HelloVulkanSDL/tree/master/VisualStudio#windows-build-instructions)
+- iOS and macOS (Xcode 11 to 14) &nbsp; &rarr; &nbsp; [Mac Build Instructions](https://github.com/electromaggot/HelloVulkanSDL/tree/master/Xcode#mac-build-instructions)
+- Windows (Visual Studio 2019+) &nbsp; &rarr; &nbsp; [Windows Build Instructions](https://github.com/electromaggot/HelloVulkanSDL/tree/master/VisualStudio#windows-build-instructions)
 - Linux (CMake) &nbsp; &rarr; &nbsp; [Ubuntu Build Instructions](https://github.com/electromaggot/HelloVulkanSDL/tree/master/CMakeLinux#ubuntu--build-instructions) &nbsp; &nbsp; [Raspberry Pi 5 Build Instructions](https://github.com/electromaggot/HelloVulkanSDL/tree/master/CMakeRasPi#raspberry-pi-5--build-instructions)
 - (Android and VR platform support coming soon!__[*](https://github.com/electromaggot/HelloVulkanSDL#contributing)__)
 
