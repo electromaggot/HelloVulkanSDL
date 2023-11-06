@@ -174,6 +174,7 @@
 		9E61A5DF24A8284300AF6133 /* AppSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppSettings.cpp; sourceTree = "<group>"; };
 		9E61A5E424A830DC00AF6133 /* json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
 		9E6B2DE12332AF5300F7575D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/iOS/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		9E6BC84925EE8F2500B8C40F /* Customizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Customizer.h; sourceTree = "<group>"; };
 		9E6C1B0E234BF74900A86F04 /* Mipmaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mipmaps.h; sourceTree = "<group>"; };
 		9E6C1B0F234BF96200A86F04 /* sdlEquivalents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdlEquivalents.h; sourceTree = "<group>"; };
 		9E82E59922037F2300AC8F7D /* ValidationLayers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ValidationLayers.cpp; sourceTree = "<group>"; };
@@ -366,6 +367,7 @@
 				9E44805B2462DA13009A8EA4 /* iRenderable.h */,
 				9E44805C2462DA13009A8EA4 /* FixedRenderable.cpp */,
 				9E44805D2462DA13009A8EA4 /* FixedRenderable.h */,
+				9E6BC84925EE8F2500B8C40F /* Customizer.h */,
 			);
 			path = Renderables;
 			sourceTree = "<group>";
