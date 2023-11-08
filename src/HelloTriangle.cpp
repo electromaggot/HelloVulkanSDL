@@ -67,14 +67,14 @@ void HelloApplication::Init()
 						 { FRAGMENT, "25_shader_textures-frag.spv"		} },	// and now requires...
 			.vertexSpec = Quad2DTextureTinted,
 			.pUBOs		= { uboMVP },
-			.textureSpecs = { { "texture.jpg" }, { } }							//	a texture too, array
-		},									  // ^^^							<--	"null" terminated!
+			.textureSpecs = { { "texture.jpg" } }								//	a texture too, array
+		},
 		{												// 6: minimal textured quad
 			.shaders = { { VERTEX,	 "TexturedQuad-vert.spv"			},		// This shader requires...
 						 { FRAGMENT, "TexturedQuad-frag.spv"			} },
 			.vertexSpec = Quad2DTextured,										//	this quad, plus...
 			.pUBOs		= { uboMVP },											//	this model/view/projection,
-			.textureSpecs = { { "texture.jpg" }, { } }							//	and this texture.
+			.textureSpecs = { { "texture.jpg" } }								//	and this texture.
 		},{												// 7: ray marching test
 			.shaders = { { VERTEX,	 "FullScreenTriangle-vert.spv"		},
 						 { FRAGMENT, "tjVolcanic-frag.spv"				} },
@@ -82,7 +82,7 @@ void HelloApplication::Init()
 			.pUBOs		= { uboRayCast },
 			.textureSpecs = { { "Noise256.png", LINEAR, REPEAT },
 							  { "MossyBark.jpg", MIPMAP, REPEAT },
-							  { "PockScorch.jpg", MIPMAP, REPEAT }, { }	}
+							  { "PockScorch.jpg", MIPMAP, REPEAT } }
 		}
 	};
 
