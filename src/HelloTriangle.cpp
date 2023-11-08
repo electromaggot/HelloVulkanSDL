@@ -107,7 +107,7 @@ void HelloApplication::Run()
 		while (platform.PollEvent())
 			quit = platform.IsEventQUIT();
 
-		if (platform.IsWindowMinimized())
+		if (platform.IsWindowMinimizedOrHidden())
 			platform.AwaitEvent();
 
 		updateRender();
