@@ -178,6 +178,7 @@
 		9E6C1B0E234BF74900A86F04 /* Mipmaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mipmaps.h; sourceTree = "<group>"; };
 		9E6C1B0F234BF96200A86F04 /* sdlEquivalents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdlEquivalents.h; sourceTree = "<group>"; };
 		9E7C112229D4960B00D6DDEB /* VulkanMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VulkanMath.h; sourceTree = "<group>"; };
+		9E7C113529DC9A8E00D6DDEB /* iControlScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iControlScheme.h; path = ControlScheme/iControlScheme.h; sourceTree = "<group>"; };
 		9E82E59922037F2300AC8F7D /* ValidationLayers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ValidationLayers.cpp; sourceTree = "<group>"; };
 		9E82E59A22037F2300AC8F7D /* ValidationLayers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValidationLayers.h; sourceTree = "<group>"; };
 		9E82E59C2203B51600AC8F7D /* Swapchain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Swapchain.cpp; sourceTree = "<group>"; };
@@ -342,6 +343,7 @@
 				9E128D97247C349900032E8E /* Logger */,
 				9EC4858D2231A31F007C7242 /* PlatformExtension.h */,
 				9EC4858A222DE445007C7242 /* PlatformCommon.cpp */,
+				9E7C113529DC9A8E00D6DDEB /* iControlScheme.h */,
 				9E128D9B247C358D00032E8E /* Universal.h */,
 				9EEBF713228067FC00AC0B7F /* Apple */,
 			);
