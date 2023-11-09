@@ -121,6 +121,11 @@ set(Platform__OSAbstraction
 )
 source_group("Platform\\OSAbstraction" FILES ${Platform__OSAbstraction})
 
+set(Platform__ControlScheme
+    "../src/VulkanModule/Platform/ControlScheme/iControlScheme.h"
+)
+source_group("Platform\\ControlScheme" FILES ${Platform__ControlScheme})
+
 set(Vulkan__AddOns
     "../src/VulkanModule/AddOns/BufferBase.h"
     "../src/VulkanModule/AddOns/CommandBufferBase.h"
@@ -234,6 +239,7 @@ set(ALL_FILES
     ${Platform__Logger}
     ${Platform__Microsoft}
     ${Platform__OSAbstraction}
+    ${Platform__ControlScheme}
     ${Vulkan__AddOns}
     ${Vulkan__AddOns__3DObjects}
     ${Vulkan__AddOns__Renderables}
@@ -294,6 +300,7 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Include directories
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Platform/FileSystem;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Platform/GUISystem;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Platform/GUISystem/stubs;"
+        "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Platform/ControlScheme;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../External/imgui;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../External/imgui/examples;"
 #END
