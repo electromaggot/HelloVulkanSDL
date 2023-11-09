@@ -31,7 +31,7 @@ UBO uboRayCast(RayCast);
 using std::chrono::high_resolution_clock; using std::chrono::duration; using std::chrono::seconds;
 
 
-const int iDemoMode = 7;	// See below for what this numbering means.
+const int iDemoMode = 6;	// See below for what this numbering means.
 
 
 // Actually this "POST-CONSTRUCTION INITIALIZATION" runs after VulkanSetup's
@@ -40,7 +40,7 @@ const int iDemoMode = 7;	// See below for what this numbering means.
 //
 void HelloApplication::Init()
 {
-	static Renderable demos[] = {
+	static RenderableSpec demoSpecifiers[] = {
 		{												// 0: full-screen color gradient
 			.shaders = { { VERTEX,	 "FullScreenTriangle-vert.spv"		},
 						 { FRAGMENT, "basicPlaid-frag.spv"				} },
@@ -85,10 +85,11 @@ void HelloApplication::Init()
 							  { "PockScorch.jpg", MIPMAP, REPEAT } }
 		}
 	};
+	Renderable demo(demoSpecifiers[iDemoMode]);
 
 	Renderables& renderables = vulkan.command.renderables;
 
-	renderables.Add(FixedRenderable(demos[iDemoMode], vulkan, platform));
+	renderables.Add(FixedRenderable(demo, vulkan, platform));
 
 	vulkan.command.PostInitPrepBuffers(vulkan);
 
