@@ -27,10 +27,7 @@ MeshObject Triangle2DColored = {
 
 	VertexDescriptor2DColored,
 	(void*) TriangleVertices,
-	N_ELEMENTS_IN_ARRAY(TriangleVertices),
-	0,	// first vertex
-	1,	// instance count
-	0	// first instance
+	N_ELEMENTS_IN_ARRAY(TriangleVertices)
 };
 
 
