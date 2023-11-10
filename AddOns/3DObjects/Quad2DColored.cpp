@@ -15,7 +15,7 @@
 // Created 6/14/19 by Tadd Jensen
 //	© 2112 (uncopyrighted; use at will)
 //
-#include "VertexBasedObject.h"
+#include "MeshObject.h"
 #include "Vertex2DColored.h"
 
 
@@ -32,7 +32,7 @@ const IndexBufferIndexType QuadIndices[] = {
 	0, 1, 2, 2, 3, 0
 };
 
-VertexBasedObject Quad2DColored = {
+MeshObject Quad2DColored = {
 
 	VertexDescriptor2DColored,
 	(void*) QuadVertices,
