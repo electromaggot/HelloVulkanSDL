@@ -36,14 +36,9 @@ MeshObject Quad2D = {
 	VertexDescriptor2D,
 	(void*) QuadVertices,
 	N_ELEMENTS_IN_ARRAY(QuadVertices),
-	0,	// first vertex
-	1,	// instance count
-	0,	// first instance
 
 	(void*) QuadIndices,
-	N_ELEMENTS_IN_ARRAY(QuadIndices),
-	0,	// first index
-	0	// vertex offset
+	N_ELEMENTS_IN_ARRAY(QuadIndices)
 };
 
 
