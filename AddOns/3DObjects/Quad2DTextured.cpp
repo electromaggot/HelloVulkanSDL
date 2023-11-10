@@ -27,7 +27,7 @@ const Vertex2DTextured QuadVertices[] = {
 	{ {	 0.5f, -0.5f },	{ 1.0f, 0.0f } }
 };
 
-const IndexBufferIndexType QuadIndices[] = {
+const IndexBufferDefaultIndexType QuadIndices[] = {
 
 	0, 1, 2, 2, 3, 0
 };
