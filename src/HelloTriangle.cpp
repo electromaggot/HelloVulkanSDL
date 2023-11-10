@@ -40,52 +40,52 @@ const int iDemoMode = 6;	// See below for what this numbering means.
 //
 void HelloApplication::Init()
 {
-	static RenderableSpec demoSpecifiers[] = {
+	static DrawableProperties demoSpecifiers[] = {
 		{												// 0: full-screen color gradient
-			.vertexSpec = ShaderSets3Vertices,
+			.mesh = ShaderSets3Vertices,
 			.shaders = { { VERTEX,	 "FullScreenTriangle-vert.spv"		},
 						 { FRAGMENT, "basicPlaid-frag.spv"				} }
 		},{												// 1: triangle, shader-defined vertices, colored per vertex
-			.vertexSpec = ShaderSets3Vertices,
+			.mesh = ShaderSets3Vertices,
 			.shaders = { { VERTEX,	 "09_shader_base-vert.spv"			},		// Simplest example of a renderable.
 						 { FRAGMENT, "09_shader_base-frag.spv"			} }
 		},{												// 2: triangle, vertex buffer, colored per vertex
-			.vertexSpec = Triangle2DColored,									// This vertex buffer required by...
+			.mesh = Triangle2DColored,											// This vertex buffer required by...
 			.shaders = { { VERTEX,	 "17_shader_vertexbuffer-vert.spv"	},		//	these shaders.
 						 { FRAGMENT, "17_shader_vertexbuffer-frag.spv"	} }
 		},{												// 3: quad, vertex + index buffer, color per vertex
-			.vertexSpec = Quad2DColored,
+			.mesh = Quad2DColored,
 			.shaders = { { VERTEX,	 "17_shader_vertexbuffer-vert.spv"	},
 						 { FRAGMENT, "17_shader_vertexbuffer-frag.spv"	} }
 		},{												// 4: quad in 3D, uniform buffer, color vertex
-			.vertexSpec	= Quad2DColored,										// This quad is required by...
+			.mesh	= Quad2DColored,											// This quad is required by...
 			.shaders = { { VERTEX,	 "21_shader_ubo-vert.spv"			},		//	this shader, which also expects...
 						 { FRAGMENT, "21_shader_ubo-frag.spv"			} },
 			.pUBOs		= { uboMVP }											//	this uniform buffer.
 		},{												// 5: textured quad with colored vertices
-			.vertexSpec = Quad2DTextureTinted,
+			.mesh = Quad2DTextureTinted,
 			.shaders = { { VERTEX,	 "25_shader_textures-vert.spv"		},
 						 { FRAGMENT, "25_shader_textures-frag.spv"		} },	// and now requires...
 			.pUBOs		= { uboMVP },
-			.textureSpecs = { { "texture.jpg" } }								//	a texture too (array).
+			.textures = { { "texture.jpg" } }								//	a texture too (array).
 		},
 		{												// 6: minimal textured quad
-			.vertexSpec = Quad2DTextured,										// This quad, required by...
+			.mesh = Quad2DTextured,												// This quad, required by...
 			.shaders = { { VERTEX,	 "TexturedQuad-vert.spv"			},		//	this shader, also requires...
 						 { FRAGMENT, "TexturedQuad-frag.spv"			} },
 			.pUBOs		= { uboMVP },											//	this model/view/projection,
-			.textureSpecs = { { "texture.jpg" } }								//	and this texture.
+			.textures = { { "texture.jpg" } }								//	and this texture.
 		},{												// 7: ray marching test
-			.vertexSpec = ShaderSets3Vertices,
+			.mesh = ShaderSets3Vertices,
 			.shaders = { { VERTEX,	 "FullScreenTriangle-vert.spv"		},
 						 { FRAGMENT, "tjVolcanic-frag.spv"				} },
 			.pUBOs		= { uboRayCast },
-			.textureSpecs = { { "Noise256.png", LINEAR, REPEAT },
+			.textures =	{ { "Noise256.png", LINEAR, REPEAT },
 							  { "MossyBark.jpg", MIPMAP, REPEAT },
 							  { "PockScorch.jpg", MIPMAP, REPEAT } }
 		}
 	};
-	Renderable demo(demoSpecifiers[iDemoMode]);
+	DrawableSpecifier demo(demoSpecifiers[iDemoMode]);
 
 	Renderables& renderables = vulkan.command.renderables;
 
