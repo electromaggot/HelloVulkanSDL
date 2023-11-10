@@ -26,7 +26,7 @@ const Vertex2D QuadVertices[] = {
 	{  0.5f, -0.5f }
 };
 
-const IndexBufferIndexType QuadIndices[] = {
+const IndexBufferDefaultIndexType QuadIndices[] = {
 
 	0, 1, 2, 2, 3, 0
 };
