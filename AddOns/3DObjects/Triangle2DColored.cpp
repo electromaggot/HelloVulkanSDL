@@ -12,7 +12,7 @@
 // Created 6/14/19 by Tadd Jensen
 //	© 2112 (uncopyrighted; use at will)
 //
-#include "VertexBasedObject.h"
+#include "MeshObject.h"
 #include "Vertex2DColored.h"
 
 
@@ -23,7 +23,7 @@ const Vertex2DColored TriangleVertices[] = {
 	{ {	 0.5f,  0.5f },	{ 0.0f, 1.0f, 0.0f } }
 };
 
-VertexBasedObject Triangle2DColored = {
+MeshObject Triangle2DColored = {
 
 	VertexDescriptor2DColored,
 	(void*) TriangleVertices,
