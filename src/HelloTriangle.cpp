@@ -9,16 +9,16 @@
 #include "HelloTriangle.h"
 
 #include "CommandObjects.h"
-#include "VertexBasedObject.h"
+#include "MeshObject.h"
 #include "UniformBufferLiterals.h"
 
 #include "FixedRenderable.h"
 #include "VertexNull.h"
 
-extern VertexBasedObject Quad2DTextured;
-extern VertexBasedObject Quad2DTextureTinted;
-extern VertexBasedObject Quad2DColored;
-extern VertexBasedObject Triangle2DColored;
+extern MeshObject Quad2DTextured;
+extern MeshObject Quad2DTextureTinted;
+extern MeshObject Quad2DColored;
+extern MeshObject Triangle2DColored;
 
 UBO_MVP	MVP;
 UBO uboMVP(MVP);
