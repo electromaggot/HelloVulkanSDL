@@ -248,7 +248,7 @@
 		9EEBF7122280645A00AC0B7F /* optional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = optional.h; path = src/optional.h; sourceTree = SOURCE_ROOT; };
 		9EF5A4E02314D26400524830 /* PrimitiveBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PrimitiveBuffer.cpp; sourceTree = "<group>"; };
 		9EF5A4E12314D26400524830 /* PrimitiveBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrimitiveBuffer.h; sourceTree = "<group>"; };
-		9EF5A4E52315C01100524830 /* VertexType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertexType.h; sourceTree = "<group>"; };
+		9EF5A4E52315C01100524830 /* VertexAbstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertexAbstract.h; sourceTree = "<group>"; };
 		9EF5A4E623173DD300524830 /* MeshObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshObject.h; sourceTree = "<group>"; };
 		9EF5A4E7231998D800524830 /* VertexNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertexNull.h; sourceTree = "<group>"; };
 		9EF5A4E8231B228900524830 /* Quad2DColored.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Quad2DColored.cpp; sourceTree = "<group>"; };
@@ -648,7 +648,7 @@
 		9EF5A4EE231EB31400524830 /* VertexTypes */ = {
 			isa = PBXGroup;
 			children = (
-				9EF5A4E52315C01100524830 /* VertexType.h */,
+				9EF5A4E52315C01100524830 /* VertexAbstract.h */,
 				9E2DAE09232CDD3F004ADDCB /* Vertex2DTextured.h */,
 				9E2DAE08232CDD3F004ADDCB /* Vertex2DTextureTinted.h */,
 				9EA5CCFF231450BE00178010 /* Vertex2DColored.h */,
