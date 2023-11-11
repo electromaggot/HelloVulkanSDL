@@ -86,6 +86,8 @@
 		9EC4858B222DE445007C7242 /* PlatformCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4858A222DE445007C7242 /* PlatformCommon.cpp */; };
 		9EC4858C222DE445007C7242 /* PlatformCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4858A222DE445007C7242 /* PlatformCommon.cpp */; };
 		9ECA3982220255BE00B2A7B3 /* compiledShaders in Resources */ = {isa = PBXBuildFile; fileRef = 9ECA3981220255BE00B2A7B3 /* compiledShaders */; };
+		9EDC51662AE026620098F52D /* DepthBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EDC51642AE026620098F52D /* DepthBuffer.cpp */; };
+		9EDC51672AE026620098F52D /* DepthBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EDC51642AE026620098F52D /* DepthBuffer.cpp */; };
 		9EEA190B2AF0742A00EB47F4 /* MoltenVK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EEA190A2AF0742A00EB47F4 /* MoltenVK.xcframework */; };
 		9EEA190C2AF0743D00EB47F4 /* MoltenVK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EEA190A2AF0742A00EB47F4 /* MoltenVK.xcframework */; };
 		9EEBF70E226DFBF700AC0B7F /* DebugReport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBF70D226DFBF700AC0B7F /* DebugReport.cpp */; };
@@ -242,6 +244,8 @@
 		9ECA39852202560E00B2A7B3 /* compile.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = compile.sh; sourceTree = "<group>"; };
 		9ECA39862202560E00B2A7B3 /* 09_shader_base.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 09_shader_base.vert; sourceTree = "<group>"; };
 		9ED90BD42337F7ED0004BAFA /* RenderSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderSettings.h; sourceTree = "<group>"; };
+		9EDC51632AE026620098F52D /* DepthBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DepthBuffer.h; sourceTree = "<group>"; };
+		9EDC51642AE026620098F52D /* DepthBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DepthBuffer.cpp; sourceTree = "<group>"; };
 		9EEA190A2AF0742A00EB47F4 /* MoltenVK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MoltenVK.xcframework; path = "../External/VulkanSDK/MoltenVK/MoltenVK.xcframework"; sourceTree = "<group>"; };
 		9EEBF70C226DFBF700AC0B7F /* DebugReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugReport.h; sourceTree = "<group>"; };
 		9EEBF70D226DFBF700AC0B7F /* DebugReport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DebugReport.cpp; sourceTree = "<group>"; };
@@ -520,6 +524,8 @@
 				9EFA5B3E2301265E00B63757 /* ShaderModules.h */,
 				9E82E5A72203B51600AC8F7D /* Framebuffers.cpp */,
 				9E82E59D2203B51600AC8F7D /* Framebuffers.h */,
+				9EDC51642AE026620098F52D /* DepthBuffer.cpp */,
+				9EDC51632AE026620098F52D /* DepthBuffer.h */,
 				9E82E5A92203B51600AC8F7D /* CommandObjects.cpp */,
 				9E82E5A82203B51600AC8F7D /* CommandObjects.h */,
 				9E82E5A42203B51600AC8F7D /* SyncObjects.cpp */,
@@ -805,6 +811,7 @@
 				9E82E5BE220A345B00AC8F7D /* CommandObjects.cpp in Sources */,
 				9E4480662462DB12009A8EA4 /* EventObjects.cpp in Sources */,
 				9EFA5B3822F8C4D100B63757 /* DeviceRanking.cpp in Sources */,
+				9EDC51672AE026620098F52D /* DepthBuffer.cpp in Sources */,
 				9E82E5BF220A345B00AC8F7D /* Swapchain.cpp in Sources */,
 				9E82E5C0220A345B00AC8F7D /* ValidationLayers.cpp in Sources */,
 				9EFA5B3022EB466500B63757 /* DeviceAssessment.cpp in Sources */,
@@ -851,6 +858,7 @@
 				9E4480652462DAE1009A8EA4 /* EventObjects.cpp in Sources */,
 				9EFA5B3722F8C4D100B63757 /* DeviceRanking.cpp in Sources */,
 				9E82E5B12203B51700AC8F7D /* CommandObjects.cpp in Sources */,
+				9EDC51662AE026620098F52D /* DepthBuffer.cpp in Sources */,
 				9E2DAE0B232CE035004ADDCB /* Quad2DTextureTinted.cpp in Sources */,
 				9E4480572462D8ED009A8EA4 /* imgui_impl_sdl.cpp in Sources */,
 				9E61A5E124A8284300AF6133 /* AppSettings.cpp in Sources */,
