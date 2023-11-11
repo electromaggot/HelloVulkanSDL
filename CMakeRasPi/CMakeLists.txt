@@ -201,6 +201,8 @@ set(Vulkan__Objects
     "../src/VulkanModule/Objects/GraphicsDevice.h"
     "../src/VulkanModule/Objects/GraphicsPipeline.cpp"
     "../src/VulkanModule/Objects/GraphicsPipeline.h"
+    "../src/VulkanModule/Objects/ImageResource.cpp"
+    "../src/VulkanModule/Objects/ImageResource.h"
     "../src/VulkanModule/Objects/RenderPass.cpp"
     "../src/VulkanModule/Objects/RenderPass.h"
     "../src/VulkanModule/Objects/ShaderModules.cpp"
