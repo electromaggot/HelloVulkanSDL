@@ -32,7 +32,7 @@ set(PROJECT_NAME HelloTriangle)				# Sub-projects
 #################### Source groups ######################
 
 set(no_group_source_files
-    "../src/VulkanModule/AddOns/3DObjects/VertexBasedObject.h"
+    "../src/VulkanModule/AddOns/3DObjects/MeshObject.h"
 )
 source_group("" FILES ${no_group_source_files})
 
@@ -166,7 +166,7 @@ set(Vulkan__AddOns__VertexTypes
     "../src/VulkanModule/AddOns/VertexTypes/Vertex2DTextured.h"
     "../src/VulkanModule/AddOns/VertexTypes/Vertex2DTextureTinted.h"
     "../src/VulkanModule/AddOns/VertexTypes/VertexNull.h"
-    "../src/VulkanModule/AddOns/VertexTypes/VertexType.h"
+    "../src/VulkanModule/AddOns/VertexTypes/VertexAbstract.h"
     "../src/VulkanModule/AddOns/VertexTypes/VertexTypes.cpp"
 )
 source_group("Vulkan\\AddOns\\VertexTypes" FILES ${Vulkan__AddOns__VertexTypes})
@@ -192,6 +192,8 @@ source_group("Vulkan\\Assist" FILES ${Vulkan__Assist})
 set(Vulkan__Objects
     "../src/VulkanModule/Objects/CommandObjects.cpp"
     "../src/VulkanModule/Objects/CommandObjects.h"
+    "../src/VulkanModule/Objects/DepthBuffer.cpp"
+    "../src/VulkanModule/Objects/DepthBuffer.h"
     "../src/VulkanModule/Objects/DeviceQueues.cpp"
     "../src/VulkanModule/Objects/DeviceQueues.h"
     "../src/VulkanModule/Objects/EventObjects.cpp"
