@@ -250,7 +250,7 @@
 		9EDC51632AE026620098F52D /* DepthBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DepthBuffer.h; sourceTree = "<group>"; };
 		9EDC51642AE026620098F52D /* DepthBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DepthBuffer.cpp; sourceTree = "<group>"; };
 		9EDC51652AE026620098F52D /* ImageResource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageResource.cpp; sourceTree = "<group>"; };
-		9EEA190A2AF0742A00EB47F4 /* MoltenVK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MoltenVK.xcframework; path = "../External/VulkanSDK/MoltenVK/MoltenVK.xcframework"; sourceTree = "<group>"; };
+		9EEA190A2AF0742A00EB47F4 /* MoltenVK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MoltenVK.xcframework; path = ../External/VulkanSDK/MoltenVK/MoltenVK.xcframework; sourceTree = "<group>"; };
 		9EEBF70C226DFBF700AC0B7F /* DebugReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugReport.h; sourceTree = "<group>"; };
 		9EEBF70D226DFBF700AC0B7F /* DebugReport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DebugReport.cpp; sourceTree = "<group>"; };
 		9EEBF7122280645A00AC0B7F /* optional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = optional.h; path = src/optional.h; sourceTree = SOURCE_ROOT; };
@@ -417,7 +417,7 @@
 			children = (
 				9EEBF70F226E276400AC0B7F /* Setup */,
 				9EEBF70B226DF80A00AC0B7F /* Assist */,
-				9EF5A4E42315BE3B00524830 /* AddOns */,
+				9EF5A4E42315BE3B00524830 /* Adjunct */,
 				9EBD618F232EBC14005ADF20 /* Objects */,
 			);
 			name = Vulkan;
@@ -635,7 +635,7 @@
 			name = Apple;
 			sourceTree = "<group>";
 		};
-		9EF5A4E42315BE3B00524830 /* AddOns */ = {
+		9EF5A4E42315BE3B00524830 /* Adjunct */ = {
 			isa = PBXGroup;
 			children = (
 				9E4480582462D99D009A8EA4 /* Renderables */,
@@ -654,7 +654,7 @@
 				9E87F5CD232183880009062F /* CommandBufferBase.h */,
 				9EF5A4F3231EF79000524830 /* BufferBase.h */,
 			);
-			path = AddOns;
+			path = Adjunct;
 			sourceTree = "<group>";
 		};
 		9EF5A4EE231EB31400524830 /* VertexTypes */ = {

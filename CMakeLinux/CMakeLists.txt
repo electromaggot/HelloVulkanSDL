@@ -32,7 +32,7 @@ set(PROJECT_NAME HelloTriangle)				# Sub-projects
 #################### Source groups ######################
 
 set(no_group_source_files
-    "../src/VulkanModule/AddOns/3DObjects/MeshObject.h"
+    "../src/VulkanModule/Adjunct/3DObjects/MeshObject.h"
 )
 source_group("" FILES ${no_group_source_files})
 
@@ -126,50 +126,50 @@ set(Platform__ControlScheme
 )
 source_group("Platform\\ControlScheme" FILES ${Platform__ControlScheme})
 
-set(Vulkan__AddOns
-    "../src/VulkanModule/AddOns/BufferBase.h"
-    "../src/VulkanModule/AddOns/CommandBufferBase.h"
-    "../src/VulkanModule/AddOns/Descriptors.cpp"
-    "../src/VulkanModule/AddOns/Descriptors.h"
-    "../src/VulkanModule/AddOns/Mipmaps.h"
-    "../src/VulkanModule/AddOns/PrimitiveBuffer.cpp"
-    "../src/VulkanModule/AddOns/PrimitiveBuffer.h"
-    "../src/VulkanModule/AddOns/TextureImage.cpp"
-    "../src/VulkanModule/AddOns/TextureImage.h"
-    "../src/VulkanModule/AddOns/UniformBuffer.cpp"
-    "../src/VulkanModule/AddOns/UniformBuffer.h"
-    "../src/VulkanModule/AddOns/UniformBufferLiterals.h"
+set(Vulkan__Adjunct
+    "../src/VulkanModule/Adjunct/BufferBase.h"
+    "../src/VulkanModule/Adjunct/CommandBufferBase.h"
+    "../src/VulkanModule/Adjunct/Descriptors.cpp"
+    "../src/VulkanModule/Adjunct/Descriptors.h"
+    "../src/VulkanModule/Adjunct/Mipmaps.h"
+    "../src/VulkanModule/Adjunct/PrimitiveBuffer.cpp"
+    "../src/VulkanModule/Adjunct/PrimitiveBuffer.h"
+    "../src/VulkanModule/Adjunct/TextureImage.cpp"
+    "../src/VulkanModule/Adjunct/TextureImage.h"
+    "../src/VulkanModule/Adjunct/UniformBuffer.cpp"
+    "../src/VulkanModule/Adjunct/UniformBuffer.h"
+    "../src/VulkanModule/Adjunct/UniformBufferLiterals.h"
 )
-source_group("Vulkan\\AddOns" FILES ${Vulkan__AddOns})
+source_group("Vulkan\\Adjunct" FILES ${Vulkan__Adjunct})
 
-set(Vulkan__AddOns__3DObjects
-    "../src/VulkanModule/AddOns/3DObjects/Quad2D.cpp"
-    "../src/VulkanModule/AddOns/3DObjects/Quad2DColored.cpp"
-    "../src/VulkanModule/AddOns/3DObjects/Quad2DTextured.cpp"
-    "../src/VulkanModule/AddOns/3DObjects/Quad2DTextureTinted.cpp"
-    "../src/VulkanModule/AddOns/3DObjects/Triangle2DColored.cpp"
+set(Vulkan__Adjunct__3DObjects
+    "../src/VulkanModule/Adjunct/3DObjects/Quad2D.cpp"
+    "../src/VulkanModule/Adjunct/3DObjects/Quad2DColored.cpp"
+    "../src/VulkanModule/Adjunct/3DObjects/Quad2DTextured.cpp"
+    "../src/VulkanModule/Adjunct/3DObjects/Quad2DTextureTinted.cpp"
+    "../src/VulkanModule/Adjunct/3DObjects/Triangle2DColored.cpp"
 )
-source_group("Vulkan\\AddOns\\3DObjects" FILES ${Vulkan__AddOns__3DObjects})
+source_group("Vulkan\\Adjunct\\3DObjects" FILES ${Vulkan__Adjunct__3DObjects})
 
-set(Vulkan__AddOns__Renderables
-    "../src/VulkanModule/AddOns/Renderables/AddOns.cpp"
-    "../src/VulkanModule/AddOns/Renderables/AddOns.h"
-    "../src/VulkanModule/AddOns/Renderables/FixedRenderable.cpp"
-    "../src/VulkanModule/AddOns/Renderables/FixedRenderable.h"
-    "../src/VulkanModule/AddOns/Renderables/iRenderable.h"
+set(Vulkan__Adjunct__Renderables
+    "../src/VulkanModule/Adjunct/Renderables/AddOns.cpp"
+    "../src/VulkanModule/Adjunct/Renderables/AddOns.h"
+    "../src/VulkanModule/Adjunct/Renderables/FixedRenderable.cpp"
+    "../src/VulkanModule/Adjunct/Renderables/FixedRenderable.h"
+    "../src/VulkanModule/Adjunct/Renderables/iRenderable.h"
 )
-source_group("Vulkan\\AddOns\\Renderables" FILES ${Vulkan__AddOns__Renderables})
+source_group("Vulkan\\Adjunct\\Renderables" FILES ${Vulkan__Adjunct__Renderables})
 
-set(Vulkan__AddOns__VertexTypes
-    "../src/VulkanModule/AddOns/VertexTypes/Vertex2D.h"
-    "../src/VulkanModule/AddOns/VertexTypes/Vertex2DColored.h"
-    "../src/VulkanModule/AddOns/VertexTypes/Vertex2DTextured.h"
-    "../src/VulkanModule/AddOns/VertexTypes/Vertex2DTextureTinted.h"
-    "../src/VulkanModule/AddOns/VertexTypes/VertexNull.h"
-    "../src/VulkanModule/AddOns/VertexTypes/VertexAbstract.h"
-    "../src/VulkanModule/AddOns/VertexTypes/VertexTypes.cpp"
+set(Vulkan__Adjunct__VertexTypes
+    "../src/VulkanModule/Adjunct/VertexTypes/Vertex2D.h"
+    "../src/VulkanModule/Adjunct/VertexTypes/Vertex2DColored.h"
+    "../src/VulkanModule/Adjunct/VertexTypes/Vertex2DTextured.h"
+    "../src/VulkanModule/Adjunct/VertexTypes/Vertex2DTextureTinted.h"
+    "../src/VulkanModule/Adjunct/VertexTypes/VertexNull.h"
+    "../src/VulkanModule/Adjunct/VertexTypes/VertexAbstract.h"
+    "../src/VulkanModule/Adjunct/VertexTypes/VertexTypes.cpp"
 )
-source_group("Vulkan\\AddOns\\VertexTypes" FILES ${Vulkan__AddOns__VertexTypes})
+source_group("Vulkan\\Adjunct\\VertexTypes" FILES ${Vulkan__Adjunct__VertexTypes})
 
 set(Vulkan__Assist
     "../src/VulkanModule/Assist/DebugReport.cpp"
@@ -244,10 +244,10 @@ set(ALL_FILES
     ${Platform__Microsoft}
     ${Platform__OSAbstraction}
     ${Platform__ControlScheme}
-    ${Vulkan__AddOns}
-    ${Vulkan__AddOns__3DObjects}
-    ${Vulkan__AddOns__Renderables}
-    ${Vulkan__AddOns__VertexTypes}
+    ${Vulkan__Adjunct}
+    ${Vulkan__Adjunct__3DObjects}
+    ${Vulkan__Adjunct__Renderables}
+    ${Vulkan__Adjunct__VertexTypes}
     ${Vulkan__Assist}
     ${Vulkan__Objects}
     ${Vulkan__Setup}
@@ -292,10 +292,10 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Include directories
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Setup;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Assist;"
-        "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/AddOns;"
-        "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/AddOns/3DObjects;"
-        "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/AddOns/Renderables;"
-        "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/AddOns/VertexTypes;"
+        "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Adjunct;"
+        "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Adjunct/3DObjects;"
+        "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Adjunct/Renderables;"
+        "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Adjunct/VertexTypes;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Objects;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Platform;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Platform/OSAbstraction;"
