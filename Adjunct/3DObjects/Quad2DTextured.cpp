@@ -16,10 +16,13 @@
 //	© 2112 (uncopyrighted; use at will)
 //
 #include "MeshObject.h"
-#include "Vertex2DTextured.h"
+#include "Vertex2DTypes.h"
 
 
-const Vertex2DTextured QuadVertices[] = {
+extern VertexDescription<Vertex2DTexture>	VertexDescriptor2DTexture;	// note, later will entirely retire external creation of this
+
+
+const Vertex2DTexture QuadVertices[] = {
 
 	{ {	-0.5f, -0.5f },	{ 0.0f, 0.0f } },
 	{ {	-0.5f,  0.5f },	{ 0.0f, 1.0f } },
@@ -34,7 +37,7 @@ const IndexBufferDefaultIndexType QuadIndices[] = {
 
 MeshObject Quad2DTextured = {
 
-	VertexDescriptor2DTextured,
+	VertexDescriptor2DTexture,
 	(void*) QuadVertices,
 	N_ELEMENTS_IN_ARRAY(QuadVertices),
 
