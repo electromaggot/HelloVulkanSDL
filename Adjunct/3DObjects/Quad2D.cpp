@@ -15,21 +15,25 @@
 //	© 2112 (uncopyrighted; use at will)
 //
 #include "MeshObject.h"
-#include "Vertex2D.h"
+#include "Vertex2DTypes.h"
+
+
+VertexDescription<Vertex2D>	 VertexDescriptor2D;
 
 
 const Vertex2D QuadVertices[] = {
 
-	{ -0.5f, -0.5f },
-	{ -0.5f,  0.5f },
-	{  0.5f,  0.5f },
-	{  0.5f, -0.5f }
+	{ { -0.5f, -0.5f } },
+	{ { -0.5f,  0.5f } },
+	{ {  0.5f,  0.5f } },
+	{ {  0.5f, -0.5f } }
 };
 
 const IndexBufferDefaultIndexType QuadIndices[] = {
 
 	0, 1, 2, 2, 3, 0
 };
+
 
 MeshObject Quad2D = {
 
