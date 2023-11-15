@@ -251,6 +251,7 @@
 		9EDC51642AE026620098F52D /* DepthBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DepthBuffer.cpp; sourceTree = "<group>"; };
 		9EDC51652AE026620098F52D /* ImageResource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageResource.cpp; sourceTree = "<group>"; };
 		9EEA190A2AF0742A00EB47F4 /* MoltenVK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MoltenVK.xcframework; path = ../External/VulkanSDK/MoltenVK/MoltenVK.xcframework; sourceTree = "<group>"; };
+		9EEA19152B03C47100EB47F4 /* DrawableSpecifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawableSpecifier.h; sourceTree = "<group>"; };
 		9EEBF70C226DFBF700AC0B7F /* DebugReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugReport.h; sourceTree = "<group>"; };
 		9EEBF70D226DFBF700AC0B7F /* DebugReport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DebugReport.cpp; sourceTree = "<group>"; };
 		9EEBF7122280645A00AC0B7F /* optional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = optional.h; path = src/optional.h; sourceTree = SOURCE_ROOT; };
@@ -375,6 +376,7 @@
 			children = (
 				9E44805A2462DA13009A8EA4 /* AddOns.cpp */,
 				9E4480592462DA13009A8EA4 /* AddOns.h */,
+				9EEA19152B03C47100EB47F4 /* DrawableSpecifier.h */,
 				9E44805B2462DA13009A8EA4 /* iRenderable.h */,
 				9E44805C2462DA13009A8EA4 /* FixedRenderable.cpp */,
 				9E44805D2462DA13009A8EA4 /* FixedRenderable.h */,
