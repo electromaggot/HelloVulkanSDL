@@ -98,8 +98,8 @@
 		9EF5A4E32314D26400524830 /* PrimitiveBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5A4E02314D26400524830 /* PrimitiveBuffer.cpp */; };
 		9EF5A4E9231B228900524830 /* Quad2DColored.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5A4E8231B228900524830 /* Quad2DColored.cpp */; };
 		9EF5A4EA231B236B00524830 /* Quad2DColored.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5A4E8231B228900524830 /* Quad2DColored.cpp */; };
-		9EF5A4EC231B27BA00524830 /* VertexTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5A4EB231B27BA00524830 /* VertexTypes.cpp */; };
-		9EF5A4ED231B27BA00524830 /* VertexTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5A4EB231B27BA00524830 /* VertexTypes.cpp */; };
+		9EF5A4EC231B27BA00524830 /* VertexNull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5A4EB231B27BA00524830 /* VertexNull.cpp */; };
+		9EF5A4ED231B27BA00524830 /* VertexNull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5A4EB231B27BA00524830 /* VertexNull.cpp */; };
 		9EF5A4F1231ED00300524830 /* UniformBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5A4F0231ED00300524830 /* UniformBuffer.cpp */; };
 		9EF5A4F2231ED06000524830 /* UniformBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5A4F0231ED00300524830 /* UniformBuffer.cpp */; };
 		9EFA5B2F22EB466500B63757 /* DeviceAssessment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EFA5B2D22EB466500B63757 /* DeviceAssessment.cpp */; };
@@ -150,8 +150,6 @@
 		9E2A27852215333200B4FDBC /* PlatformGLFW.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlatformGLFW.cpp; sourceTree = "<group>"; };
 		9E2A27862217349900B4FDBC /* HelloTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloTriangle.h; sourceTree = "<group>"; };
 		9E2DAE02232A81CC004ADDCB /* Quad2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Quad2D.cpp; sourceTree = "<group>"; };
-		9E2DAE05232A86E2004ADDCB /* Vertex2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vertex2D.h; sourceTree = "<group>"; };
-		9E2DAE08232CDD3F004ADDCB /* Vertex2DTextureTinted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex2DTextureTinted.h; sourceTree = "<group>"; };
 		9E2DAE0A232CE035004ADDCB /* Quad2DTextureTinted.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Quad2DTextureTinted.cpp; sourceTree = "<group>"; };
 		9E2DAE0C232CE1A5004ADDCB /* Quad2DTextured.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Quad2DTextured.cpp; sourceTree = "<group>"; };
 		9E2DAE10232D8428004ADDCB /* TexturedQuad.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = TexturedQuad.frag; path = ../shaders/TexturedQuad.frag; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 		9EA5CCF9231367E800178010 /* 17_shader_vertexbuffer.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 17_shader_vertexbuffer.frag; path = ../shaders/17_shader_vertexbuffer.frag; sourceTree = "<group>"; };
 		9EA5CCFA231367E800178010 /* 17_shader_vertexbuffer.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 17_shader_vertexbuffer.vert; path = ../shaders/17_shader_vertexbuffer.vert; sourceTree = "<group>"; };
 		9EA5CCFE231450BE00178010 /* Triangle2DColored.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle2DColored.cpp; sourceTree = "<group>"; };
-		9EA5CCFF231450BE00178010 /* Vertex2DColored.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vertex2DColored.h; sourceTree = "<group>"; };
 		9EA6481C22003AC200FD3DB0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../src/main.cpp; sourceTree = "<group>"; };
 		9EA6482122003B2900FD3DB0 /* HelloTriangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloTriangle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA648342200C65500FD3DB0 /* vkEnumStrings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vkEnumStrings.cpp; sourceTree = "<group>"; };
@@ -264,7 +261,7 @@
 		9EF5A4E623173DD300524830 /* MeshObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshObject.h; sourceTree = "<group>"; };
 		9EF5A4E7231998D800524830 /* VertexNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertexNull.h; sourceTree = "<group>"; };
 		9EF5A4E8231B228900524830 /* Quad2DColored.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Quad2DColored.cpp; sourceTree = "<group>"; };
-		9EF5A4EB231B27BA00524830 /* VertexTypes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VertexTypes.cpp; sourceTree = "<group>"; };
+		9EF5A4EB231B27BA00524830 /* VertexNull.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VertexNull.cpp; sourceTree = "<group>"; };
 		9EF5A4EF231ED00300524830 /* UniformBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniformBuffer.h; sourceTree = "<group>"; };
 		9EF5A4F0231ED00300524830 /* UniformBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UniformBuffer.cpp; sourceTree = "<group>"; };
 		9EF5A4F3231EF79000524830 /* BufferBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferBase.h; sourceTree = "<group>"; };
@@ -669,12 +666,9 @@
 				9EEA19182B04826700EB47F4 /* Vertex2DTypes.h */,
 				9EEA19192B04826700EB47F4 /* VertexAttribute.h */,
 				9EEA191A2B04826700EB47F4 /* VertexDescription.h */,
-				9E2DAE08232CDD3F004ADDCB /* Vertex2DTextureTinted.h */,
-				9EA5CCFF231450BE00178010 /* Vertex2DColored.h */,
-				9E2DAE05232A86E2004ADDCB /* Vertex2D.h */,
 				9EF5A4E52315C01100524830 /* VertexAbstract.h */,
 				9EF5A4E7231998D800524830 /* VertexNull.h */,
-				9EF5A4EB231B27BA00524830 /* VertexTypes.cpp */,
+				9EF5A4EB231B27BA00524830 /* VertexNull.cpp */,
 			);
 			path = VertexTypes;
 			sourceTree = "<group>";
@@ -855,7 +849,7 @@
 				9E4480612462DA13009A8EA4 /* FixedRenderable.cpp in Sources */,
 				9E82E5C9220A345B00AC8F7D /* VulkanSetup.cpp in Sources */,
 				9EA5CD01231450BE00178010 /* Triangle2DColored.cpp in Sources */,
-				9EF5A4ED231B27BA00524830 /* VertexTypes.cpp in Sources */,
+				9EF5A4ED231B27BA00524830 /* VertexNull.cpp in Sources */,
 				9E2DAE0F232CE24E004ADDCB /* Quad2DTextureTinted.cpp in Sources */,
 				9E2DAE0E232CE24A004ADDCB /* Quad2DTextured.cpp in Sources */,
 				9E82E5CA220A345B00AC8F7D /* Framebuffers.cpp in Sources */,
@@ -904,7 +898,7 @@
 				9EFA5B3322F1C7E200B63757 /* Utility.cpp in Sources */,
 				9E82E5AF2203B51700AC8F7D /* SyncObjects.cpp in Sources */,
 				9EA5CD00231450BE00178010 /* Triangle2DColored.cpp in Sources */,
-				9EF5A4EC231B27BA00524830 /* VertexTypes.cpp in Sources */,
+				9EF5A4EC231B27BA00524830 /* VertexNull.cpp in Sources */,
 				9E82E5B62206453800AC8F7D /* VulkanSetup.cpp in Sources */,
 				9E82E5B02203B51700AC8F7D /* Framebuffers.cpp in Sources */,
 			);
