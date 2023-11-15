@@ -16,21 +16,31 @@
 //	© 2112 (uncopyrighted; use at will)
 //
 #include "MeshObject.h"
-#include "Vertex2DColored.h"
+#include "Vertex2DTypes.h"
 
 
-const Vertex2DColored QuadVertices[] = {
+const vec4 red	 { 1.0f, 0.0f, 0.0f, 1.0f };
+const vec4 white { 1.0f, 1.0f, 1.0f, 1.0f };
+const vec4 blue	 { 0.0f, 0.0f, 1.0f, 1.0f };
+const vec4 green { 0.0f, 1.0f, 0.0f, 1.0f };
 
-	{ {	-0.5f, -0.5f },	{ 1.0f, 0.0f, 0.0f } },
-	{ {	-0.5f,  0.5f },	{ 1.0f, 1.0f, 1.0f } },
-	{ {	 0.5f,  0.5f },	{ 0.0f, 0.0f, 1.0f } },
-	{ {	 0.5f, -0.5f },	{ 0.0f, 1.0f, 0.0f } }
+
+VertexDescription<Vertex2DColor>	VertexDescriptor2DColored;
+
+
+const Vertex2DColor QuadVertices[] = {
+
+	{ {	-0.5f, -0.5f },  red	},
+	{ {	-0.5f,  0.5f },	 white	},
+	{ {	 0.5f,  0.5f },	 blue	},
+	{ {	 0.5f, -0.5f },	 green	}
 };
 
 const IndexBufferDefaultIndexType QuadIndices[] = {
 
 	0, 1, 2, 2, 3, 0
 };
+
 
 MeshObject Quad2DColored = {
 
