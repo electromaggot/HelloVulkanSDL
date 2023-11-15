@@ -158,13 +158,13 @@ set(Vulkan__Adjunct__Renderables
 source_group("Vulkan\\Adjunct\\Renderables" FILES ${Vulkan__Adjunct__Renderables})
 
 set(Vulkan__Adjunct__VertexTypes
-    "../src/VulkanModule/Adjunct/VertexTypes/Vertex2D.h"
-    "../src/VulkanModule/Adjunct/VertexTypes/Vertex2DColored.h"
-    "../src/VulkanModule/Adjunct/VertexTypes/Vertex2DTextured.h"
-    "../src/VulkanModule/Adjunct/VertexTypes/Vertex2DTextureTinted.h"
-    "../src/VulkanModule/Adjunct/VertexTypes/VertexNull.h"
+    "../src/VulkanModule/Adjunct/VertexTypes/Vertex3DTypes.h"
+    "../src/VulkanModule/Adjunct/VertexTypes/Vertex2DTypes.h"
+    "../src/VulkanModule/Adjunct/VertexTypes/VertexAttribute.h"
+    "../src/VulkanModule/Adjunct/VertexTypes/VertexDescription.h"
     "../src/VulkanModule/Adjunct/VertexTypes/VertexAbstract.h"
-    "../src/VulkanModule/Adjunct/VertexTypes/VertexTypes.cpp"
+    "../src/VulkanModule/Adjunct/VertexTypes/VertexNull.h"
+    "../src/VulkanModule/Adjunct/VertexTypes/VertexNull.cpp"
 )
 source_group("Vulkan\\Adjunct\\VertexTypes" FILES ${Vulkan__Adjunct__VertexTypes})
 
