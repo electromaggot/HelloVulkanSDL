@@ -17,15 +17,24 @@
 //	© 2112 (uncopyrighted; use at will)
 //
 #include "MeshObject.h"
-#include "Vertex2DTextureTinted.h"
+#include "Vertex2DTypes.h"
 
 
-const Vertex2DTextureTinted QuadVertices[] = {
+const vec4 red	 { 1.0f, 0.0f, 0.0f, 1.0f };
+const vec4 white { 1.0f, 1.0f, 1.0f, 1.0f };
+const vec4 blue	 { 0.0f, 0.0f, 1.0f, 1.0f };
+const vec4 green { 0.0f, 1.0f, 0.0f, 1.0f };
 
-	{ {	-0.5f, -0.5f },	{ 1.0f, 0.0f, 0.0f }, {	0.0f, 0.0f } },
-	{ {	-0.5f,  0.5f },	{ 1.0f, 1.0f, 1.0f }, {	0.0f, 1.0f } },
-	{ {	 0.5f,  0.5f },	{ 0.0f, 0.0f, 1.0f }, {	1.0f, 1.0f } },
-	{ {	 0.5f, -0.5f },	{ 0.0f, 1.0f, 0.0f }, {	1.0f, 0.0f } }
+
+VertexDescription<Vertex2DTextureColor>	 VertexDescriptor2DTextureTinted;
+
+
+const Vertex2DTextureColor QuadVertices[] = {
+
+	{ {	-0.5f, -0.5f },  { 0.0f, 0.0f },  red	},
+	{ {	-0.5f,  0.5f },  { 0.0f, 1.0f },  white	},
+	{ {	 0.5f,  0.5f },  { 1.0f, 1.0f },  blue	},
+	{ {	 0.5f, -0.5f },  { 1.0f, 0.0f },  green	}
 };
 
 const IndexBufferDefaultIndexType QuadIndices[] = {
