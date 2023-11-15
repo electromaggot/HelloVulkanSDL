@@ -249,6 +249,7 @@
 		9EDC51632AE026620098F52D /* DepthBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DepthBuffer.h; sourceTree = "<group>"; };
 		9EDC51642AE026620098F52D /* DepthBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DepthBuffer.cpp; sourceTree = "<group>"; };
 		9EDC51652AE026620098F52D /* ImageResource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageResource.cpp; sourceTree = "<group>"; };
+		9EDC51782AE0336D0098F52D /* Vertex3DTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex3DTypes.h; sourceTree = "<group>"; };
 		9EEA190A2AF0742A00EB47F4 /* MoltenVK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MoltenVK.xcframework; path = ../External/VulkanSDK/MoltenVK/MoltenVK.xcframework; sourceTree = "<group>"; };
 		9EEA19152B03C47100EB47F4 /* DrawableSpecifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawableSpecifier.h; sourceTree = "<group>"; };
 		9EEA19182B04826700EB47F4 /* Vertex2DTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vertex2DTypes.h; sourceTree = "<group>"; };
@@ -664,6 +665,7 @@
 		9EF5A4EE231EB31400524830 /* VertexTypes */ = {
 			isa = PBXGroup;
 			children = (
+				9EDC51782AE0336D0098F52D /* Vertex3DTypes.h */,
 				9EEA19182B04826700EB47F4 /* Vertex2DTypes.h */,
 				9EEA19192B04826700EB47F4 /* VertexAttribute.h */,
 				9EEA191A2B04826700EB47F4 /* VertexDescription.h */,
