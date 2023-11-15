@@ -13,19 +13,28 @@
 //	© 2112 (uncopyrighted; use at will)
 //
 #include "MeshObject.h"
-#include "Vertex2DColored.h"
+#include "Vertex2DTypes.h"
 
 
-const Vertex2DColored TriangleVertices[] = {
+const vec4 white { 1.0f, 1.0f, 1.0f, 1.0f };
+const vec4 blue	 { 0.0f, 0.0f, 1.0f, 1.0f };
+const vec4 green { 0.0f, 1.0f, 0.0f, 1.0f };
 
-	{ {	 0.0f, -0.5f },	{ 1.0f, 1.0f, 1.0f } },
-	{ {	-0.5f,  0.5f },	{ 0.0f, 0.0f, 1.0f } },
-	{ {	 0.5f,  0.5f },	{ 0.0f, 1.0f, 0.0f } }
+
+VertexType2DColor	VertexDescriptor2DColor;	// example of non-templated "long hand" description,
+												//	see struct at bottom of: VertexDescription.h
+
+const Vertex2DColor TriangleVertices[] = {
+
+	{ {	 0.0f, -0.5f },	 white	},
+	{ {	-0.5f,  0.5f },	 blue	},
+	{ {	 0.5f,  0.5f },	 green	}
 };
+
 
 MeshObject Triangle2DColored = {
 
-	VertexDescriptor2DColored,
+	VertexDescriptor2DColor,
 	(void*) TriangleVertices,
 	N_ELEMENTS_IN_ARRAY(TriangleVertices)
 };
