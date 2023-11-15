@@ -152,7 +152,6 @@
 		9E2DAE02232A81CC004ADDCB /* Quad2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Quad2D.cpp; sourceTree = "<group>"; };
 		9E2DAE05232A86E2004ADDCB /* Vertex2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vertex2D.h; sourceTree = "<group>"; };
 		9E2DAE08232CDD3F004ADDCB /* Vertex2DTextureTinted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex2DTextureTinted.h; sourceTree = "<group>"; };
-		9E2DAE09232CDD3F004ADDCB /* Vertex2DTextured.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex2DTextured.h; sourceTree = "<group>"; };
 		9E2DAE0A232CE035004ADDCB /* Quad2DTextureTinted.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Quad2DTextureTinted.cpp; sourceTree = "<group>"; };
 		9E2DAE0C232CE1A5004ADDCB /* Quad2DTextured.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Quad2DTextured.cpp; sourceTree = "<group>"; };
 		9E2DAE10232D8428004ADDCB /* TexturedQuad.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = TexturedQuad.frag; path = ../shaders/TexturedQuad.frag; sourceTree = "<group>"; };
@@ -252,6 +251,9 @@
 		9EDC51652AE026620098F52D /* ImageResource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageResource.cpp; sourceTree = "<group>"; };
 		9EEA190A2AF0742A00EB47F4 /* MoltenVK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MoltenVK.xcframework; path = ../External/VulkanSDK/MoltenVK/MoltenVK.xcframework; sourceTree = "<group>"; };
 		9EEA19152B03C47100EB47F4 /* DrawableSpecifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawableSpecifier.h; sourceTree = "<group>"; };
+		9EEA19182B04826700EB47F4 /* Vertex2DTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vertex2DTypes.h; sourceTree = "<group>"; };
+		9EEA19192B04826700EB47F4 /* VertexAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VertexAttribute.h; sourceTree = "<group>"; };
+		9EEA191A2B04826700EB47F4 /* VertexDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VertexDescription.h; sourceTree = "<group>"; };
 		9EEBF70C226DFBF700AC0B7F /* DebugReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugReport.h; sourceTree = "<group>"; };
 		9EEBF70D226DFBF700AC0B7F /* DebugReport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DebugReport.cpp; sourceTree = "<group>"; };
 		9EEBF7122280645A00AC0B7F /* optional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = optional.h; path = src/optional.h; sourceTree = SOURCE_ROOT; };
@@ -662,11 +664,13 @@
 		9EF5A4EE231EB31400524830 /* VertexTypes */ = {
 			isa = PBXGroup;
 			children = (
-				9EF5A4E52315C01100524830 /* VertexAbstract.h */,
-				9E2DAE09232CDD3F004ADDCB /* Vertex2DTextured.h */,
+				9EEA19182B04826700EB47F4 /* Vertex2DTypes.h */,
+				9EEA19192B04826700EB47F4 /* VertexAttribute.h */,
+				9EEA191A2B04826700EB47F4 /* VertexDescription.h */,
 				9E2DAE08232CDD3F004ADDCB /* Vertex2DTextureTinted.h */,
 				9EA5CCFF231450BE00178010 /* Vertex2DColored.h */,
 				9E2DAE05232A86E2004ADDCB /* Vertex2D.h */,
+				9EF5A4E52315C01100524830 /* VertexAbstract.h */,
 				9EF5A4E7231998D800524830 /* VertexNull.h */,
 				9EF5A4EB231B27BA00524830 /* VertexTypes.cpp */,
 			);
