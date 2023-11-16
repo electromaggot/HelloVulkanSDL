@@ -47,7 +47,8 @@ MeshObject Quad2D = {
 
 
 
-#if ASCII_ART
+#if ASCII_ART_EXPLAINER
+
                 -y
                   ^
          0        |        3
