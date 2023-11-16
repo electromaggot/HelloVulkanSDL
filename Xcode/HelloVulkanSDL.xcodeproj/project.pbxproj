@@ -374,6 +374,7 @@
 		9E4480582462D99D009A8EA4 /* Renderables */ = {
 			isa = PBXGroup;
 			children = (
+				9EF5A4E623173DD300524830 /* MeshObject.h */,
 				9E44805A2462DA13009A8EA4 /* AddOns.cpp */,
 				9E4480592462DA13009A8EA4 /* AddOns.h */,
 				9EEA19152B03C47100EB47F4 /* DrawableSpecifier.h */,
@@ -383,6 +384,16 @@
 				9E6BC84925EE8F2500B8C40F /* Customizer.h */,
 			);
 			path = Renderables;
+			sourceTree = "<group>";
+		};
+		9E4810D82B06D1B0007FC1E1 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				9ECA39832202560E00B2A7B3 /* Shaders */,
+				9EA5CCFD23144B7D00178010 /* MeshObjects */,
+			);
+			name = Graphics;
+			path = ../graphics;
 			sourceTree = "<group>";
 		};
 		9E61A5DC24A81FE700AF6133 /* Settings */ = {
@@ -436,23 +447,24 @@
 			path = FileSystem;
 			sourceTree = "<group>";
 		};
-		9EA5CCFD23144B7D00178010 /* 3DObjects */ = {
+		9EA5CCFD23144B7D00178010 /* MeshObjects */ = {
 			isa = PBXGroup;
 			children = (
-				9EF5A4E623173DD300524830 /* MeshObject.h */,
 				9E2DAE0C232CE1A5004ADDCB /* Quad2DTextured.cpp */,
 				9E2DAE0A232CE035004ADDCB /* Quad2DTextureTinted.cpp */,
 				9EF5A4E8231B228900524830 /* Quad2DColored.cpp */,
 				9E2DAE02232A81CC004ADDCB /* Quad2D.cpp */,
 				9EA5CCFE231450BE00178010 /* Triangle2DColored.cpp */,
 			);
-			path = 3DObjects;
+			name = MeshObjects;
+			path = meshObjects;
 			sourceTree = "<group>";
 		};
 		9EA6481522003A9000FD3DB0 = {
 			isa = PBXGroup;
 			children = (
 				9EA6482322003B2900FD3DB0 /* HelloTriangle */,
+				9E4810D82B06D1B0007FC1E1 /* Graphics */,
 				9E2A277B2215308500B4FDBC /* Platform */,
 				9E82E59822037E9400AC8F7D /* Vulkan */,
 				9EA648362200D4B100FD3DB0 /* Resources */,
@@ -473,7 +485,6 @@
 		9EA6482322003B2900FD3DB0 /* HelloTriangle */ = {
 			isa = PBXGroup;
 			children = (
-				9ECA39832202560E00B2A7B3 /* Shaders */,
 				9EA6483C2201635000FD3DB0 /* HelloTriangle.cpp */,
 				9E2A27862217349900B4FDBC /* HelloTriangle.h */,
 				9EA6481C22003AC200FD3DB0 /* main.cpp */,
@@ -588,7 +599,8 @@
 				9EA5CCF623134C6C00178010 /* tjVolcanic.frag */,
 				9ECA39852202560E00B2A7B3 /* compile.sh */,
 			);
-			path = Shaders;
+			name = Shaders;
+			path = shaders;
 			sourceTree = "<group>";
 		};
 		9EEBF70B226DF80A00AC0B7F /* Assist */ = {
@@ -641,7 +653,6 @@
 			isa = PBXGroup;
 			children = (
 				9E4480582462D99D009A8EA4 /* Renderables */,
-				9EA5CCFD23144B7D00178010 /* 3DObjects */,
 				9EF5A4EE231EB31400524830 /* VertexTypes */,
 				9E389209232973490024D111 /* Descriptors.cpp */,
 				9E38920A232973490024D111 /* Descriptors.h */,
@@ -785,7 +796,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ../src/shaders\n./compile.sh\n";
+			shellScript = "cd ../graphics/shaders\n./compile.sh\n";
 		};
 		9EA5CCF52313438D00178010 /* Compile Shaders */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -803,7 +814,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ../src/shaders\n./compile.sh\n";
+			shellScript = "cd ../graphics/shaders\n./compile.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
