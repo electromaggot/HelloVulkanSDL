@@ -36,8 +36,10 @@ void AppSettings::Save()
 {
 	jsonSettings = *this;		// (this does indeed work! although not in reverse)
 
-	if (jsonSettings.empty() || jsonSettings.type() == value_t::null)
+	if (jsonSettings.empty() || jsonSettings.type() == value_t::null) {
+		Log(RAW, "FAILED; No JSON handling. See: AppSettings.h + json.hpp");
 		return;
+	}
 
 	string fileName = AppConstants.SettingsFileName;
 	fileName = FileSystem::AppLocalStorageDirectory() + fileName;
