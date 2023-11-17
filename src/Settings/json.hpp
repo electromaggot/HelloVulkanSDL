@@ -6,8 +6,9 @@
 //	If you have no need for Saved Settings, do nothing!
 //
 // However if you'd like to save Settings to JSON, replace this file
-//	with https://raw.githubusercontent.com/nlohmann/json/develop/single_include/nlohmann/json.hpp
-//		(https://github.com/nlohmann/json/blob/develop/single_include/nlohmann/json.hpp)
+//	with https://github.com/nlohmann/json/blob/develop/single_include/nlohmann/json.hpp
+//	  for example, using command line:
+//		wget https://raw.githubusercontent.com/nlohmann/json/develop/single_include/nlohmann/json.hpp
 //	from https://github.com/nlohmann/json
 //
 // Created 6/27/20 by Tadd Jensen
