@@ -49,23 +49,32 @@ set(HelloTriangle__Settings
 )
 source_group("HelloTriangle\\Settings" FILES ${HelloTriangle__Settings})
 
-set(HelloTriangle__Shaders
-    "../src/shaders/09_shader_base.frag"
-    "../src/shaders/09_shader_base.vert"
-    "../src/shaders/17_shader_vertexbuffer.frag"
-    "../src/shaders/17_shader_vertexbuffer.vert"
-    "../src/shaders/21_shader_ubo.frag"
-    "../src/shaders/21_shader_ubo.vert"
-    "../src/shaders/25_shader_textures.frag"
-    "../src/shaders/25_shader_textures.vert"
-    "../src/shaders/basicPlaid.frag"
-    "../src/shaders/compile.bat"
-    "../src/shaders/FullScreenTriangle.vert"
-    "../src/shaders/TexturedQuad.frag"
-    "../src/shaders/TexturedQuad.vert"
-    "../src/shaders/tjVolcanic.frag"
+set(Graphics__Shaders
+    "../graphics/shaders/09_shader_base.frag"
+    "../graphics/shaders/09_shader_base.vert"
+    "../graphics/shaders/17_shader_vertexbuffer.frag"
+    "../graphics/shaders/17_shader_vertexbuffer.vert"
+    "../graphics/shaders/21_shader_ubo.frag"
+    "../graphics/shaders/21_shader_ubo.vert"
+    "../graphics/shaders/25_shader_textures.frag"
+    "../graphics/shaders/25_shader_textures.vert"
+    "../graphics/shaders/basicPlaid.frag"
+    "../graphics/shaders/compile.bat"
+    "../graphics/shaders/FullScreenTriangle.vert"
+    "../graphics/shaders/TexturedQuad.frag"
+    "../graphics/shaders/TexturedQuad.vert"
+    "../graphics/shaders/tjVolcanic.frag"
 )
-source_group("HelloTriangle\\Shaders" FILES ${HelloTriangle__Shaders})
+source_group("Graphics\\Shaders" FILES ${Graphics__Shaders})
+
+set(Graphics__MeshObjects
+    "../graphics/meshObjects/Quad2D.cpp"
+    "../graphics/meshObjects/Quad2DColored.cpp"
+    "../graphics/meshObjects/Quad2DTextured.cpp"
+    "../graphics/meshObjects/Quad2DTextureTinted.cpp"
+    "../graphics/meshObjects/Triangle2DColored.cpp"
+)
+source_group("Graphics\\MeshObjects" FILES ${Graphics__MeshObjects})
 
 set(Platform
     "../src/VulkanModule/Platform/PlatformCommon.cpp"
@@ -138,22 +147,13 @@ set(Vulkan__Adjunct
 )
 source_group("Vulkan\\Adjunct" FILES ${Vulkan__Adjunct})
 
-set(Vulkan__Adjunct__3DObjects
-    "../src/VulkanModule/Adjunct/3DObjects/MeshObject.h"
-    "../src/VulkanModule/Adjunct/3DObjects/Quad2D.cpp"
-    "../src/VulkanModule/Adjunct/3DObjects/Quad2DColored.cpp"
-    "../src/VulkanModule/Adjunct/3DObjects/Quad2DTextured.cpp"
-    "../src/VulkanModule/Adjunct/3DObjects/Quad2DTextureTinted.cpp"
-    "../src/VulkanModule/Adjunct/3DObjects/Triangle2DColored.cpp"
-)
-source_group("Vulkan\\Adjunct\\3DObjects" FILES ${Vulkan__Adjunct__3DObjects})
-
 set(Vulkan__Adjunct__Renderables
     "../src/VulkanModule/Adjunct/Renderables/AddOns.cpp"
     "../src/VulkanModule/Adjunct/Renderables/AddOns.h"
     "../src/VulkanModule/Adjunct/Renderables/FixedRenderable.cpp"
     "../src/VulkanModule/Adjunct/Renderables/FixedRenderable.h"
     "../src/VulkanModule/Adjunct/Renderables/iRenderable.h"
+    "../src/VulkanModule/Adjunct/Renderables/MeshObject.h"
 )
 source_group("Vulkan\\Adjunct\\Renderables" FILES ${Vulkan__Adjunct__Renderables})
 
@@ -231,7 +231,8 @@ source_group("Vulkan\\Setup" FILES ${Vulkan__Setup})
 set(ALL_FILES
     ${HelloTriangle}
     ${HelloTriangle__Settings}
-    ${HelloTriangle__Shaders}
+    ${Graphics__Shaders}
+    ${Graphics__MeshObjects}
     ${Platform}
     ${Platform__FileSystem}
     ${Platform__GUISystem}
@@ -241,7 +242,6 @@ set(ALL_FILES
     ${Platform__OSAbstraction}
     ${Platform__ControlScheme}
     ${Vulkan__Adjunct}
-    ${Vulkan__Adjunct__3DObjects}
     ${Vulkan__Adjunct__Renderables}
     ${Vulkan__Adjunct__VertexTypes}
     ${Vulkan__Assist}
@@ -290,7 +290,6 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Include directories
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Setup;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Assist;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Adjunct;"
-        "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Adjunct/3DObjects;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Adjunct/Renderables;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Adjunct/VertexTypes;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Objects;"
@@ -325,7 +324,7 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Post build events
         TARGET ${PROJECT_NAME}
         POST_BUILD
 	COMMAND if [ ! -e "build" ]\; then mkdir build\; fi
-	COMMAND if [ ! -e "build/compiledShaders" ]\; then cd build\; ln -s "../../src/shaders" compiledShaders \; cd compiledShaders \; ./compileLinux.sh \; fi
+	COMMAND if [ ! -e "build/compiledShaders" ]\; then cd build\; ln -s "../../graphics/shaders" compiledShaders \; cd compiledShaders \; ./compileLinux.sh \; fi
         COMMAND if [ ! -L "build/textures" ]\; then cd build\; ln -s "../../assets/textures" \; fi
         COMMENT "Post-build events complete."
     )
@@ -335,7 +334,7 @@ endif()
 #if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Custom build events
 #    add_custom_command(
 #        OUTPUT "compiledShaders"
-#        COMMAND cd ../src/shaders
+#        COMMAND cd ../graphics/shaders
 #        COMMAND compileLinux.sh
 #        COMMENT "Shaders compiled."
 #    )
