@@ -198,6 +198,9 @@ void HelloApplication::draw()
 								 VK_NULL_HANDLE, &iNextImage);
 	const char* called = "Acquire Next Image";
 
+	if (platform.IsWindowResized() || call == VK_ERROR_OUT_OF_DATE_KHR || call == VK_SUBOPTIMAL_KHR)
+		vulkan.RecreateRenderingRudiments();
+
 	//	...then restore Fence back to unsignaled state.
 	vkResetFences(device, 1, &syncObjects.inFlightFences[iCurrentFrame]);
 
