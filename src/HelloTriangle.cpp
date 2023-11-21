@@ -149,20 +149,49 @@ void HelloApplication::update()
 
 	vulkan.command.renderables.Update(deltaSeconds);
 
-	if (iDemoMode < 7)
+	if (iDemoMode < 7) {
 		updateSpinOnZAxis(secondsElapsed, swapchainExtent.width / (float) swapchainExtent.height);
-	else
+		recalculateProjectionIfChanged();
+	} else {
 		updateRayCast(secondsElapsed);
+	}
 }
 
 void HelloApplication::updateSpinOnZAxis(float time, float aspectRatio)
 {
-	MVP.model = glm::rotate(mat4(1.0f), time * radians(90.0f), vec3(0.0f, 0.0f, 1.0f));
-					// identity matrix		rotate 90 deg/sec		around Z axis
-	MVP.proj = glm::perspective(radians(45.0f), aspectRatio, 0.1f, 10.0f);
-								// fov: 45 degrees			 near	far
+	const float degreesPerSecond = 90.0f;
+	float radiansRotation = time * radians(degreesPerSecond);
 
-	//uboMVP.proj[1][1] *= -1;	//TJ_DELETE_LATER: the original tutorial did this too, to flip Y's, and set eye at 2,2,2 and +Z for up
+	const vec3 aroundZaxis = vec3(0.0f, 0.0f, 1.0f);
+	const mat4 identityMatrix = mat4(1.0f);
+
+	MVP.model = glm::rotate(identityMatrix, radiansRotation, aroundZaxis);
+}
+
+void HelloApplication::recalculateProjectionIfChanged()
+{
+	if (swapchainExtent.width != platform.LastSavedPixelsWide || swapchainExtent.height != platform.LastSavedPixelsHigh)
+		setPerspectiveProjection();
+}
+
+void HelloApplication::setPerspectiveProjection()
+{
+	const float nearPlane = 0.1f;
+	const float farPlane = 100.0f;
+
+	const float degreeLandscapeFOV = 45.0f;
+	const float landscapeVerticalFOV = radians(degreeLandscapeFOV);
+
+	float aspectRatio = swapchainExtent.width / (float) swapchainExtent.height;
+	bool isMobileInPortraitMode = (platform.IsMobile && aspectRatio < 1.0f);
+
+	float fieldOfView = landscapeVerticalFOV;
+	if (isMobileInPortraitMode)
+		fieldOfView = 2.0f * atanf(tanf(landscapeVerticalFOV / 2.0f) / aspectRatio);
+
+	MVP.proj = glm::perspective(fieldOfView, aspectRatio, nearPlane, farPlane);
+
+	//uboMVP.proj[1][1] *= -1;	//note: the original tutorial did this too, to flip Y's, and set eye at 2,2,2 and +Z for up
 }
 
 void HelloApplication::updateRayCast(float time)
@@ -178,8 +207,13 @@ void HelloApplication::updateRayCast(float time)
 //
 void HelloApplication::prepareForMainLoop()
 {
-	MVP.view = glm::lookAt(vec3(0.0f, -2.0f, 2.0f), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, -1.0f, 0.0f));
-						 // eye: 2 back 2 up		  center @ origin		up: negative Y points up
+	const vec3 eyePosition = vec3(0.0f, -2.0f, 2.0f);	// 2 back 2 up
+	const vec3 stareAtOrigin = vec3(0.0f, 0.0f, 0.0f);
+	const vec3 upVector = vec3(0.0f, -1.0f, 0.0f);		// negative Y points up
+
+	MVP.view = glm::lookAt(eyePosition, stareAtOrigin, upVector);
+
+	setPerspectiveProjection();
 }
 
 

@@ -70,6 +70,8 @@ private:
 	void update();
 	void draw();
 	void updateSpinOnZAxis(float time, float aspectRatio);
+	void recalculateProjectionIfChanged();
+	void setPerspectiveProjection();
 	void updateRayCast(float time);
 
 	static void ForceUpdateRender(void* pOurself);
