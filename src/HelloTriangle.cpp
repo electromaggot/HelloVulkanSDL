@@ -251,10 +251,10 @@ void HelloApplication::draw()
 			call = vkQueuePresentKHR(deviceQueue, &presentInfo);
 			called = "Queue Present";
 		}
+		if (platform.IsWindowResized() || call == VK_ERROR_OUT_OF_DATE_KHR || call == VK_SUBOPTIMAL_KHR)
+			vulkan.RecreateRenderingRudiments();
 	}
-	if (platform.IsWindowResized() || call == VK_ERROR_OUT_OF_DATE_KHR || call == VK_SUBOPTIMAL_KHR)
-		vulkan.RecreateRenderingRudiments();
-	else if (call != VK_SUCCESS)
+	if (call != VK_SUCCESS)
 		Log(ERROR, called + ErrStr(call));
 
 	iCurrentFrame = (iCurrentFrame + 1) % syncObjects.MaxFramesInFlight;
