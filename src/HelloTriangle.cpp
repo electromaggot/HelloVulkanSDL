@@ -128,7 +128,7 @@ void HelloApplication::ForceUpdateRender(void* pOurself)
 	HelloApplication* pSelf = static_cast<HelloApplication*>(pOurself);
 	if (pSelf) {
 		if (pSelf->platform.isWindowResized)
-			pSelf->vulkan.RecreateRenderingRudiments();
+			pSelf->vulkan.RecreateRenderingResources();
 
 		pSelf->updateRender();
 	}
@@ -199,7 +199,7 @@ void HelloApplication::draw()
 	const char* called = "Acquire Next Image";
 
 	if (platform.IsWindowResized() || call == VK_ERROR_OUT_OF_DATE_KHR || call == VK_SUBOPTIMAL_KHR)
-		vulkan.RecreateRenderingRudiments();
+		vulkan.RecreateRenderingResources();
 
 	//	...then restore Fence back to unsignaled state.
 	vkResetFences(device, 1, &syncObjects.inFlightFences[iCurrentFrame]);
@@ -252,7 +252,7 @@ void HelloApplication::draw()
 			called = "Queue Present";
 		}
 		if (platform.IsWindowResized() || call == VK_ERROR_OUT_OF_DATE_KHR || call == VK_SUBOPTIMAL_KHR)
-			vulkan.RecreateRenderingRudiments();
+			vulkan.RecreateRenderingResources();
 	}
 	if (call != VK_SUCCESS)
 		Log(ERROR, called + ErrStr(call));
