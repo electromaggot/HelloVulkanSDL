@@ -29,6 +29,9 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)		# Use solution folders feature
 
 set(PROJECT_NAME HelloTriangle)				# Sub-projects
 
+set(EXECUTABLE_OUTPUT_PATH build)			# sub-directory destination for built binary
+
+
 #################### Source groups ######################
 
 set(HelloTriangle
@@ -43,7 +46,6 @@ set(HelloTriangle__Settings
     "../src/Settings/AppSettings.cpp"
     "../src/Settings/AppSettings.h"
     "../src/Settings/json.hpp"
-#    "../src/Settings/jsonConvert_c.h"
 )
 source_group("HelloTriangle\\Settings" FILES ${HelloTriangle__Settings})
 
@@ -57,7 +59,6 @@ set(Graphics__Shaders
     "../graphics/shaders/25_shader_textures.frag"
     "../graphics/shaders/25_shader_textures.vert"
     "../graphics/shaders/basicPlaid.frag"
-    "../graphics/shaders/compile.bat"
     "../graphics/shaders/FullScreenTriangle.vert"
     "../graphics/shaders/TexturedQuad.frag"
     "../graphics/shaders/TexturedQuad.vert"
@@ -108,17 +109,16 @@ set(Platform__Logger
 )
 source_group("Platform\\Logger" FILES ${Platform__Logger})
 
-set(Platform__Microsoft
+set(Platform__Linux
     "src/LocalFileSystem.h"
     "src/optional.h"
     "src/PlatformConstants.h"
     "src/PlatformSpecifics.h"
 )
-source_group("Platform\\Microsoft" FILES ${Platform__Microsoft})
+source_group("Platform\\Linux" FILES ${Platform__Linux})
 
 set(Platform__OSAbstraction
     "../src/VulkanModule/Platform/OSAbstraction/iPlatform.h"
-#    "../src/VulkanModule/Platform/OSAbstraction/PlatformGLFW.cpp"
     "../src/VulkanModule/Platform/OSAbstraction/PlatformGLFW.h"
     "../src/VulkanModule/Platform/OSAbstraction/PlatformSDL.cpp"
     "../src/VulkanModule/Platform/OSAbstraction/PlatformSDL.h"
@@ -237,7 +237,7 @@ set(ALL_FILES
     ${Platform__GUISystem}
     ${Platform__ImageHandling}
     ${Platform__Logger}
-    ${Platform__Microsoft}
+    ${Platform__Linux}
     ${Platform__OSAbstraction}
     ${Platform__ControlScheme}
     ${Vulkan__Adjunct}
@@ -264,6 +264,8 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Output directory
 endif()
 if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")
     set_target_properties(${PROJECT_NAME} PROPERTIES
+        OUTPUT_DIRECTORY_DEBUG   "${CMAKE_SOURCE_DIR}/build/"
+        OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/build/$<CONFIG>/"
         INTERPROCEDURAL_OPTIMIZATION_RELEASE "TRUE"
     )
 elseif("${CMAKE_PLATFORM_NAME}" STREQUAL "x86")
@@ -280,7 +282,6 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Include directories
 	"/usr/include/SDL2;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../External/SDL2/include;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../External/SDL2_image/include;"
-#ADD
         "${CMAKE_CURRENT_SOURCE_DIR}/src;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/Settings;"
@@ -301,7 +302,6 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Include directories
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Platform/ControlScheme;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../External/imgui;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../External/imgui/examples;"
-#END
     )
 endif()
 
@@ -322,9 +322,9 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Post build events
     add_custom_command(
         TARGET ${PROJECT_NAME}
         POST_BUILD
-	COMMAND if [ ! -e "compiledShaders" ]\; then ln -s "${CMAKE_CURRENT_SOURCE_DIR}/../graphics/shaders" compiledShaders \; cd compiledShaders \; ./compileLinux.sh \; fi
-	#COMMAND bash -c "compiledShaders/compileLinux.sh"
-        COMMAND if [ ! -L "textures" ]\; then ln -s "${CMAKE_CURRENT_SOURCE_DIR}/../assets/textures" \; fi
+	COMMAND if [ ! -e "build" ]\; then mkdir build\; fi
+	COMMAND if [ ! -e "build/compiledShaders" ]\; then cd build\; ln -s "../../graphics/shaders" compiledShaders \; cd compiledShaders \; ./compileLinux.sh \; fi
+        COMMAND if [ ! -L "build/textures" ]\; then cd build\; ln -s "../../assets/textures" \; fi
         COMMENT "Post-build events complete."
     )
 endif()
@@ -349,6 +349,7 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Dependencies
 	"stdc++"
     )
 endif()
+
 target_link_libraries(${PROJECT_NAME} PRIVATE "${ADDITIONAL_LIBRARY_DEPENDENCIES}")
 
 if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")

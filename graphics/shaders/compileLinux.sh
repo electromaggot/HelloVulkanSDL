@@ -15,7 +15,7 @@ for SRC in *.vert *.frag; do
 
   # don't re-compile if existing binary is newer than source file
 
-  NEWER="$(ls -t1 "$SRC" "$OUT" | head -1)"
+  NEWER="$(ls -t1 2>/dev/null "$SRC" "$OUT" | head -1)"
 
   if [ "$SRC" = "$NEWER" ]; then
 
