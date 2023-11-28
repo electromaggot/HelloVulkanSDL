@@ -1,6 +1,6 @@
 ## Ubuntu &nbsp; Build Instructions
 
-Running on Ubuntu **22.04** was successfully tested with [both modern and old (weak) hardware](https://github.com/electromaggot/HelloVulkanSDL/edit/master/CMakeLinux/README.md#systems-tested-on).
+Running on Ubuntu **22.04** was successfully tested with [both modern and old (weak) hardware](https://github.com/electromaggot/HelloVulkanSDL/blob/master/CMakeLinux/README.md#systems-tested-on).
 
 You will need:
 
@@ -78,4 +78,4 @@ Worst case, delete the project and re-clone.  If that doesn't help, please submi
 Systems Tested On
 -----------------
 - *modern:* **Core-i7**-based PC with integrated Intel 3D graphics ("`Intel(R) UHD Graphics 630 (CFL GT2)`").
-- *ancient/weak:* **Intel Atom** motherboard, also with early integrated graphics but lacking driver support for a present-day OS.  However, our code was still able to detect/select the [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) software renderer and display graphics just the same (albeit at expectedly-limited frame rates).  ("`llvmpipe (LLVM 15.0.7, 128 bits)`")
+- *ancient/weak:* **Intel Atom** motherboard, also with early integrated graphics (e.g. OpenGL ES 2.0) but lacking driver support for a present-day OS.  However, our code was still able to detect/select the [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) software renderer and display graphics just the same ...albeit at expectedly-limited frame rates.  ("`llvmpipe (LLVM 15.0.7, 128 bits)`")
