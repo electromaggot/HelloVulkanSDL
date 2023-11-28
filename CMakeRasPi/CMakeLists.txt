@@ -59,7 +59,6 @@ set(Graphics__Shaders
     "../graphics/shaders/25_shader_textures.frag"
     "../graphics/shaders/25_shader_textures.vert"
     "../graphics/shaders/basicPlaid.frag"
-    "../graphics/shaders/compile.bat"
     "../graphics/shaders/FullScreenTriangle.vert"
     "../graphics/shaders/TexturedQuad.frag"
     "../graphics/shaders/TexturedQuad.vert"
@@ -280,7 +279,7 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Include directories
     target_include_directories(${PROJECT_NAME} PRIVATE
         "${CMAKE_CURRENT_SOURCE_DIR}/../External/VulkanSDK/Include;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../External/VulkanSDK/Third-Party/Include;"
-	"/usr/include/SDL2;"
+        "/usr/include/SDL2;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../External/SDL2/include;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../External/SDL2_image/include;"
         "${CMAKE_CURRENT_SOURCE_DIR}/src;"
@@ -323,9 +322,9 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Post build events
     add_custom_command(
         TARGET ${PROJECT_NAME}
         POST_BUILD
-	COMMAND if [ ! -e "build" ]\; then mkdir build\; fi
-	COMMAND if [ ! -e "build/compiledShaders" ]\; then cd build\; ln -s "../../graphics/shaders" compiledShaders \; cd compiledShaders \; ./compileLinux.sh \; fi
-        COMMAND if [ ! -L "build/textures" ]\; then cd build\; ln -s "../../assets/textures" \; fi
+        COMMAND if [ ! -d "build" ]\; then mkdir build\; fi
+        COMMAND if [ ! -L "build/compiledShaders" ]\; then cd build\; ln -s "../../CMakeLinux/build/compiledShaders" \; cd "../../graphics/shaders" \; ./compileLinux.sh\; fi
+        COMMAND if [ ! -L "build/textures" ]\; then cd build\; ln -s "../../graphics/assets/textures" \; fi
         COMMENT "Post-build events complete."
     )
 endif()
@@ -346,8 +345,8 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Dependencies
         "vulkan;"
         "SDL2;"
         "SDL2_image;"
-	"m;"
-	"stdc++"
+        "m;"
+        "stdc++"
     )
 endif()
 
