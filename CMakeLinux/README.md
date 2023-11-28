@@ -60,3 +60,17 @@ cd build
 ./HelloTriangle
 ```
 
+\
+If Updating a Previous Version... or you run into trouble
+---------------------------------------------------------
+Either:
+```ruby
+make clean
+```
+or try deleting the files that `cmake` and `make` auto-generate:
+```ruby
+cd CMakeLinux/build
+rm -r build CMakeFiles CMakeCache.txt cmake_install.cmake Makefile
+```
+Worst case, delete the project and re-clone.  If that doesn't help, please submit an Issue.
+
