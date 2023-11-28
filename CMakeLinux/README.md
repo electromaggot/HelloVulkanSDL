@@ -2,7 +2,7 @@
 
 Running Ubuntu 22.04, these steps were successfully tested on the following equipment:
 - a modern Core-i7-based PC with integrated Intel 3D graphics.
-- an ancient Intel Atom system, also with early (weak) integrated graphics but lacking driver support for a present-day OS.  However, our code was still able to detect/select the [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) software renderer and display graphics just the same (albeit at expectedly-low frame rates).
+- an ancient Intel Atom system, also with early (weak) integrated graphics but lacking driver support for a present-day OS.  However, our code was still able to detect/select the [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) software renderer and display graphics just the same (albeit at expectedly-limited frame rates).
 
 You will need:
 
