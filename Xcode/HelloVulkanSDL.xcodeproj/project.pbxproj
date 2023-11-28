@@ -208,7 +208,7 @@
 		9E87F5BF232147D00009062F /* 21_shader_ubo.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 21_shader_ubo.frag; path = ../shaders/21_shader_ubo.frag; sourceTree = "<group>"; };
 		9E87F5C0232147D00009062F /* 25_shader_textures.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 25_shader_textures.vert; path = ../shaders/25_shader_textures.vert; sourceTree = "<group>"; };
 		9E87F5C1232147D00009062F /* 25_shader_textures.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 25_shader_textures.frag; path = ../shaders/25_shader_textures.frag; sourceTree = "<group>"; };
-		9E87F5C623214D150009062F /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = textures; path = ../../assets/textures; sourceTree = "<group>"; };
+		9E87F5C623214D150009062F /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = textures; path = ../../graphics/assets/textures; sourceTree = "<group>"; };
 		9E87F5C923217A210009062F /* TextureImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureImage.h; sourceTree = "<group>"; };
 		9E87F5CA23217A210009062F /* TextureImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureImage.cpp; sourceTree = "<group>"; };
 		9E87F5CD232183880009062F /* CommandBufferBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandBufferBase.h; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 		9EC4858D2231A31F007C7242 /* PlatformExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformExtension.h; sourceTree = "<group>"; };
 		9ECA3981220255BE00B2A7B3 /* compiledShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = compiledShaders; sourceTree = "<group>"; };
 		9ECA39842202560E00B2A7B3 /* 09_shader_base.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 09_shader_base.frag; sourceTree = "<group>"; };
-		9ECA39852202560E00B2A7B3 /* compile.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = compile.sh; sourceTree = "<group>"; };
+		9ECA39852202560E00B2A7B3 /* compileApple.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = compileApple.sh; sourceTree = "<group>"; };
 		9ECA39862202560E00B2A7B3 /* 09_shader_base.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 09_shader_base.vert; sourceTree = "<group>"; };
 		9ED90BD42337F7ED0004BAFA /* RenderSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderSettings.h; sourceTree = "<group>"; };
 		9EDC51622AE026620098F52D /* ImageResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageResource.h; sourceTree = "<group>"; };
@@ -597,7 +597,7 @@
 				9E2DAE11232D8428004ADDCB /* TexturedQuad.vert */,
 				9E2DAE10232D8428004ADDCB /* TexturedQuad.frag */,
 				9EA5CCF623134C6C00178010 /* tjVolcanic.frag */,
-				9ECA39852202560E00B2A7B3 /* compile.sh */,
+				9ECA39852202560E00B2A7B3 /* compileApple.sh */,
 			);
 			name = Shaders;
 			path = shaders;
@@ -796,7 +796,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ../graphics/shaders\n./compile.sh\n";
+			shellScript = "cd ../graphics/shaders\n./compileApple.sh\n";
 		};
 		9EA5CCF52313438D00178010 /* Compile Shaders */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -814,7 +814,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ../graphics/shaders\n./compile.sh\n";
+			shellScript = "cd ../graphics/shaders\n./compileApple.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
