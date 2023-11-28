@@ -279,7 +279,7 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Include directories
     target_include_directories(${PROJECT_NAME} PRIVATE
         "${CMAKE_CURRENT_SOURCE_DIR}/../External/VulkanSDK/Include;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../External/VulkanSDK/Third-Party/Include;"
-	"/usr/include/SDL2;"
+        "/usr/include/SDL2;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../External/SDL2/include;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../External/SDL2_image/include;"
         "${CMAKE_CURRENT_SOURCE_DIR}/src;"
@@ -322,9 +322,9 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Post build events
     add_custom_command(
         TARGET ${PROJECT_NAME}
         POST_BUILD
-	COMMAND if [ ! -e "build" ]\; then mkdir build\; fi
-	COMMAND if [ ! -e "build/compiledShaders" ]\; then cd build\; ln -s "../../graphics/shaders" compiledShaders \; cd compiledShaders \; ./compileLinux.sh \; fi
-        COMMAND if [ ! -L "build/textures" ]\; then cd build\; ln -s "../../assets/textures" \; fi
+        COMMAND if [ ! -d "build" ]\; then mkdir build\; fi
+        COMMAND if [ ! -d "build/compiledShaders" ]\; then mkdir "build/compiledShaders" \; cd "../graphics/shaders" \; ./compileLinux.sh\; fi
+        COMMAND if [ ! -L "build/textures" ]\; then cd build\; ln -s "../../graphics/assets/textures" \; fi
         COMMENT "Post-build events complete."
     )
 endif()
@@ -345,8 +345,8 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Dependencies
         "vulkan;"
         "SDL2;"
         "SDL2_image;"
-	"m;"
-	"stdc++"
+        "m;"
+        "stdc++"
     )
 endif()
 
@@ -376,7 +376,7 @@ target_compile_options(${PROJECT_NAME} PRIVATE
             #/sdl;
             #/W3;
             #-fPIC;
-	    -ggdb3
+            -ggdb3
             -m64;
             -mcmodel=medium;
             ${DEFAULT_CXX_DEBUG_INFORMATION_FORMAT};
@@ -390,11 +390,11 @@ target_link_options(${PROJECT_NAME} PRIVATE
             $<$<CONFIG:Release>:
                 /OPT:REF;
                 /OPT:ICF;
-            	#-mcmodel=medium
+                #-mcmodel=medium
             >
             #/DEBUG:FULL;
-	    -m64;
-	    -fPIE;
+            -m64;
+            -fPIE;
             #-mcmodel=medium
         )
 

@@ -6,28 +6,30 @@ if [ -n "$(grep -i "name.*debian" /etc/os-release)" ]; then
   COMPILER=/usr/local/bin/glslang
 fi
 
-DSTDIR=../../CMakeLinux/compiledShaders
+DSTDIR=../../CMakeLinux/build/compiledShaders
+
+if [ ! -d $DSTDIR ]; then
+
+  mkdir -p $DSTDIR
+
+fi
 
 
 for SRC in *.vert *.frag; do
 
-  OUT="$(echo "$SRC" | sed "s/\.frag$/-frag/" | sed "s/\.vert$/-vert/").spv"
+  DSTFIL="$(echo "$SRC" | sed "s/\.frag$/-frag/" | sed "s/\.vert$/-vert/").spv"
+
+  OUT="$DSTDIR/$DSTFIL"
 
   # don't re-compile if existing binary is newer than source file
 
-  NEWER="$(ls -t1 2>/dev/null "$SRC" "$OUT" | head -1)"
+  NEWER="$(ls -t1 "$SRC" "$OUT" 2>/dev/null | head -1)"
 
   if [ "$SRC" = "$NEWER" ]; then
 
-    echo "COMPILING $OUT from:"
+    echo -n "COMPILING $OUT\n   from   "
 
     $COMPILER -V "$SRC" -o "$OUT"
-
-    # for Apple projects' benefit, copy the SPVs (vs. Xcode copying, not following, the symbolic link)
-
-    echo "copying to $DSTDIR"
-
-	cp "$OUT" "$DSTDIR"
 
   else
 
