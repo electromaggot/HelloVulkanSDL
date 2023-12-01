@@ -14,8 +14,8 @@
 //		manage object lifespans in minimal code.
 //	2. Post-construction (once program has the chance to start running)-
 //		Finishes initialization that requires some processing, like
-//		to specify and load shader files, etc., which the rest of
-//		Vulkan's pipeline depends upon.
+//		to specify and load shader files, etc., which the rest of a
+//		Vulkan pipeline depends upon.
 //
 // Created 1/27/19 by Tadd Jensen
 //	© 0000 (uncopyrighted; use at will)
@@ -25,27 +25,30 @@
 #include "VulkanSetup.h"
 
 
+const SteerSetup simple = NO_DEPTH_BUFFER;
+
+
 class HelloApplication
 {
 private:
-	PlatformSDL		platform;	// SDL is target "platform" (i/o abstraction layer).
+	PlatformSDL		platform;			// SDL is target "platform" (i/o abstraction layer).
 
-	VulkanSetup		vulkan;		// This one instantiation...
+	VulkanSetup		vulkan;				// This one instantiation...
 
 public:
 	HelloApplication()
 		:	platform(),
-			vulkan(platform),	//	...initializes almost all of Vulkan.
-			device(vulkan.device.getLogical()),
-			swapchain(vulkan.swapchain.getVkSwapchain()),
-			deviceQueue(vulkan.device.Queues.getCurrent()),
-			syncObjects(vulkan.syncObjects),
-			swapchainExtent(vulkan.swapchain.getExtent())
+			vulkan(platform, simple),	//		...initializes almost all of Vulkan.
+			device(vulkan.device.getLogical()),				//
+			swapchain(vulkan.swapchain.getVkSwapchain()),	// Then the rest of this initializer
+			deviceQueue(vulkan.device.Queues.getCurrent()),	//	list stores local references to
+			syncObjects(vulkan.syncObjects),				//	avoid repeated dereferencing.
+			swapchainExtent(vulkan.swapchain.getExtent())	//
 	{ }
 
-	~HelloApplication()			// Before destruction, in turn destroying child
-	{								//	data structures instanced above, ensure
-		vkDeviceWaitIdle(device);	//	Vulkan finish any operations in-process.
+	~HelloApplication()					// Before destruction, in turn destroying child
+	{									//	data structures instanced above, ensure
+		vkDeviceWaitIdle(device);		//	Vulkan finish any operations in-process.
 	}
 
 		// lesser MEMBERS
