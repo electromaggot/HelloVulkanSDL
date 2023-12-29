@@ -62,6 +62,12 @@ private:
 	SyncObjects&	syncObjects;
 	VkExtent2D&		swapchainExtent;
 
+	// Draw-loop-related detail
+	typedef uint64_t NanosecondTimeout;
+	const NanosecondTimeout NO_TIMEOUT = numeric_limits<uint64_t>::max();
+	const NanosecondTimeout FAILSAFE_TIMEOUT = 100'000'000;					// 1/10th second
+	VkResult call;		// local instance (the global one, while convenient, isn't thread-safe)
+
 		// METHODS
 public:
 	void Run();
@@ -72,6 +78,7 @@ private:
 	void updateRender();
 	void update();
 	void draw();
+
 	void updateSpinOnZAxis(float time, float aspectRatio);
 	void recalculateProjectionIfChanged();
 	void setPerspectiveProjection();

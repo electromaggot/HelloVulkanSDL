@@ -221,19 +221,15 @@ void HelloApplication::prepareForMainLoop()
 //
 void HelloApplication::draw()
 {
-	const uint64_t NO_TIMEOUT = numeric_limits<uint64_t>::max();
 	uint32_t iNextImage;
 
-	// Await prior submission's finish...
-	vkWaitForFences(device, 1, &syncObjects.inFlightFences[iCurrentFrame], VK_TRUE, NO_TIMEOUT);
+	// Await prior submission's finish...						(and to never risk deadlock ↓ )
+	vkWaitForFences(device, 1, &syncObjects.inFlightFences[iCurrentFrame], VK_TRUE, FAILSAFE_TIMEOUT);
 
-	call = vkAcquireNextImageKHR(device, swapchain, NO_TIMEOUT,
+	call = vkAcquireNextImageKHR(device, swapchain, FAILSAFE_TIMEOUT,
 								 syncObjects.imageAvailableSemaphores[iCurrentFrame],
 								 VK_NULL_HANDLE, &iNextImage);
 	const char* called = "Acquire Next Image";
-
-	if (platform.IsWindowResized() || call == VK_ERROR_OUT_OF_DATE_KHR || call == VK_SUBOPTIMAL_KHR)
-		vulkan.RecreateRenderingResources();
 
 	//	...then restore Fence back to unsignaled state.
 	vkResetFences(device, 1, &syncObjects.inFlightFences[iCurrentFrame]);
@@ -285,10 +281,13 @@ void HelloApplication::draw()
 			call = vkQueuePresentKHR(deviceQueue, &presentInfo);
 			called = "Queue Present";
 		}
-		if (platform.IsWindowResized() || call == VK_ERROR_OUT_OF_DATE_KHR || call == VK_SUBOPTIMAL_KHR)
-			vulkan.RecreateRenderingResources();
 	}
-	if (call != VK_SUCCESS)
+	if (call == VK_ERROR_OUT_OF_DATE_KHR || call == VK_SUBOPTIMAL_KHR)
+	{
+		vulkan.RecreateRenderingResources();
+		syncObjects.Recreate();
+	}
+	if (call != VK_SUCCESS && call != VK_SUBOPTIMAL_KHR)
 		Log(ERROR, called + ErrStr(call));
 
 	iCurrentFrame = (iCurrentFrame + 1) % syncObjects.MaxFramesInFlight;
