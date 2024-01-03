@@ -304,12 +304,12 @@ void main()
 
 	// terrain	
 	float t = raymarchTerrain(ro, rd);		// t is distance to terrain hit
-	float st = t;
+//	float st = t;
 	if (t > 0.0)
 	{
 		vec3 pos = ro + t * rd;
 		vec3 normal = calcNormal(pos, t);
-		vec3 ref = reflect(rd, normal);
+//		vec3 ref = reflect(rd, normal);
 
 		vec3 bn = -1.0 + 2.0 * texcube(iChannel0, 3.0 * pos / 4.0, normal).xyz;
 		normal = normalize(normal + 0.6 * bn);
