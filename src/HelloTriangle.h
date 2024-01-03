@@ -23,6 +23,8 @@
 #include "AppSettings.h"
 #include "PlatformSDL.h"
 #include "VulkanSetup.h"
+#include "DrawableSpecifier.h"
+#include "OtherDrawables.h"
 
 
 const SteerSetup simple = NO_DEPTH_BUFFER;
@@ -49,6 +51,9 @@ public:
 	~HelloApplication()					// Before destruction, in turn destroying child
 	{									//	data structures instanced above, ensure
 		vkDeviceWaitIdle(device);		//	Vulkan finish any operations in-process.
+
+		if (pOtherDrawables)
+			delete pOtherDrawables;
 	}
 
 		// lesser MEMBERS
@@ -68,6 +73,9 @@ private:
 	const NanosecondTimeout FAILSAFE_TIMEOUT = 100'000'000;					// 1/10th second
 	VkResult call;		// local instance (the global one, while convenient, isn't thread-safe)
 
+	// App-specific
+	OtherDrawables*	pOtherDrawables = nullptr;
+
 		// METHODS
 public:
 	void Run();
@@ -79,10 +87,11 @@ private:
 	void update();
 	void draw();
 
-	void updateSpinOnZAxis(float time, float aspectRatio);
+	void loadRenderable(DrawableSpecifier& specified);
+	void loadNextRenderable();
+
 	void recalculateProjectionIfChanged();
 	void setPerspectiveProjection();
-	void updateRayCast(float time);
 
 	static void ForceUpdateRender(void* pOurself);
 };

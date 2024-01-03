@@ -9,29 +9,16 @@
 #include "HelloTriangle.h"
 
 #include "CommandObjects.h"
-#include "MeshObject.h"
-#include "UniformBufferLiterals.h"
-
 #include "FixedRenderable.h"
 #include "VertexNull.h"
 
-extern MeshObject Quad2DTextured;
-extern MeshObject Quad2DTextureTinted;
-extern MeshObject Quad2DColored;
-extern MeshObject Triangle2DColored;
 
 UBO_MVP	MVP;
 UBO uboMVP(MVP);
 
-UBO_rtm RayCast;
-UBO uboRayCast(RayCast);
-
 
 #include <chrono>	// for game loop, and per-frame delta-time updates
 using std::chrono::high_resolution_clock; using std::chrono::duration; using std::chrono::seconds;
-
-
-const int iDemoMode = 6;	// See below for what this numbering means.
 
 
 // This "Post-construction Initialization" runs after VulkanSetup's initializer list instantiates/initializes
@@ -39,61 +26,39 @@ const int iDemoMode = 6;	// See below for what this numbering means.
 //
 void HelloApplication::Init()
 {
-	static DrawableProperties demoSpecifiers[] = {
-		{												// 0: full-screen color gradient
-			.mesh = ShaderSets3Vertices,
-			.shaders = { { VERTEX,	 "FullScreenTriangle-vert.spv"		},
-						 { FRAGMENT, "basicPlaid-frag.spv"				} }
-		},{												// 1: triangle, shader-defined vertices, colored per vertex
-			.mesh = ShaderSets3Vertices,
-			.shaders = { { VERTEX,	 "09_shader_base-vert.spv"			},		// Simplest example of a renderable.
-						 { FRAGMENT, "09_shader_base-frag.spv"			} }
-		},{												// 2: triangle, vertex buffer, colored per vertex
-			.mesh = Triangle2DColored,											// This vertex buffer required by...
-			.shaders = { { VERTEX,	 "17_shader_vertexbuffer-vert.spv"	},		//	these shaders.
-						 { FRAGMENT, "17_shader_vertexbuffer-frag.spv"	} }
-		},{												// 3: quad, vertex + index buffer, color per vertex
-			.mesh = Quad2DColored,
-			.shaders = { { VERTEX,	 "17_shader_vertexbuffer-vert.spv"	},
-						 { FRAGMENT, "17_shader_vertexbuffer-frag.spv"	} }
-		},{												// 4: quad in 3D, uniform buffer, color vertex
-			.mesh = Quad2DColored,												// This quad is required by...
-			.shaders = { { VERTEX,	 "21_shader_ubo-vert.spv"			},		//	this shader, which also expects...
-						 { FRAGMENT, "21_shader_ubo-frag.spv"			} },
-			.pUBOs	 = { uboMVP }												//	this uniform buffer.
-		},{												// 5: textured quad with colored vertices
-			.mesh = Quad2DTextureTinted,
-			.shaders  = { { VERTEX,   "25_shader_textures-vert.spv"		},
-						  { FRAGMENT, "25_shader_textures-frag.spv"		} },	// and now requires...
-			.pUBOs	  = { uboMVP },
-			.textures = { { "texture.jpg" } }									//	a texture too (array).
-		},{												// 6: minimal textured quad
-			.mesh = Quad2DTextured,												// This quad, required by...
-			.shaders  = { { VERTEX,   "TexturedQuad-vert.spv"			},		//	this shader, also requires...
-						  { FRAGMENT, "TexturedQuad-frag.spv"			} },
-			.pUBOs	  = { uboMVP },												//	this model/view/projection,
-			.textures = { { "texture.jpg" } }									//	and this texture.
-		},{												// 7: ray marching test
-			.mesh = ShaderSets3Vertices,
-			.shaders  = { { VERTEX,   "FullScreenTriangle-vert.spv"		},
-						  { FRAGMENT, "tjVolcanic-frag.spv"				} },
-			.pUBOs	  = { uboRayCast },
-			.textures =	{ { "Noise256.png", LINEAR, REPEAT },
-						  { "MossyBark.jpg", MIPMAP, REPEAT },
-						  { "PockScorch.jpg", MIPMAP, REPEAT } }
-		}
+	DrawableProperties demoSpecifier = {		// triangle, shader-defined vertices, colored per vertex
+		.mesh = ShaderSets3Vertices,
+		.shaders = { { VERTEX,	 "09_shader_base-vert.spv"	},		// Simplest example of a renderable.
+					 { FRAGMENT, "09_shader_base-frag.spv"	} },
+		.name = "Hello-triangle!"
 	};
-	DrawableSpecifier demo(demoSpecifiers[iDemoMode]);
+	DrawableSpecifier demo(demoSpecifier);
 
-	Renderables& renderables = vulkan.command.renderables;
-
-	renderables.Add(FixedRenderable(demo, vulkan, platform));
-
-	vulkan.command.PostInitPrepBuffers(vulkan);
+	loadRenderable(demo);
 
 	prepareForMainLoop();
 
 	platform.RegisterForceRenderCallback(HelloApplication::ForceUpdateRender, this);
+}
+
+void HelloApplication::loadRenderable(DrawableSpecifier& specified)
+{
+	vulkan.command.renderables.Add(FixedRenderable(specified, vulkan, platform));
+
+	vulkan.command.PostInitPrepBuffers(vulkan);
+}
+
+void HelloApplication::loadNextRenderable()
+{
+	if (!pOtherDrawables)
+		pOtherDrawables = new OtherDrawables(platform);
+
+	vkDeviceWaitIdle(device);
+	vulkan.command.RecreateBuffers(vulkan.framebuffers);
+	vulkan.command.renderables.Clear();	 // (blanket-clears all of 'em, as only one is active at a time anyway)
+
+	DrawableSpecifier nextDrawable(pOtherDrawables->GetNextDrawable());
+	loadRenderable(nextDrawable);
 }
 
 
@@ -148,24 +113,6 @@ void HelloApplication::update()
 	previousSeconds = secondsElapsed;
 
 	vulkan.command.renderables.Update(deltaSeconds);
-
-	if (iDemoMode < 7) {
-		updateSpinOnZAxis(secondsElapsed, swapchainExtent.width / (float) swapchainExtent.height);
-		recalculateProjectionIfChanged();
-	} else {
-		updateRayCast(secondsElapsed);
-	}
-}
-
-void HelloApplication::updateSpinOnZAxis(float time, float aspectRatio)
-{
-	const float degreesPerSecond = 90.0f;
-	float radiansRotation = time * radians(degreesPerSecond);
-
-	const vec3 aroundZaxis = vec3(0.0f, 0.0f, 1.0f);
-	const mat4 identityMatrix = mat4(1.0f);
-
-	MVP.model = glm::rotate(identityMatrix, radiansRotation, aroundZaxis);
 }
 
 void HelloApplication::recalculateProjectionIfChanged()
@@ -192,13 +139,6 @@ void HelloApplication::setPerspectiveProjection()
 	MVP.proj = glm::perspective(fieldOfView, aspectRatio, nearPlane, farPlane);
 
 	//uboMVP.proj[1][1] *= -1;	//note: the original tutorial did this too, to flip Y's, and set eye at 2,2,2 and +Z for up
-}
-
-void HelloApplication::updateRayCast(float time)
-{
-	RayCast.resolution	= vec4(float(platform.pixelsWide), float(platform.pixelsHigh), 1.0f, 0.0f);
-	RayCast.time		= time;
-	RayCast.mouse		= vec4(float(platform.mouseX), float(platform.mouseY), 0.0f, 0.0f);
 }
 
 

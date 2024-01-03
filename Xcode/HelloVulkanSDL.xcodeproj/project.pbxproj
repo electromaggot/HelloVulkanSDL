@@ -25,6 +25,8 @@
 		9E2DAE0E232CE24A004ADDCB /* Quad2DTextured.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DAE0C232CE1A5004ADDCB /* Quad2DTextured.cpp */; };
 		9E2DAE0F232CE24E004ADDCB /* Quad2DTextureTinted.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DAE0A232CE035004ADDCB /* Quad2DTextureTinted.cpp */; };
 		9E2DAE18232E8BFA004ADDCB /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2DAE17232E8BFA004ADDCB /* IOSurface.framework */; };
+		9E2F26C02B466858004A5311 /* OtherDrawables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2F26BE2B466858004A5311 /* OtherDrawables.cpp */; };
+		9E2F26C12B47CDB2004A5311 /* OtherDrawables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E2F26BE2B466858004A5311 /* OtherDrawables.cpp */; };
 		9E38920B232973490024D111 /* Descriptors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E389209232973490024D111 /* Descriptors.cpp */; };
 		9E38920C23297DCE0024D111 /* Descriptors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E389209232973490024D111 /* Descriptors.cpp */; };
 		9E3CA04422834D9A007494D6 /* DeviceQueues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CA04222834D9A007494D6 /* DeviceQueues.cpp */; };
@@ -155,6 +157,8 @@
 		9E2DAE10232D8428004ADDCB /* TexturedQuad.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = TexturedQuad.frag; path = ../shaders/TexturedQuad.frag; sourceTree = "<group>"; };
 		9E2DAE11232D8428004ADDCB /* TexturedQuad.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = TexturedQuad.vert; path = ../shaders/TexturedQuad.vert; sourceTree = "<group>"; };
 		9E2DAE17232E8BFA004ADDCB /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		9E2F26BE2B466858004A5311 /* OtherDrawables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OtherDrawables.cpp; path = ../src/Extras/OtherDrawables.cpp; sourceTree = "<group>"; };
+		9E2F26BF2B466858004A5311 /* OtherDrawables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OtherDrawables.h; path = ../src/Extras/OtherDrawables.h; sourceTree = "<group>"; };
 		9E3808372303019200FDF839 /* LocalFileSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LocalFileSystem.h; path = src/LocalFileSystem.h; sourceTree = SOURCE_ROOT; };
 		9E389209232973490024D111 /* Descriptors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Descriptors.cpp; sourceTree = "<group>"; };
 		9E38920A232973490024D111 /* Descriptors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Descriptors.h; sourceTree = "<group>"; };
@@ -389,6 +393,8 @@
 		9E4810D82B06D1B0007FC1E1 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				9E2F26BE2B466858004A5311 /* OtherDrawables.cpp */,
+				9E2F26BF2B466858004A5311 /* OtherDrawables.h */,
 				9ECA39832202560E00B2A7B3 /* Shaders */,
 				9EA5CCFD23144B7D00178010 /* MeshObjects */,
 			);
@@ -844,6 +850,7 @@
 				9E82E5C3220A345B00AC8F7D /* RenderPass.cpp in Sources */,
 				9E128D9C247C365B00032E8E /* Logging.cpp in Sources */,
 				9E82E5C4220A345B00AC8F7D /* main.cpp in Sources */,
+				9E2F26C12B47CDB2004A5311 /* OtherDrawables.cpp in Sources */,
 				9EEBF710226EBD2000AC0B7F /* DebugReport.cpp in Sources */,
 				9E82E5C5220A345B00AC8F7D /* GraphicsDevice.cpp in Sources */,
 				9E82E5C6220A345B00AC8F7D /* vkEnumStrings.cpp in Sources */,
@@ -892,6 +899,7 @@
 				9EA6484022017D4600FD3DB0 /* HelloTriangle.cpp in Sources */,
 				9E128D9A247C350E00032E8E /* Logging.cpp in Sources */,
 				9E82E5B32203B51700AC8F7D /* GraphicsPipeline.cpp in Sources */,
+				9E2F26C02B466858004A5311 /* OtherDrawables.cpp in Sources */,
 				9E2A27802215331B00B4FDBC /* PlatformSDL.cpp in Sources */,
 				9E82E5AE2203B51700AC8F7D /* RenderPass.cpp in Sources */,
 				9EA6482922003B7500FD3DB0 /* main.cpp in Sources */,
