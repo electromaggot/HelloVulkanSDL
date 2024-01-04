@@ -229,6 +229,8 @@ target_compile_options(${PROJECT_NAME} PRIVATE
             #/W3;
             #-fPIC;
             -ggdb3
+            -std=c++1z
+            #^because^ otherwise:  -Wno-c++17-extensions
             -m64;
             -mcmodel=medium;
             ${DEFAULT_CXX_DEBUG_INFORMATION_FORMAT};
