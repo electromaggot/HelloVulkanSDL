@@ -25,6 +25,7 @@
 #include "VulkanSetup.h"
 #include "DrawableSpecifier.h"
 #include "OtherDrawables.h"
+#include "GameClock.h"
 
 
 const SteerSetup simple = NO_DEPTH_BUFFER;
@@ -75,6 +76,7 @@ private:
 
 	// App-specific
 	OtherDrawables*	pOtherDrawables = nullptr;
+	GameClock		gameClock;
 
 		// METHODS
 public:

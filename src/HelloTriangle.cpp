@@ -17,10 +17,6 @@ UBO_MVP	MVP;
 UBO uboMVP(MVP);
 
 
-#include <chrono>	// for game loop, and per-frame delta-time updates
-using std::chrono::high_resolution_clock; using std::chrono::duration; using std::chrono::seconds;
-
-
 // This "Post-construction Initialization" runs after VulkanSetup's initializer list instantiates/initializes
 //	nearly all of the Vulkan objects.  Now instruct it how to finish, specifying app-specific customizations.
 //
@@ -83,8 +79,8 @@ void HelloApplication::Run()
 
 void HelloApplication::updateRender()
 {
+	gameClock.BeginNewFrame();
 	update();
-
 	draw();
 }
 
@@ -107,15 +103,8 @@ void HelloApplication::ForceUpdateRender(void* pOurself)
 //
 void HelloApplication::update()
 {
-	static auto startTime = high_resolution_clock::now();
-	static float previousSeconds = 0.0f;
-
-	auto currentTime = high_resolution_clock::now();
-	float secondsElapsed = duration<float, seconds::period>(currentTime - startTime).count();
-	float deltaSeconds = secondsElapsed - previousSeconds;
-	previousSeconds = secondsElapsed;
-
-	vulkan.command.renderables.Update(deltaSeconds);
+	if (vulkan.command.renderables.Update(gameClock))
+		recalculateProjectionIfChanged();
 }
 
 void HelloApplication::recalculateProjectionIfChanged()

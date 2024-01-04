@@ -159,6 +159,7 @@
 		9E2DAE17232E8BFA004ADDCB /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
 		9E2F26BE2B466858004A5311 /* OtherDrawables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OtherDrawables.cpp; path = ../src/Extras/OtherDrawables.cpp; sourceTree = "<group>"; };
 		9E2F26BF2B466858004A5311 /* OtherDrawables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OtherDrawables.h; path = ../src/Extras/OtherDrawables.h; sourceTree = "<group>"; };
+		9E2F26C32B488ED1004A5311 /* GameClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameClock.h; sourceTree = "<group>"; };
 		9E3808372303019200FDF839 /* LocalFileSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LocalFileSystem.h; path = src/LocalFileSystem.h; sourceTree = SOURCE_ROOT; };
 		9E389209232973490024D111 /* Descriptors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Descriptors.cpp; sourceTree = "<group>"; };
 		9E38920A232973490024D111 /* Descriptors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Descriptors.h; sourceTree = "<group>"; };
@@ -625,6 +626,7 @@
 				9EFA5B3122F1C7E200B63757 /* Utility.cpp */,
 				9EFA5B3222F1C7E200B63757 /* Utility.h */,
 				9EA5CCF3230F4EA600178010 /* Helpers.h */,
+				9E2F26C32B488ED1004A5311 /* GameClock.h */,
 				9E7C112229D4960B00D6DDEB /* VulkanMath.h */,
 				9EA648342200C65500FD3DB0 /* vkEnumStrings.cpp */,
 			);
