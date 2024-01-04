@@ -41,27 +41,27 @@ set(EXECUTABLE_OUTPUT_PATH build)			# sub-directory destination for built binary
 
 AUX_SOURCE_DIRECTORY("src/" Platform_Linux)
 
-AUX_SOURCE_DIRECTORY("../src/", HelloTriangle)
-AUX_SOURCE_DIRECTORY("../src/Settings/", HelloTriangle_Settings)
-AUX_SOURCE_DIRECTORY("../src/Extras/", HelloTriangle_Extras)
+AUX_SOURCE_DIRECTORY("../src/" HelloTriangle)
+AUX_SOURCE_DIRECTORY("../src/Settings/" HelloTriangle_Settings)
+AUX_SOURCE_DIRECTORY("../src/Extras/" HelloTriangle_Extras)
 
-AUX_SOURCE_DIRECTORY("../graphics/shaders/", Graphics_Shaders)
-AUX_SOURCE_DIRECTORY("../graphics/meshObjects/", Graphics_MeshObjects)
+AUX_SOURCE_DIRECTORY("../graphics/shaders/" Graphics_Shaders)
+AUX_SOURCE_DIRECTORY("../graphics/meshObjects/" Graphics_MeshObjects)
 
-AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/", Platform)
-AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/FileSystem/", Platform_FileSystem)
-AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/GUISystem/", Platform_GUISystem)
-AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/ImageHandling/", Platform_ImageHandling)
-AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/Logger/", Platform_Logger)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/" Platform)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/FileSystem/" Platform_FileSystem)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/GUISystem/" Platform_GUISystem)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/ImageHandling/" Platform_ImageHandling)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/Logger/" Platform_Logger)
 
 set(Platform_OSAbstraction
     "../src/VulkanModule/Platform/OSAbstraction/PlatformSDL.cpp"
 )
 source_group("Platform\\OSAbstraction" FILES ${Platform_OSAbstraction})
 
-AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/ControlScheme/", Platform_ControlScheme)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/ControlScheme/" Platform_ControlScheme)
 
-AUX_SOURCE_DIRECTORY("../src/VulkanModule/Adjunct/", Vulkan_Adjunct)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Adjunct/" Vulkan_Adjunct)
 
 set(Vulkan_Adjunct_Renderables
     "../src/VulkanModule/Adjunct/Renderables/AddOns.cpp"
@@ -69,13 +69,13 @@ set(Vulkan_Adjunct_Renderables
 )
 source_group("Vulkan\\Adjunct\\Renderables" FILES ${Vulkan_Adjunct_Renderables})
 
-AUX_SOURCE_DIRECTORY("../src/VulkanModule/Adjunct/VertexTypes/", Vulkan_Adjunct_VertexTypes)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Adjunct/VertexTypes/" Vulkan_Adjunct_VertexTypes)
 
-AUX_SOURCE_DIRECTORY("../src/VulkanModule/Assist/", Vulkan_Assist)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Assist/" Vulkan_Assist)
 
-AUX_SOURCE_DIRECTORY("../src/VulkanModule/Objects/", Vulkan_Objects)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Objects/" Vulkan_Objects)
 
-AUX_SOURCE_DIRECTORY("../src/VulkanModule/Setup/", Vulkan_Setup)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Setup/" Vulkan_Setup)
 
 set(ALL_FILES
     ${HelloTriangle}
