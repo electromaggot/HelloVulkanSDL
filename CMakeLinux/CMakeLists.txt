@@ -50,7 +50,7 @@ AUX_SOURCE_DIRECTORY("../graphics/meshObjects/" Graphics_MeshObjects)
 
 AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/" Platform)
 AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/FileSystem/" Platform_FileSystem)
-AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/GUISystem/" Platform_GUISystem)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/GUISystem/stubs/" Platform_GUISystem)
 AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/ImageHandling/" Platform_ImageHandling)
 AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/Logger/" Platform_Logger)
 
@@ -58,8 +58,6 @@ set(Platform_OSAbstraction
     "../src/VulkanModule/Platform/OSAbstraction/PlatformSDL.cpp"
 )
 source_group("Platform\\OSAbstraction" FILES ${Platform_OSAbstraction})
-
-AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/ControlScheme/" Platform_ControlScheme)
 
 AUX_SOURCE_DIRECTORY("../src/VulkanModule/Adjunct/" Vulkan_Adjunct)
 
@@ -229,12 +227,15 @@ target_compile_options(${PROJECT_NAME} PRIVATE
             #/W3;
             #-fPIC;
             -ggdb3
-            -std=c++1z
+            -std=c++20
             #^because^ otherwise:  -Wno-c++17-extensions
+            #          and for designated initializers
             -m64;
             -mcmodel=medium;
             ${DEFAULT_CXX_DEBUG_INFORMATION_FORMAT};
             -Wno-vla;
+            -Wno-reorder-init-list
+            # ^also^ avert designated intializer warnings
             #-Wno-c99-designator;
             #-Wno-deprecated-volatile;
             ${DEFAULT_CXX_EXCEPTION_HANDLING}
