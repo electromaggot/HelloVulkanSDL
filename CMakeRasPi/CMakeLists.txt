@@ -2,6 +2,11 @@ cmake_minimum_required(VERSION 3.16.0 FATAL_ERROR)
 
 set(CMAKE_SYSTEM_VERSION 10.0 CACHE STRING "" FORCE)
 
+set(CMAKE_C_COMPILER /usr/bin/clang-15)
+set(CMAKE_CPP_COMPILER /usr/bin/clang-cpp-15)
+set(CMAKE_CXX_COMPILER /usr/bin/clang++-15)
+set(CMAKE_LINKER /usr/bin/ld.lld-15)
+
 project(HelloVulkanSDL CXX)
 
 
@@ -34,218 +39,62 @@ set(EXECUTABLE_OUTPUT_PATH build)			# sub-directory destination for built binary
 
 #################### Source groups ######################
 
-set(HelloTriangle
-    "../src/AppConstants.h"
-    "../src/HelloTriangle.cpp"
-    "../src/HelloTriangle.h"
-    "../src/main.cpp"
-)
-source_group("HelloTriangle" FILES ${HelloTriangle})
+AUX_SOURCE_DIRECTORY("src/" Platform_Linux)
 
-set(HelloTriangle__Settings
-    "../src/Settings/AppSettings.cpp"
-    "../src/Settings/AppSettings.h"
-    "../src/Settings/json.hpp"
-)
-source_group("HelloTriangle\\Settings" FILES ${HelloTriangle__Settings})
+AUX_SOURCE_DIRECTORY("../src/" HelloTriangle)
+AUX_SOURCE_DIRECTORY("../src/Settings/" HelloTriangle_Settings)
+AUX_SOURCE_DIRECTORY("../src/Extras/" HelloTriangle_Extras)
 
-set(Graphics__Shaders
-    "../graphics/shaders/09_shader_base.frag"
-    "../graphics/shaders/09_shader_base.vert"
-    "../graphics/shaders/17_shader_vertexbuffer.frag"
-    "../graphics/shaders/17_shader_vertexbuffer.vert"
-    "../graphics/shaders/21_shader_ubo.frag"
-    "../graphics/shaders/21_shader_ubo.vert"
-    "../graphics/shaders/25_shader_textures.frag"
-    "../graphics/shaders/25_shader_textures.vert"
-    "../graphics/shaders/basicPlaid.frag"
-    "../graphics/shaders/FullScreenTriangle.vert"
-    "../graphics/shaders/TexturedQuad.frag"
-    "../graphics/shaders/TexturedQuad.vert"
-    "../graphics/shaders/tjVolcanic.frag"
-)
-source_group("Graphics\\Shaders" FILES ${Graphics__Shaders})
+AUX_SOURCE_DIRECTORY("../graphics/shaders/" Graphics_Shaders)
+AUX_SOURCE_DIRECTORY("../graphics/meshObjects/" Graphics_MeshObjects)
 
-set(Graphics__MeshObjects
-    "../graphics/meshObjects/Quad2D.cpp"
-    "../graphics/meshObjects/Quad2DColored.cpp"
-    "../graphics/meshObjects/Quad2DTextured.cpp"
-    "../graphics/meshObjects/Quad2DTextureTinted.cpp"
-    "../graphics/meshObjects/Triangle2DColored.cpp"
-)
-source_group("Graphics\\MeshObjects" FILES ${Graphics__MeshObjects})
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/" Platform)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/FileSystem/" Platform_FileSystem)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/GUISystem/stubs/" Platform_GUISystem)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/ImageHandling/" Platform_ImageHandling)
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Platform/Logger/" Platform_Logger)
 
-set(Platform
-    "../src/VulkanModule/Platform/PlatformCommon.cpp"
-    "../src/VulkanModule/Platform/PlatformExtension.h"
-)
-source_group("Platform" FILES ${Platform})
-
-set(Platform__FileSystem
-    "../src/VulkanModule/Platform/FileSystem/FileSystem.cpp"
-    "../src/VulkanModule/Platform/FileSystem/FileSystem.h"
-    "../src/VulkanModule/Platform/FileSystem/FileSystemSDL.h"
-)
-source_group("Platform\\FileSystem" FILES ${Platform__FileSystem})
-
-set(Platform__GUISystem
-    "../src/VulkanModule/Platform/GUISystem/stubs/imgui.h"
-    "../src/VulkanModule/Platform/GUISystem/stubs/imgui_impl_sdl.cpp"
-    "../src/VulkanModule/Platform/GUISystem/stubs/imgui_impl_sdl.h"
-)
-source_group("Platform\\GUISystem" FILES ${Platform__GUISystem})
-
-set(Platform__ImageHandling
-    "../src/VulkanModule/Platform/ImageHandling/iImageSource.h"
-    "../src/VulkanModule/Platform/ImageHandling/ImageSDL.h"
-    "../src/VulkanModule/Platform/ImageHandling/ImageSTB.h"
-    "../src/VulkanModule/Platform/ImageHandling/sdlEquivalents.h"
-)
-source_group("Platform\\ImageHandling" FILES ${Platform__ImageHandling})
-
-set(Platform__Logger
-    "../src/VulkanModule/Platform/Logger/Logging.cpp"
-    "../src/VulkanModule/Platform/Logger/Logging.h"
-)
-source_group("Platform\\Logger" FILES ${Platform__Logger})
-
-set(Platform__Linux
-    "src/LocalFileSystem.h"
-    "src/optional.h"
-    "src/PlatformConstants.h"
-    "src/PlatformSpecifics.h"
-)
-source_group("Platform\\Linux" FILES ${Platform__Linux})
-
-set(Platform__OSAbstraction
-    "../src/VulkanModule/Platform/OSAbstraction/iPlatform.h"
-    "../src/VulkanModule/Platform/OSAbstraction/PlatformGLFW.h"
+set(Platform_OSAbstraction
     "../src/VulkanModule/Platform/OSAbstraction/PlatformSDL.cpp"
-    "../src/VulkanModule/Platform/OSAbstraction/PlatformSDL.h"
 )
-source_group("Platform\\OSAbstraction" FILES ${Platform__OSAbstraction})
+source_group("Platform\\OSAbstraction" FILES ${Platform_OSAbstraction})
 
-set(Platform__ControlScheme
-    "../src/VulkanModule/Platform/ControlScheme/iControlScheme.h"
-)
-source_group("Platform\\ControlScheme" FILES ${Platform__ControlScheme})
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Adjunct/" Vulkan_Adjunct)
 
-set(Vulkan__Adjunct
-    "../src/VulkanModule/Adjunct/BufferBase.h"
-    "../src/VulkanModule/Adjunct/CommandBufferBase.h"
-    "../src/VulkanModule/Adjunct/Descriptors.cpp"
-    "../src/VulkanModule/Adjunct/Descriptors.h"
-    "../src/VulkanModule/Adjunct/Mipmaps.h"
-    "../src/VulkanModule/Adjunct/PrimitiveBuffer.cpp"
-    "../src/VulkanModule/Adjunct/PrimitiveBuffer.h"
-    "../src/VulkanModule/Adjunct/TextureImage.cpp"
-    "../src/VulkanModule/Adjunct/TextureImage.h"
-    "../src/VulkanModule/Adjunct/UniformBuffer.cpp"
-    "../src/VulkanModule/Adjunct/UniformBuffer.h"
-    "../src/VulkanModule/Adjunct/UniformBufferLiterals.h"
-)
-source_group("Vulkan\\Adjunct" FILES ${Vulkan__Adjunct})
-
-set(Vulkan__Adjunct__Renderables
+set(Vulkan_Adjunct_Renderables
     "../src/VulkanModule/Adjunct/Renderables/AddOns.cpp"
-    "../src/VulkanModule/Adjunct/Renderables/AddOns.h"
     "../src/VulkanModule/Adjunct/Renderables/FixedRenderable.cpp"
-    "../src/VulkanModule/Adjunct/Renderables/FixedRenderable.h"
-    "../src/VulkanModule/Adjunct/Renderables/iRenderable.h"
-    "../src/VulkanModule/Adjunct/Renderables/MeshObject.h"
 )
-source_group("Vulkan\\Adjunct\\Renderables" FILES ${Vulkan__Adjunct__Renderables})
+source_group("Vulkan\\Adjunct\\Renderables" FILES ${Vulkan_Adjunct_Renderables})
 
-set(Vulkan__Adjunct__VertexTypes
-    "../src/VulkanModule/Adjunct/VertexTypes/Vertex3DTypes.h"
-    "../src/VulkanModule/Adjunct/VertexTypes/Vertex2DTypes.h"
-    "../src/VulkanModule/Adjunct/VertexTypes/VertexAttribute.h"
-    "../src/VulkanModule/Adjunct/VertexTypes/VertexDescription.h"
-    "../src/VulkanModule/Adjunct/VertexTypes/VertexAbstract.h"
-    "../src/VulkanModule/Adjunct/VertexTypes/VertexNull.h"
-    "../src/VulkanModule/Adjunct/VertexTypes/VertexNull.cpp"
-)
-source_group("Vulkan\\Adjunct\\VertexTypes" FILES ${Vulkan__Adjunct__VertexTypes})
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Adjunct/VertexTypes/" Vulkan_Adjunct_VertexTypes)
 
-set(Vulkan__Assist
-    "../src/VulkanModule/Assist/DebugReport.cpp"
-    "../src/VulkanModule/Assist/DebugReport.h"
-    "../src/VulkanModule/Assist/DeviceAssessment.cpp"
-    "../src/VulkanModule/Assist/DeviceAssessment.h"
-    "../src/VulkanModule/Assist/DeviceProfile.h"
-    "../src/VulkanModule/Assist/DeviceRanking.cpp"
-    "../src/VulkanModule/Assist/DeviceRanking.h"
-    "../src/VulkanModule/Assist/Helpers.h"
-    "../src/VulkanModule/Assist/Utility.cpp"
-    "../src/VulkanModule/Assist/Utility.h"
-    "../src/VulkanModule/Assist/ValidationLayers.cpp"
-    "../src/VulkanModule/Assist/ValidationLayers.h"
-    "../src/VulkanModule/Assist/vkEnumStrings.cpp"
-    "../src/VulkanModule/Assist/VulkanPlatform.h"
-)
-source_group("Vulkan\\Assist" FILES ${Vulkan__Assist})
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Assist/" Vulkan_Assist)
 
-set(Vulkan__Objects
-    "../src/VulkanModule/Objects/CommandObjects.cpp"
-    "../src/VulkanModule/Objects/CommandObjects.h"
-    "../src/VulkanModule/Objects/DepthBuffer.cpp"
-    "../src/VulkanModule/Objects/DepthBuffer.h"
-    "../src/VulkanModule/Objects/DeviceQueues.cpp"
-    "../src/VulkanModule/Objects/DeviceQueues.h"
-    "../src/VulkanModule/Objects/EventObjects.cpp"
-    "../src/VulkanModule/Objects/EventObjects.h"
-    "../src/VulkanModule/Objects/Framebuffers.cpp"
-    "../src/VulkanModule/Objects/Framebuffers.h"
-    "../src/VulkanModule/Objects/GraphicsDevice.cpp"
-    "../src/VulkanModule/Objects/GraphicsDevice.h"
-    "../src/VulkanModule/Objects/GraphicsPipeline.cpp"
-    "../src/VulkanModule/Objects/GraphicsPipeline.h"
-    "../src/VulkanModule/Objects/ImageResource.cpp"
-    "../src/VulkanModule/Objects/ImageResource.h"
-    "../src/VulkanModule/Objects/RenderPass.cpp"
-    "../src/VulkanModule/Objects/RenderPass.h"
-    "../src/VulkanModule/Objects/ShaderModules.cpp"
-    "../src/VulkanModule/Objects/ShaderModules.h"
-    "../src/VulkanModule/Objects/Swapchain.cpp"
-    "../src/VulkanModule/Objects/Swapchain.h"
-    "../src/VulkanModule/Objects/SyncObjects.cpp"
-    "../src/VulkanModule/Objects/SyncObjects.h"
-    "../src/VulkanModule/Objects/VulkanInstance.cpp"
-    "../src/VulkanModule/Objects/VulkanInstance.h"
-    "../src/VulkanModule/Objects/WindowSurface.cpp"
-    "../src/VulkanModule/Objects/WindowSurface.h"
-)
-source_group("Vulkan\\Objects" FILES ${Vulkan__Objects})
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Objects/" Vulkan_Objects)
 
-set(Vulkan__Setup
-    "../src/VulkanModule/Setup/RenderSettings.h"
-    "../src/VulkanModule/Setup/Shader.h"
-    "../src/VulkanModule/Setup/VulkanConfigure.h"
-    "../src/VulkanModule/Setup/VulkanSetup.cpp"
-    "../src/VulkanModule/Setup/VulkanSetup.h"
-    "../src/VulkanModule/Setup/VulkanSingleton.h"
-)
-source_group("Vulkan\\Setup" FILES ${Vulkan__Setup})
+AUX_SOURCE_DIRECTORY("../src/VulkanModule/Setup/" Vulkan_Setup)
 
 set(ALL_FILES
     ${HelloTriangle}
-    ${HelloTriangle__Settings}
-    ${Graphics__Shaders}
-    ${Graphics__MeshObjects}
+    ${HelloTriangle_Settings}
+    ${HelloTriangle_Extras}
+    ${Graphics_Shaders}
+    ${Graphics_MeshObjects}
     ${Platform}
-    ${Platform__FileSystem}
-    ${Platform__GUISystem}
-    ${Platform__ImageHandling}
-    ${Platform__Logger}
-    ${Platform__Linux}
-    ${Platform__OSAbstraction}
-    ${Platform__ControlScheme}
-    ${Vulkan__Adjunct}
-    ${Vulkan__Adjunct__Renderables}
-    ${Vulkan__Adjunct__VertexTypes}
-    ${Vulkan__Assist}
-    ${Vulkan__Objects}
-    ${Vulkan__Setup}
+    ${Platform_FileSystem}
+    ${Platform_GUISystem}
+    ${Platform_ImageHandling}
+    ${Platform_Logger}
+    ${Platform_Linux}
+    ${Platform_OSAbstraction}
+    ${Platform_ControlScheme}
+    ${Vulkan_Adjunct}
+    ${Vulkan_Adjunct_Renderables}
+    ${Vulkan_Adjunct_VertexTypes}
+    ${Vulkan_Assist}
+    ${Vulkan_Objects}
+    ${Vulkan_Setup}
 )
 
 #########################################################
@@ -285,6 +134,7 @@ if("${CMAKE_PLATFORM_NAME}" STREQUAL "x64")		# Include directories
         "${CMAKE_CURRENT_SOURCE_DIR}/src;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/Settings;"
+        "${CMAKE_CURRENT_SOURCE_DIR}/../src/Extras;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Setup;"
         "${CMAKE_CURRENT_SOURCE_DIR}/../src/VulkanModule/Assist;"
@@ -372,8 +222,10 @@ target_compile_options(${PROJECT_NAME} PRIVATE
                 /Gy
             >
             -ggdb3
+            -std=c++20
             ${DEFAULT_CXX_DEBUG_INFORMATION_FORMAT};
             -Wno-vla;
+            -Wno-reorder-init-list;
             ${DEFAULT_CXX_EXCEPTION_HANDLING}
         )
 
