@@ -2,10 +2,10 @@ cmake_minimum_required(VERSION 3.16.0 FATAL_ERROR)
 
 set(CMAKE_SYSTEM_VERSION 10.0 CACHE STRING "" FORCE)
 
-set(CMAKE_C_COMPILER /usr/bin/clang-15)
-set(CMAKE_CPP_COMPILER /usr/bin/clang-cpp-15)
-set(CMAKE_CXX_COMPILER /usr/bin/clang++-15)
-set(CMAKE_LINKER /usr/bin/ld.lld-15)
+set(CMAKE_C_COMPILER /usr/bin/clang-14)
+set(CMAKE_CPP_COMPILER /usr/bin/clang-cpp-14)
+set(CMAKE_CXX_COMPILER /usr/bin/clang++-14)
+set(CMAKE_LINKER /usr/bin/ld.lld-14)
 
 project(HelloVulkanSDL CXX)
 
