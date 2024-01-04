@@ -74,6 +74,9 @@ void HelloApplication::Run()
 		if (platform.IsWindowMinimizedOrHidden())
 			platform.AwaitEvent();
 
+		if (platform.WasSimplePress())
+			loadNextRenderable();
+
 		updateRender();
 	}
 }
