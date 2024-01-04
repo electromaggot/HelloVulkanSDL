@@ -61,6 +61,7 @@
 		9E0355A91D382F9900B7EFDE /* IMG_xxx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = IMG_xxx.c; path = ../../../External/SDL_image/IMG_xxx.c; sourceTree = "<group>"; };
 		9E0355AA1D382F9900B7EFDE /* IMG.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = IMG.c; path = ../../../External/SDL_image/IMG.c; sourceTree = "<group>"; };
 		9E286E09214076EF007E4CF6 /* IMG_svg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = IMG_svg.c; path = ../../../External/SDL_image/IMG_svg.c; sourceTree = "<group>"; };
+		9E98BFEF2B48F8750049D265 /* SDL_image_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image_iOS.framework; path = "build/Debug-iphoneos/SDL_image_iOS.framework"; sourceTree = "<group>"; };
 		9EDD1DDE1D320548004DAFF4 /* SDL_image_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDL_image_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EDD1DE11D320548004DAFF4 /* SDL_image-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SDL_image-iOS.h"; path = "SDL_image-iOS/SDL_image-iOS.h"; sourceTree = "<group>"; };
 		9EDD1DE31D320548004DAFF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "SDL_image-iOS/Info.plist"; sourceTree = "<group>"; };
@@ -97,6 +98,7 @@
 		9EDD1DD41D320548004DAFF4 = {
 			isa = PBXGroup;
 			children = (
+				9E98BFEF2B48F8750049D265 /* SDL_image_iOS.framework */,
 				9ED30CF41D335BF200C56EA4 /* Public Headers */,
 				9EDD1DE01D320548004DAFF4 /* Library Source */,
 				9ED30CF51D335C0E00C56EA4 /* SDL_image-iOS */,
@@ -176,7 +178,7 @@
 		9EDD1DD51D320548004DAFF4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = Tadd;
 				TargetAttributes = {
 					9E0118781D354F1F009B02A7 = {
@@ -268,6 +270,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(inherited)";
 				CONFIGURATION_TEMP_DIR = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OBJROOT = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYMROOT = "$(inherited)";
@@ -282,6 +285,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(inherited)";
 				CONFIGURATION_TEMP_DIR = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OBJROOT = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYMROOT = "$(inherited)";
@@ -313,6 +317,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -340,7 +345,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ../../External/SDL/include;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -376,6 +381,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -397,7 +403,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ../../External/SDL/include;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SYMROOT = "$(PROJECT_DIR)/Build";
@@ -436,7 +442,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "SDL_image-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "SDL_image-iOS/module.modulemap";
@@ -477,7 +483,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "SDL_image-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "SDL_image-iOS/module.modulemap";

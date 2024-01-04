@@ -350,27 +350,28 @@
 		9E37860C1FF6DB2D00A90C0B /* SDL_egl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_egl.c; path = ../../../External/SDL/src/video/SDL_egl.c; sourceTree = "<group>"; };
 		9E37860D1FF6DB2D00A90C0B /* SDL_shape_internals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_shape_internals.h; path = ../../../External/SDL/src/video/SDL_shape_internals.h; sourceTree = "<group>"; };
 		9E37860E1FF6DB2D00A90C0B /* SDL_vulkan_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_vulkan_utils.c; path = ../../../External/SDL/src/video/SDL_vulkan_utils.c; sourceTree = "<group>"; };
-		9E3B99722341EBE700D44576 /* SDL_displayevents.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_displayevents.c; path = "../../../External/SDL/src/events/SDL_displayevents.c"; sourceTree = "<group>"; };
-		9E3B99732341EBE700D44576 /* SDL_displayevents_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_displayevents_c.h; path = "../../../External/SDL/src/events/SDL_displayevents_c.h"; sourceTree = "<group>"; };
-		9E3B99782341ECB300D44576 /* hid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = hid.m; path = "../../../External/SDL/src/hidapi/ios/hid.m"; sourceTree = "<group>"; };
-		9E3B997B2341ED1200D44576 /* SDL_hidapi_ps4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_hidapi_ps4.c; path = "../../../External/SDL/src/joystick/hidapi/SDL_hidapi_ps4.c"; sourceTree = "<group>"; };
-		9E3B997C2341ED1200D44576 /* SDL_hidapi_xboxone.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_hidapi_xboxone.c; path = "../../../External/SDL/src/joystick/hidapi/SDL_hidapi_xboxone.c"; sourceTree = "<group>"; };
-		9E3B997D2341ED1200D44576 /* SDL_hidapi_switch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_hidapi_switch.c; path = "../../../External/SDL/src/joystick/hidapi/SDL_hidapi_switch.c"; sourceTree = "<group>"; };
-		9E3B997E2341ED1200D44576 /* SDL_hidapijoystick_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_hidapijoystick_c.h; path = "../../../External/SDL/src/joystick/hidapi/SDL_hidapijoystick_c.h"; sourceTree = "<group>"; };
-		9E3B997F2341ED1200D44576 /* SDL_hidapijoystick.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_hidapijoystick.c; path = "../../../External/SDL/src/joystick/hidapi/SDL_hidapijoystick.c"; sourceTree = "<group>"; };
-		9E3B99802341ED1200D44576 /* SDL_hidapi_xbox360.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_hidapi_xbox360.c; path = "../../../External/SDL/src/joystick/hidapi/SDL_hidapi_xbox360.c"; sourceTree = "<group>"; };
-		9E3B99872341ED6100D44576 /* controller_type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = controller_type.h; path = "../../../External/SDL/src/joystick/controller_type.h"; sourceTree = "<group>"; };
-		9E3B998B2341EE0100D44576 /* SDL_uikit_main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_uikit_main.c; path = "../../../External/SDL/src/main/uikit/SDL_uikit_main.c"; sourceTree = "<group>"; };
-		9E3B998D2341EE3B00D44576 /* SDL_syspower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_syspower.h; path = "../../../External/SDL/src/power/uikit/SDL_syspower.h"; sourceTree = "<group>"; };
-		9E3B99922341EF4900D44576 /* SDL_coremotionsensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_coremotionsensor.h; path = "../../../External/SDL/src/sensor/coremotion/SDL_coremotionsensor.h"; sourceTree = "<group>"; };
-		9E3B99932341EF4900D44576 /* SDL_coremotionsensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDL_coremotionsensor.m; path = "../../../External/SDL/src/sensor/coremotion/SDL_coremotionsensor.m"; sourceTree = "<group>"; };
-		9E3B99962341EF6C00D44576 /* SDL_dummysensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_dummysensor.h; path = "../../../External/SDL/src/sensor/dummy/SDL_dummysensor.h"; sourceTree = "<group>"; };
-		9E3B99972341EF6C00D44576 /* SDL_dummysensor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_dummysensor.c; path = "../../../External/SDL/src/sensor/dummy/SDL_dummysensor.c"; sourceTree = "<group>"; };
-		9E3B999A2341EF9600D44576 /* SDL_syssensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_syssensor.h; path = "../../../External/SDL/src/sensor/SDL_syssensor.h"; sourceTree = "<group>"; };
-		9E3B999B2341EF9600D44576 /* SDL_sensor_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_sensor_c.h; path = "../../../External/SDL/src/sensor/SDL_sensor_c.h"; sourceTree = "<group>"; };
-		9E3B999C2341EF9600D44576 /* SDL_sensor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_sensor.c; path = "../../../External/SDL/src/sensor/SDL_sensor.c"; sourceTree = "<group>"; };
+		9E3B99722341EBE700D44576 /* SDL_displayevents.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_displayevents.c; path = ../../../External/SDL/src/events/SDL_displayevents.c; sourceTree = "<group>"; };
+		9E3B99732341EBE700D44576 /* SDL_displayevents_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_displayevents_c.h; path = ../../../External/SDL/src/events/SDL_displayevents_c.h; sourceTree = "<group>"; };
+		9E3B99782341ECB300D44576 /* hid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = hid.m; path = ../../../External/SDL/src/hidapi/ios/hid.m; sourceTree = "<group>"; };
+		9E3B997B2341ED1200D44576 /* SDL_hidapi_ps4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_hidapi_ps4.c; path = ../../../External/SDL/src/joystick/hidapi/SDL_hidapi_ps4.c; sourceTree = "<group>"; };
+		9E3B997C2341ED1200D44576 /* SDL_hidapi_xboxone.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_hidapi_xboxone.c; path = ../../../External/SDL/src/joystick/hidapi/SDL_hidapi_xboxone.c; sourceTree = "<group>"; };
+		9E3B997D2341ED1200D44576 /* SDL_hidapi_switch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_hidapi_switch.c; path = ../../../External/SDL/src/joystick/hidapi/SDL_hidapi_switch.c; sourceTree = "<group>"; };
+		9E3B997E2341ED1200D44576 /* SDL_hidapijoystick_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_hidapijoystick_c.h; path = ../../../External/SDL/src/joystick/hidapi/SDL_hidapijoystick_c.h; sourceTree = "<group>"; };
+		9E3B997F2341ED1200D44576 /* SDL_hidapijoystick.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_hidapijoystick.c; path = ../../../External/SDL/src/joystick/hidapi/SDL_hidapijoystick.c; sourceTree = "<group>"; };
+		9E3B99802341ED1200D44576 /* SDL_hidapi_xbox360.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_hidapi_xbox360.c; path = ../../../External/SDL/src/joystick/hidapi/SDL_hidapi_xbox360.c; sourceTree = "<group>"; };
+		9E3B99872341ED6100D44576 /* controller_type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = controller_type.h; path = ../../../External/SDL/src/joystick/controller_type.h; sourceTree = "<group>"; };
+		9E3B998B2341EE0100D44576 /* SDL_uikit_main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_uikit_main.c; path = ../../../External/SDL/src/main/uikit/SDL_uikit_main.c; sourceTree = "<group>"; };
+		9E3B998D2341EE3B00D44576 /* SDL_syspower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_syspower.h; path = ../../../External/SDL/src/power/uikit/SDL_syspower.h; sourceTree = "<group>"; };
+		9E3B99922341EF4900D44576 /* SDL_coremotionsensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_coremotionsensor.h; path = ../../../External/SDL/src/sensor/coremotion/SDL_coremotionsensor.h; sourceTree = "<group>"; };
+		9E3B99932341EF4900D44576 /* SDL_coremotionsensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDL_coremotionsensor.m; path = ../../../External/SDL/src/sensor/coremotion/SDL_coremotionsensor.m; sourceTree = "<group>"; };
+		9E3B99962341EF6C00D44576 /* SDL_dummysensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_dummysensor.h; path = ../../../External/SDL/src/sensor/dummy/SDL_dummysensor.h; sourceTree = "<group>"; };
+		9E3B99972341EF6C00D44576 /* SDL_dummysensor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_dummysensor.c; path = ../../../External/SDL/src/sensor/dummy/SDL_dummysensor.c; sourceTree = "<group>"; };
+		9E3B999A2341EF9600D44576 /* SDL_syssensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_syssensor.h; path = ../../../External/SDL/src/sensor/SDL_syssensor.h; sourceTree = "<group>"; };
+		9E3B999B2341EF9600D44576 /* SDL_sensor_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_sensor_c.h; path = ../../../External/SDL/src/sensor/SDL_sensor_c.h; sourceTree = "<group>"; };
+		9E3B999C2341EF9600D44576 /* SDL_sensor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDL_sensor.c; path = ../../../External/SDL/src/sensor/SDL_sensor.c; sourceTree = "<group>"; };
 		9E53CDB32341E23000B1E4A3 /* SDL_vulkan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_vulkan.h; path = ../../External/SDL/include/SDL_vulkan.h; sourceTree = "<group>"; };
 		9E53CDB62341E28000B1E4A3 /* SDL_sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_sensor.h; path = ../../External/SDL/include/SDL_sensor.h; sourceTree = "<group>"; };
+		9E98BFF22B48F9870049D265 /* SDL_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_iOS.framework; path = "build/Debug-iphoneos/SDL_iOS.framework"; sourceTree = "<group>"; };
 		9ED30D9C1D33676C00C56EA4 /* begin_code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = begin_code.h; path = ../../External/SDL/include/begin_code.h; sourceTree = "<group>"; };
 		9ED30D9D1D33676C00C56EA4 /* close_code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = close_code.h; path = ../../External/SDL/include/close_code.h; sourceTree = "<group>"; };
 		9ED30D9E1D33676C00C56EA4 /* SDL_assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDL_assert.h; path = ../../External/SDL/include/SDL_assert.h; sourceTree = "<group>"; };
@@ -1214,6 +1215,7 @@
 		9EDD1DD41D320548004DAFF4 = {
 			isa = PBXGroup;
 			children = (
+				9E98BFF22B48F9870049D265 /* SDL_iOS.framework */,
 				9ED30CF41D335BF200C56EA4 /* Public Headers */,
 				9EDD1DE01D320548004DAFF4 /* Library Source */,
 				9ED30CF51D335C0E00C56EA4 /* SDL-iOS */,
@@ -1452,7 +1454,7 @@
 		9EDD1DD51D320548004DAFF4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = Tadd;
 				TargetAttributes = {
 					9E0118781D354F1F009B02A7 = {
@@ -1657,6 +1659,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				HEADER_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1666,6 +1669,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				HEADER_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1695,6 +1699,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1722,10 +1727,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ../../External/SDL/include;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SYMROOT = "$(PROJECT_DIR)/Build";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1758,6 +1764,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1779,10 +1786,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ../../External/SDL/include;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				SYMROOT = "$(PROJECT_DIR)/Build";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
@@ -1805,7 +1813,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "SDL-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "SDL-iOS/module.modulemap";
@@ -1830,7 +1838,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "SDL-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "SDL-iOS/module.modulemap";

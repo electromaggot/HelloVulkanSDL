@@ -42,8 +42,8 @@ fi
 # 4
 # Build the framework for device and for simulator (using
 # all needed architectures).
-xcodebuild -project "${PROJECT_NAME}.xcodeproj" -scheme "${PROJECT_NAME}" -configuration ${CONFIGURATION} -arch arm64 -arch armv7 -arch armv7s only_active_arch=no defines_module=yes -sdk "iphoneos"
-xcodebuild -project "${PROJECT_NAME}.xcodeproj" -scheme "${PROJECT_NAME}" -configuration ${CONFIGURATION} -arch x86_64 -arch i386 only_active_arch=no defines_module=yes -sdk "iphonesimulator"
+xcodebuild -project "${PROJECT_NAME}.xcodeproj" -scheme "${PROJECT_NAME}" -configuration ${CONFIGURATION} -arch arm64 only_active_arch=no defines_module=yes -sdk "iphoneos"
+xcodebuild -project "${PROJECT_NAME}.xcodeproj" -scheme "${PROJECT_NAME}" -configuration ${CONFIGURATION} -arch x86_64 only_active_arch=no defines_module=yes -sdk "iphonesimulator"
  
 # 5
 # Remove .framework file if exists in Destination from previous run.
