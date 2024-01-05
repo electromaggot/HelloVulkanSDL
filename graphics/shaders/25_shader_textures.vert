@@ -8,8 +8,8 @@ layout(binding = 0) uniform UniformBufferObject {
 } ubo;
 											// From Vertex2DTextureTinted, for each vertex:
 layout(location = 0) in vec2 inPosition;		// 2D XY vertex coordinate
-layout(location = 1) in vec3 inColor;			// RGB color
-layout(location = 2) in vec2 inTexCoord;		// UV texture coordinate
+layout(location = 1) in vec2 inTexCoord;		// UV texture coordinate
+layout(location = 2) in vec3 inColor;			// RGB color
 
 layout(location = 0) out vec3 fragColor;
 layout(location = 1) out vec2 fragTexCoord;

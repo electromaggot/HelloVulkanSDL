@@ -51,8 +51,8 @@ void HelloApplication::loadNextRenderable()
 
 	vkDeviceWaitIdle(device);
 	vulkan.command.RecreateBuffers(vulkan.framebuffers);
-	vulkan.command.renderables.Clear();	 // (blanket-clears all of 'em, as only one is active at a time anyway)
-
+	vulkan.command.renderables.Clear();	 // (blanket-clears all of 'em, since in this demo
+										 //	 application, only one is active at a time anyway)
 	DrawableSpecifier nextDrawable(pOtherDrawables->GetNextDrawable());
 	loadRenderable(nextDrawable);
 }
