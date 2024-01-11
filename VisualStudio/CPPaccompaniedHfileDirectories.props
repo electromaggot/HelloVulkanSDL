@@ -14,11 +14,11 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <CPPaccompaniedHfileFolders>
-      src;..\src;..\src\Settings;..\src\VulkanModule;..\src\VulkanModule\Setup;..\src\VulkanModule\Assist;
-      ..\src\VulkanModule\AddOns;..\src\VulkanModule\AddOns\3DObjects;..\src\VulkanModule\AddOns\Renderables;
-      ..\src\VulkanModule\AddOns\VertexTypes;..\src\VulkanModule\Objects;
+      src;..\src;..\src\Extras;..\src\Settings;..\src\VulkanModule;..\src\VulkanModule\Setup;..\src\VulkanModule\Assist;
+      ..\src\VulkanModule\Adjunct;..\src\VulkanModule\Adjunct\3DObjects;..\src\VulkanModule\Adjunct\Renderables;
+      ..\src\VulkanModule\Adjunct\VertexTypes;..\src\VulkanModule\Objects;
       ..\src\VulkanModule\Platform;..\src\VulkanModule\Platform\OSAbstraction;..\src\VulkanModule\Platform\ImageHandling;
-      ..\src\VulkanModule\Platform\Logger;..\src\VulkanModule\Platform\FileSystem;
+      ..\src\VulkanModule\Platform\Logger;..\src\VulkanModule\Platform\FileSystem;..\src\VulkanModule\Platform\ControlScheme;
       ..\src\VulkanModule\Platform\GUISystem;..\src\VulkanModule\Platform\GUISystem\stubs;..\External\imgui;..\External\imgui\examples
     </CPPaccompaniedHfileFolders>
   </PropertyGroup>
