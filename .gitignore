@@ -34,6 +34,7 @@ iOS/*.xcodeproj/xcuserdata/
 xcuserdata/
 iOS/*.xcodeproj/project.xcworkspace/xcuserdata/
 project.xcworkspace/
+xcshareddata/
 # Sometimes we want to check in frameworks, but not this time:
 *.framework
 # VI/VIM artifact
