@@ -4,4 +4,8 @@
 #	so the single VulkanModule source set can be shared equally with other projects too.
 #
 
-echo gitdir: ../../../VulkanModule/.git > VulkanModule/.git
+GITFILE="$(dirname $0)/VulkanModule/.git"
+echo gitdir: ../../../VulkanModule/.git > $GITFILE
+if [ -f "$GITFILE" ]; then
+  echo Successfully created: $GITFILE
+fi
