@@ -1,9 +1,12 @@
 ## Mac Build Instructions
 
-0. Clone not only this project, but also https://github.com/electromaggot/VulkanModule into the same directory.\
-   (Alternately, if you prefer ZIPs: download both, double-click each, and drag the two extracted directories into \
-    the same parent directory.)  Finally, open the Mac **Terminal**.app, then\
-   `cd HelloVulkanSDL` to this project's directory, which is assumed to be `./` when appearing below.
+0. A. Clone not only this project, but also https://github.com/electromaggot/VulkanModule into\
+   &nbsp;&nbsp; &nbsp; the same project directory of your choosing.  (Alternately, if you prefer ZIPs: download both,\
+   &nbsp;&nbsp; &nbsp; double-click each, and drag the two extracted directories into the same parent directory.)\
+   B. Open the Mac **Terminal**.app, then\
+   &nbsp;&nbsp; &nbsp; `cd HelloVulkanSDL` to this project's directory, which is assumed to be `./` when appearing below.\
+   C. Set up **../VulkanModule** as a submodule (that's non-recursive or non-nested) outside this repository:\
+   &nbsp;&nbsp; &nbsp; `.submodules/RunMe*.sh`
 
 1. Download the latest **Vulkan SDK**: &nbsp; https://vulkan.lunarg.com/sdk/home#mac \
    Double-click the `.tar.gz` and drag/`mv` to relocate or rename the extracted directory as follows.\
