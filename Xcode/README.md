@@ -9,13 +9,21 @@
    &nbsp;&nbsp; &nbsp; `.submodules/RunMe*.sh`
 
 1. Download the latest **Vulkan SDK**: &nbsp; https://vulkan.lunarg.com/sdk/home#mac \
-   Double-click the `.tar.gz` and drag/`mv` to relocate or rename the extracted directory as follows.\
+   Double-click the `.dmg` and `InstallVulkan`.  For newer Macs with Apple Silicon, the\
+   SDK requires Rosetta, so click Install and run again.\
+   When the installer asks "where the Vulkan SDK will be installed" you have a choice,\
+   depending on whether you wish to use the SDK elsewhere, making it more accessible\
+   for other projects (which is probably what you want).\
    **The HelloVulkanSDL Xcode project will be looking for: `./External/VulkanSDK`**\
-   So either: a) `mkdir ./External`, move the SDK directory there, and rename it. &nbsp; ...or:\
-   &nbsp; &nbsp; &nbsp; &nbsp; b) put it wherever you want, then edit/run the script described in #3 below.
+   So either: a) install to a common directory like `/usr/local` or `/opt` or similar,\
+   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                 then edit/run the script described in #4 below. &nbsp; &nbsp; ...OR:\
+   &nbsp; &nbsp; &nbsp; b) `mkdir External` and install into that directory, if you think\
+   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; you'll only ever need the Vulkan SDK in this project.
+
 2. Get the latest SDL files, either as **Source Code** or **`.dmg`** package, depending on your desired platform.\
-   Each `.dmg` file only contains a macOS framework.  If you also want to target iOS, download the Source Code instead,
-   from which we'll build both iOS frameworks (instructions below) and the macOS frameworks.\
+   Each `.dmg` file only contains a macOS framework.  If you also want to target iOS, download the Source\
+   Code instead, from which we'll build both iOS frameworks (instructions below) and the macOS frameworks.\
   a) **SDL:** &nbsp; https://www.libsdl.org/download-2.0.php \
 	 &nbsp; &nbsp; Download: &nbsp; `SDL2-2.0.<xx>.zip`\
 	 &nbsp; &nbsp; &nbsp; &nbsp; or alternately: &nbsp; `SDL2-2.0.<xx>.dmg`\
@@ -27,6 +35,7 @@
 	 &nbsp; &nbsp; &nbsp; &nbsp; or alternately: &nbsp; `SDL2_image-2.0.<x>.dmg`\
 	 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (`<x>` being latest)\
 	 &nbsp; &nbsp; and unzip/double-click and relocate the contents the same way.
+
 3. Lastly, grab **glm**: &nbsp; https://glm.g-truc.net \
 	 Download using the upper-left link, e.g.: &nbsp; `glm-0.9.9.<x>.zip`\
 	 unzip/double-click and move the directory as you did previously.
@@ -53,7 +62,8 @@
 	4. `> open SDL_image-iOS.xcodeproj` and do the same.
 
 6. Open `Xcode/HelloVulkanSDL.xcodeproj`, select a target, build, and run.\
-	To try different demos, change the `HelloTriangle.cpp` file's `iMode` variable atop the `HelloApplication::Init()` method.
+	To try different demos, click in the window to cycle through them, or experiment with the\
+	`HelloTriangle.cpp` file's `iMode` variable atop the `HelloApplication::Init()` method.
 
 <br/>
 
