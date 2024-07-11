@@ -1,16 +1,15 @@
 ## Mac Build Instructions
 
-0. A. Clone not only this project, but also https://github.com/electromaggot/VulkanModule into\
-   &nbsp;&nbsp; &nbsp; the same project directory of your choosing.  (Alternately, if you prefer ZIPs: download both,\
-   &nbsp;&nbsp; &nbsp; double-click each, and drag the two extracted directories into the same parent directory.)\
+0. A. Clone or unzip not only this project, but also https://github.com/electromaggot/VulkanModule into\
+   &nbsp;&nbsp; &nbsp; the same parent project directory of your choosing.\
    B. Open the Mac **Terminal**.app, then\
    &nbsp;&nbsp; &nbsp; `cd HelloVulkanSDL` to this project's directory, which is assumed to be `./` when appearing below.\
    C. Set up **../VulkanModule** as a submodule (that's non-recursive or non-nested) outside this repository:\
    &nbsp;&nbsp; &nbsp; `.submodules/RunMe*.sh`
 
 1. Download the latest **Vulkan SDK**: &nbsp; https://vulkan.lunarg.com/sdk/home#mac \
-   Double-click the `.dmg` and `InstallVulkan`.  For newer Macs with Apple Silicon, the\
-   SDK requires Rosetta, so click Install and run again.\
+   In the Mac section under "SDK - SDK Installer," double-click the `.dmg` and `InstallVulkan` upon opening it.\
+   For newer Macs with Apple Silicon, the SDK requires Rosetta, so click Install and run again.\
    When the installer asks "where the Vulkan SDK will be installed" you have a choice,\
    depending on whether you wish to use the SDK elsewhere, making it more accessible\
    for other projects (which is probably what you want).\
@@ -21,7 +20,7 @@
    &nbsp; &nbsp; &nbsp; b) `mkdir External` and install into that directory, if you think\
    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; you'll only ever need the Vulkan SDK in this project.
 
-2. Get the latest SDL files, either as **Source Code** or **`.dmg`** package, depending on your desired platform.\
+3. Get the latest SDL files, either as **Source Code** or **`.dmg`** package, depending on your desired platform.\
    Each `.dmg` file only contains a macOS framework.  If you also want to target iOS, download the Source\
    Code instead, from which we'll build both iOS frameworks (instructions below) and the macOS frameworks.\
   a) **SDL:** &nbsp; https://www.libsdl.org/download-2.0.php \
@@ -36,11 +35,11 @@
 	 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (`<x>` being latest)\
 	 &nbsp; &nbsp; and unzip/double-click and relocate the contents the same way.
 
-3. Lastly, grab **glm**: &nbsp; https://glm.g-truc.net \
+4. Lastly, grab **glm**: &nbsp; https://glm.g-truc.net \
 	 Download using the upper-left link, e.g.: &nbsp; `glm-0.9.9.<x>.zip`\
 	 unzip/double-click and move the directory as you did previously.
 
-4. To set up symbolic links (skip this if you installed everything to the `./External` directory),\
+5. To set up symbolic links (skip this if you installed everything to the `./External` directory),\
    modify and run the `setup1st.sh` script* as follows. &nbsp; From **Terminal**:
 	1. `cd` to where you downloaded/cloned, then into the **`Xcode`** directory.
 	2. Make sure you have the relative path correct: `ls ../../<to directory where you downloaded #1 & #2 above>`
@@ -50,7 +49,7 @@
 	4. Run the script:  `./setup1st.sh`
 	5. Verify `External` directory created in project root and that its symbolic links list actual files/dirs.
 
-5. Building for **iOS** (which you downloaded the SDL source code for above) requires an iOS framework.
+6. Building for **iOS** (which you downloaded the SDL source code for above) requires an iOS framework.
    SDL's own Xcode projects only build a framework for macOS (you'll need to do this) but not for iOS.  However this
    HelloVulkanSDL repo includes additional Xcode projects to build the iOS frameworks for SDL:
 	1. `> cd ./Xcode/iOSFrameworks`
@@ -61,7 +60,7 @@
 	   already created links in the `./External` directory (or you dragged/copied the macOS frameworks yourself).
 	4. `> open SDL_image-iOS.xcodeproj` and do the same.
 
-6. Open `Xcode/HelloVulkanSDL.xcodeproj`, select a target, build, and run.\
+7. Open `Xcode/HelloVulkanSDL.xcodeproj`, select a target, build, and run.\
 	To try different demos, click in the window to cycle through them, or experiment with the\
 	`HelloTriangle.cpp` file's `iMode` variable atop the `HelloApplication::Init()` method.
 
