@@ -18,6 +18,7 @@ Supports:
 - iOS and macOS (Xcode 11+) &nbsp; &rarr; &nbsp; [Mac Build Instructions](https://github.com/electromaggot/HelloVulkanSDL/tree/master/Xcode#mac-build-instructions)
 - Windows (Visual Studio 2019+) &nbsp; &rarr; &nbsp; [Windows Build Instructions](https://github.com/electromaggot/HelloVulkanSDL/tree/master/VisualStudio#windows-build-instructions)
 - Linux (CMake) &nbsp; &rarr; &nbsp; [Ubuntu Build Instructions](https://github.com/electromaggot/HelloVulkanSDL/tree/master/CMakeLinux#ubuntu--build-instructions) &nbsp; &nbsp; [Raspberry Pi 5 Build Instructions](https://github.com/electromaggot/HelloVulkanSDL/tree/master/CMakeRasPi#raspberry-pi-5--build-instructions)
+- Any of the above via the top-level `CMakeLists.txt` &nbsp; &rarr; &nbsp; [Quick Start](#quick-start) below
 - (Android and VR platform support coming soon!__[*](https://github.com/electromaggot/HelloVulkanSDL#contributing)__)
 
 **Windows Requisites** and **Language Notes:** Visual Studio 2019 or later is required for this project.  [Why?](https://github.com/electromaggot/HelloVulkanSDL/wiki/Not%E2%80%90so%E2%80%90frequently-Asked-Questions#why-visual-studio-2019-only)\
@@ -26,6 +27,48 @@ Clang/LLVM is the targeted compiler, C++20/libc++ the intended language variant.
 Why another "Hello Vulkan" project?  Hopefully this one is different.  [Some reasoning and justification here](https://github.com/electromaggot/HelloVulkanSDL/wiki/Not%E2%80%90so%E2%80%90frequently-Asked-Questions#why-another-hello-vulkan-or-hello-triangle-etc-when-there-are-many-others-on-github).
 
 Find a note about my [choice of Unlicense here](https://github.com/electromaggot/HelloVulkanSDL/wiki/Not%E2%80%90so%E2%80%90frequently-Asked-Questions#license-related-personal-comment).
+
+## Quick Start
+
+The `CMakeLists.txt` in this directory builds the project on macOS, Linux, Raspberry Pi, and
+Windows alike.  (The per-IDE directories &mdash; `Xcode/`, `VisualStudio/`, `CMakeLinux/`,
+`CMakeRasPi/` &mdash; remain for anyone who prefers a hand-maintained IDE project, and their
+READMEs carry the per-platform dependency instructions.)
+
+The graphics code lives in a companion repository,
+[VulkanModule](https://github.com/electromaggot/VulkanModule), consumed as a **peer**: one
+checkout shared by every project that uses it, rather than a private copy per project.  Clone
+the two side by side:
+
+```sh
+git clone https://github.com/electromaggot/VulkanModule
+git clone https://github.com/electromaggot/HelloVulkanSDL
+cd HelloVulkanSDL
+./setup.sh                  # verifies src/VulkanModule -> ../../VulkanModule
+
+mkdir -p build && cd build
+cmake ..
+cmake --build . -j
+./HelloTriangle
+```
+
+Shaders compile from GLSL to SPIR-V as part of the build (via `glslc`, which the Vulkan SDK
+supplies), and textures deploy beside the binary &mdash; no separate script to run first.
+
+**Click the window** to cycle through the eight demos, from the plain triangle to the
+ray-marching example.  **ESC** leaves fullscreen; **Shift+ESC** quits.
+
+Prerequisites are the same three packages listed below.  On macOS, for example:
+
+```sh
+brew install vulkan-headers vulkan-loader molten-vk sdl2 sdl2_image glm
+```
+
+...and on Debian/Ubuntu:
+
+```sh
+sudo apt-get install libvulkan-dev vulkan-tools glslc libsdl2-dev libsdl2-image-dev libglm-dev
+```
 
 ## General Build Dependencies
 
