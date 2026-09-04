@@ -6,7 +6,9 @@
 //
 #include "HelloTriangle.h"
 
-#include "AppConstants.h"
+#define INSTANTIATE			// This translation unit allocates storage for AppConstants (and,
+	#include "AppConstants.h"	//	via it, PlatformConstants).  It belongs here, in the app
+#undef INSTANTIATE			//	that owns them -- VulkanModule used to do it by side effect.
 #include "Logging.h"
 
 
