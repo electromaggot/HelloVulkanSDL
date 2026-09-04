@@ -29,6 +29,7 @@ void from_json(const json& jsonAppSettings, AppSettings& appSettings)
 	appSettings.startingWindowHeight = jsonAppSettings["startingWindowHeight"];
 	appSettings.startingWindowX		 = jsonAppSettings["startingWindowX"];
 	appSettings.startingWindowY		 = jsonAppSettings["startingWindowY"];
+	appSettings.isFullScreen		 = jsonAppSettings["isFullScreen"];
 }
 
 void to_json(json& jsonAppSettings, const AppSettings& settings)
@@ -37,6 +38,7 @@ void to_json(json& jsonAppSettings, const AppSettings& settings)
 		{ "startingWindowWidth",  settings.startingWindowWidth },
 		{ "startingWindowHeight", settings.startingWindowHeight },
 		{ "startingWindowX", settings.startingWindowX },
-		{ "startingWindowY", settings.startingWindowY }
+		{ "startingWindowY", settings.startingWindowY },
+		{ "isFullScreen", (bool) settings.isFullScreen }
 	};
 }
