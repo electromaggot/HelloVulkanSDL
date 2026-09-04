@@ -11,7 +11,7 @@
 
 #include "MeshObject.h"
 #include "UniformBufferLiterals.h"
-#include "FixedRenderable.h"
+#include "Renderable.h"
 #include "VertexNull.h"
 
 extern MeshObject Quad2DTextured;
