@@ -1,3 +1,0 @@
-[submodule "VulkanModule"]
-	path = .submodules/VulkanModule
-	url = https://github.com/electromaggot/VulkanModule
